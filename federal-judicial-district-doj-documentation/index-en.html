@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for US DOJ's District Court Jurisdictions Datasets</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts","name":"Ontology for US DOJ's District Court Jurisdictions Datasets", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts", "datePublished":"2023-10-18", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for US DOJ's District Court Jurisdictions Datasets</h1>
+<h2>Release  2023-10-18</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts">http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for US DOJ's District Court Jurisdictions Datasets. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b>US district court jurisdictions</li>
+<li><b>Source Agency:</b> <a href="https://www.fjc.gov/">Federal Judicial Center</a></li>
+<li><b>Data source location:</b> <a href="https://hifld-geoplatform.opendata.arcgis.com/datasets/geoplatform::us-district-court-jurisdictions/explore">US district court jurisdictions (explore)</a></li>
+<li><b>Metadata description:</b> <a href="https://www.arcgis.com/home/item.html?id=ed086b05d8dc46eab574e0fecdcf0f1f">US district court jurisdictions (about)</a></li>
+<li><b>Type of data source:</b> Shape file (CSV, KML, GeoJSON, File Geodatabase also supported)</li>
+<li><b>Format of data returned:</b>.shp files</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/federal-judicial-district-doj-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. DOJ Federal Judicial District Schema Diagram.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for US DOJ's District Court Jurisdictions Datasets classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for US DOJ's District Court Jurisdictions Datasets.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole">Chief Judge Role</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit">Federal Judicial Circuit</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict">Federal Judicial District</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">
+            <span>instant</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">
+            <span>interval</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region">Region</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole">U.S. President Role</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole">
+      <h3>Chief Judge Role<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit">
+      <h3>Federal Judicial Circuit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict">
+      <h3>Federal Judicial District<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict</p>
+      <div class="comment">
+         <span class="markdown">This class denotes jurisdiction boundaries of the United States District Courts.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region">Region</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Instant">
+      <h3>instant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Instant</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#TemporalEntity"
+               target="_blank"
+               title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Interval">
+      <h3>interval<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Interval</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#TemporalEntity"
+               target="_blank"
+               title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region">
+      <h3>Region<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/Region</p>
+      <div class="comment">
+         <span class="markdown">A geographic entity created by the selection of characteristics that are relevant to an area of interest. It can have geometries including point, polyline and polygon.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict">Federal Judicial District</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole">
+      <h3>U.S. President Role<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge">has chief judge</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy">held by</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit">in circuit</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy">nominated by</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime">nomination time</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge">
+      <h3>has chief judge<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the relation between a federal jurisdictional area and it's chief judge(s).</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy">
+      <h3>held by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the relation between a person and the role (chief judge/ U.S. President) that they hold.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit">
+      <h3>in circuit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy">
+      <h3>nominated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the relation between a chief judge and the U.S. President who nominated them for that role.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime">
+      <h3>nomination time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the nomination time of a chief judge.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation">abbreviation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal">circuit ordinal</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName">federal judicial district name</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation">
+      <h3>abbreviation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal">
+      <h3>circuit ordinal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName">
+      <h3>federal judicial district name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

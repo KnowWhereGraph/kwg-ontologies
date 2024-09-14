@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for EPA's Air Quality Daily Summaries Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality","name":"Ontology for EPA's Air Quality Daily Summaries Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality", "datePublished":"2024-02-20", "version":"v 3.0", "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for EPA's Air Quality Daily Summaries Dataset</h1>
+<h2>Release  2024-02-20</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality">http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for EPA's Air Quality Daily Summaries Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b> Air Quality System (AQS) database</li>
+<li><b>Source Agency:</b> <a href="https://www.epa.gov/">US Environmental Protection Agency</a></li>
+<li><b>Data source location:</b> <a href="https://aqs.epa.gov/aqsweb/documents/data_api.html">The AQS API (version 2)</a></li>
+<li><b>Metadata description:</b> <a href="https://aqs.epa.gov/aqsweb/documents/data_api.html">The AQS API (version 2)</a></li>
+<li><b>Type of data source:</b> API</li>
+<li><b>Format of data returned:</b>JSON</li>
+<li><b>Data update interval:</b> daily</li>
+<li><b>General comments:</b> We only include a subset of attributes of the output json in KWG</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/air-quality-epa-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. EPA Air Quality Schema Diagram. See <a href="https://github.com/KnowWhereGraph/kwg-seed-graph/blob/master/schemas/air-quality-epa/air-quality-epa-schema-diagram.ttl">air-quality-epa.ttl</a> for members of <TT>kwg-ont:AirPollutantStandard</TT>.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for EPA's Air Quality Daily Summaries Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for EPA's Air Quality Daily Summaries Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation">EPA Air Quality Daily Summary Observation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection">EPA Air Quality Daily Summary Observation Collection</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor">EPA Air Quality Monitor</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite">EPA Air Quality Site</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">
+            <span>feature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">
+            <span>geometry</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">
+      <h3>EPA Air Pollutant Standard<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard</p>
+      <div class="comment">
+         <span class="markdown">This class denotes EPA's air pollutant standards for different air pollutant types.
+
+The National Ambient Air Quality Standards (NAAQS) established for six "criteria pollutants" in outdoor air. NAAQS are currently set for carbon monoxide, lead, ground-level ozone, nitrogen dioxide, particulate matter, and sulfur dioxide.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3">CO 1-hour 1971</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4">CO 8-hour 1971</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2">Lead 3-Month 2009</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14">Lead 3-Month PM10 Surrogate 2009</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1">Lead Quarterly 1978</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20">NO2 1-hour 2010</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8">NO2 Annual 1971</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9">Ozone 1-hour 1979</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10">Ozone 8-Hour 1997</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11">Ozone 8-Hour 2008</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23">Ozone 8-hour 2015</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12">PM10 24-hour 2006</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24">PM25 24-hour 1997</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16">PM25 24-hour 2006</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21">PM25 24-hour 2012</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25">PM25 Annual 1997</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18">PM25 Annual 2006</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22">PM25 Annual 2012</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19">SO2 1-hour 2010</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6">SO2 24-hour 1971</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5">SO2 3-hour 1971</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7">SO2 Annual 1971</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">
+      <h3>EPA Air Pollutant Type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the set of air pollutants measured in the EPA’s Air Quality System (AQS) dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101">Carbon monoxide</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129">Lead (TSP) LC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128">Lead (TSP) STP</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129">Lead PM10 LC FRM/FEM</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602">Nitrogen dioxide (NO2)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">Ozone</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102">PM10 Total 0-10um STP</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">Sulfur dioxide</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation">
+      <h3>EPA Air Quality Daily Summary Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the observation (including AQI) for a specific air pollutant type measured at an air quality site on a specific day.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection">
+      <h3>EPA Air Quality Daily Summary Observation Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the collections of observations for a specific air pollutant type measured at various air quality sites.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor">
+      <h3>EPA Air Quality Monitor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the devices measuring various air pollutant parameter at the air quality sites.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Sensor"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Sensor">sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite">
+      <h3>EPA Air Quality Site<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite</p>
+      <div class="comment">
+         <span class="markdown">This class denotes EPA's air quality sites.
+
+EPA's Air Quality System (AQS) site is a distinct geographic location that has one or more air quality monitors. Not every site measures the same air pollutant parameters.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/Platform"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Platform">platform</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#SpatialObject"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">spatial object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite">EPA Air Quality Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Geometry">
+      <h3>geometry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Geometry</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#SpatialObject"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">spatial object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard">air pollutant standard</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS">made at air quality site</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">
+      <h3>air pollutant parameter<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter</p>
+      <div class="comment">
+         <span class="markdown">The relation between AirPollutantStandard and AirPollutantType.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard">
+      <h3>air pollutant standard<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard</p>
+      <div class="comment">
+         <span class="markdown">The relation betwen AirQualityDailySummaryObservation and AirPollutantStandard.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS">
+      <h3>made at air quality site<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS</p>
+      <div class="comment">
+         <span class="markdown">The relation between AirQualityDailySummaryObservationCollection and AirQualitySite.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode">cbsa code</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName">cbsa name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode">county code</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName">county name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue">daily AQI value</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName">local site name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode">parameter occurence code</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber">site number</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode">state code</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName">state name</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">
+      <h3>air pollutant parameter name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName</p>
+      <div class="comment">
+         <span class="markdown">The parameter name associated with and air pollutant standard.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">
+      <h3>air pollutant standard description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription</p>
+      <div class="comment">
+         <span class="markdown">The description associated with and air pollutant standard (parameter).</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode">
+      <h3>cbsa code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode</p>
+      <div class="comment">
+         <span class="markdown">The code of a CBSA region. A CBSA region (core-based statistical area) is a U.S. geographic area defined by the Office of Management and Budget that consists of one or more counties anchored by an urban center of at least 10,000 people plus adjacent counties that are socioeconomically tied to the urban center by commuting.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName">
+      <h3>cbsa name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName</p>
+      <div class="comment">
+         <span class="markdown">The name of a CBSA region. A CBSA region (core-based statistical area) is a U.S. geographic area defined by the Office of Management and Budget that consists of one or more counties anchored by an urban center of at least 10,000 people plus adjacent counties that are socioeconomically tied to the urban center by commuting.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode">
+      <h3>county code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName">
+      <h3>county name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue">
+      <h3>daily AQI value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue</p>
+      <div class="comment">
+         <span class="markdown">Air Quality Index values for the specified year and location recorded by EPA's AQS dataset.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName">
+      <h3>local site name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName</p>
+      <div class="comment">
+         <span class="markdown">EPA's Air Quality System (AQS) site local name.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode">
+      <h3>parameter occurence code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode</p>
+      <div class="comment">
+         <span class="markdown">The poc (Parameter Occurrence Code) value used to uniquely identify a monitor if there is more than one device measuring the same pollutant at a site.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber">
+      <h3>site number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber</p>
+      <div class="comment">
+         <span class="markdown">EPA's Air Quality System (AQS) site number.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode">
+      <h3>state code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName">
+      <h3>state name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101">Carbon monoxide</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3">CO 1-hour 1971</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4">CO 8-hour 1971</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129">Lead (TSP) LC</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128">Lead (TSP) STP</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2">Lead 3-Month 2009</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14">Lead 3-Month PM10 Surrogate 2009</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129">Lead PM10 LC FRM/FEM</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1">Lead Quarterly 1978</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602">Nitrogen dioxide (NO2)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20">NO2 1-hour 2010</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8">NO2 Annual 1971</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">Ozone</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9">Ozone 1-hour 1979</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10">Ozone 8-Hour 1997</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11">Ozone 8-Hour 2008</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23">Ozone 8-hour 2015</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12">PM10 24-hour 2006</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102">PM10 Total 0-10um STP</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24">PM25 24-hour 1997</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16">PM25 24-hour 2006</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21">PM25 24-hour 2012</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25">PM25 Annual 1997</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18">PM25 Annual 2006</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22">PM25 Annual 2012</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19">SO2 1-hour 2010</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6">SO2 24-hour 1971</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5">SO2 3-hour 1971</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7">SO2 Annual 1971</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">Sulfur dioxide</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101">
+      <h3>Carbon monoxide<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3">
+      <h3>CO 1-hour 1971<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101">Carbon monoxide</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Carbon monoxide"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Carbon Monoxide 1-hour standard from 1971"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4">
+      <h3>CO 8-hour 1971<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101">Carbon monoxide</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Carbon monoxide"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Carbon Monoxide 8-hour running average from 1971"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129">
+      <h3>Lead (TSP) LC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128">
+      <h3>Lead (TSP) STP<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2">
+      <h3>Lead 3-Month 2009<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129">Lead (TSP) LC</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Lead (TSP) LC"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Lead 3 month rolling average site level summary based on TSP lead at local conditions"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14">
+      <h3>Lead 3-Month PM10 Surrogate 2009<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129">Lead PM10 LC FRM/FEM</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Lead PM10 LC FRM/FEM"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM10 Surgate (instead of TSP) for the new lead 3 month rolling average site level summary"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129">
+      <h3>Lead PM10 LC FRM/FEM<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1">
+      <h3>Lead Quarterly 1978<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128">Lead (TSP) STP</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Lead (TSP) STP"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Original lead standard based on calendar quarterly average."</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602">
+      <h3>Nitrogen dioxide (NO2)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20">
+      <h3>NO2 1-hour 2010<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602">Nitrogen dioxide (NO2)</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Nitrogen dioxide (NO2)"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Nitrogen Dioxide 1-hour standard"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8">
+      <h3>NO2 Annual 1971<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602">Nitrogen dioxide (NO2)</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Nitrogen dioxide (NO2)"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Nitrogen Dioxide Annual Mean from 1971"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">
+      <h3>Ozone<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9">
+      <h3>Ozone 1-hour 1979<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">Ozone</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone 1-hour Daily Maximum value based on data completeness betweeen 9 AM and 9 pm"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10">
+      <h3>Ozone 8-Hour 1997<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">Ozone</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone 1-hour Daily Maximum value based on data completeness betweeen 9 AM and 9 pm"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11">
+      <h3>Ozone 8-Hour 2008<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">Ozone</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone 8-hour running average stored in begin hour from 1997"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23">
+      <h3>Ozone 8-hour 2015<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201">Ozone</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Ozone 8-hour 2015 -- Daily 8-hour maximum between 7:00 AM and 11:00 PM"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12">
+      <h3>PM10 24-hour 2006<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102">PM10 Total 0-10um STP</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM10 Total 0-10um STP"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM10 24-hour standard. Violations include actual exceedences and expected exceedences where data is missing"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102">
+      <h3>PM10 Total 0-10um STP<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">
+      <h3>PM2.5 - Local Conditions<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24">
+      <h3>PM25 24-hour 1997<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM2.5 - Local Conditions"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM25 24-hour standard for 1997. Created for Region 9 / AQAD"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16">
+      <h3>PM25 24-hour 2006<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM2.5 - Local Conditions"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM25 annual weighted mean was reaffirmed in 2006 with the same level as originally promulgated"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21">
+      <h3>PM25 24-hour 2012<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM2.5 - Local Conditions"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM25 24-hour standard was reaffirmed in 2013 with the same level as previously promulgated"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25">
+      <h3>PM25 Annual 1997<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM2.5 - Local Conditions"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM25 Annual standard for 1997. Created for Region 9 / AQAD	"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18">
+      <h3>PM25 Annual 2006<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM2.5 - Local Conditions"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM25 annual weighted mean was reaffirmed in 2006 with the same level as originally promulgated"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22">
+      <h3>PM25 Annual 2012<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101">PM2.5 - Local Conditions</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM2.5 - Local Conditions"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PM25 annual standard was lowered in 2013 to increase protection against health effects with long-term exposures"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19">
+      <h3>SO2 1-hour 2010<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">Sulfur dioxide</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur dioxide"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulphur Dioxide 1-hour standard from 2010"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6">
+      <h3>SO2 24-hour 1971<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">Sulfur dioxide</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur dioxide"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur Dioxide Annual Mean Standard from 1971"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5">
+      <h3>SO2 3-hour 1971<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">Sulfur dioxide</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur dioxide"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur Dioxide 3-hour Block Average from 1971"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7">
+      <h3>SO2 Annual 1971<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard">EPA Air Pollutant Standard</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter">air pollutant parameter</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">Sulfur dioxide</a>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName">air pollutant parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur dioxide"</span>
+         </dd>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription">air pollutant standard description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Sulfur Dioxide Annual Mean Standard from 1971"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401">
+      <h3>Sulfur dioxide<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType">EPA Air Pollutant Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

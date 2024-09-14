@@ -1,0 +1,391 @@
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://purl.org/dc/terms/created> "2023-11-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://purl.org/dc/terms/title> "Ontology for NIFC's Wildland Fire Incident Locations Dataset"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> <http://www.w3.org/2002/07/owl#versionInfo> "v 3.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the reason the fire occurred." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause> <http://www.w3.org/2000/01/rdf-schema#label> "fire cause" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the date and time a fire was reported as discovered or confirmed to exist. May also be the start date for reporting purposes." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime> <http://www.w3.org/2000/01/rdf-schema#label> "fire discovery time" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the date and time when a fire is declared out." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime> <http://www.w3.org/2000/01/rdf-schema#label> "fire out time" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the point of origin of a fire incident." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "fire point of origin" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the date/time of the initial response to the incident (when the IC arrives and performs initial size up)" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime> <http://www.w3.org/2000/01/rdf-schema#label> "fire response time" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName> <http://www.w3.org/2000/01/rdf-schema#label> "county name" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier for the dispatch center that intersects with the incident point of origin." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID> <http://www.w3.org/2000/01/rdf-schema#label> "dispatch center ID" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc> <http://www.w3.org/2000/01/rdf-schema#comment> "A code that identifies the wildland fire geographic area coordination center (GACC) at the point of origin for the incident. A GACC is a facility used for the coordination of agency or jurisdictional resources in support of one or more incidents within a geographic area." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc> <http://www.w3.org/2000/01/rdf-schema#label> "geographic area coordination center" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName> <http://www.w3.org/2000/01/rdf-schema#label> "incident name" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> <http://www.w3.org/2000/01/rdf-schema#label> "irwin ID" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the agency that has protection responsibility at the point of origin of a fire incident." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency> <http://www.w3.org/2000/01/rdf-schema#label> "protection agency" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "NWCG Unit responsible for providing direct incident management and services to an incident pursuant in its jurisdictional responsibility or as specified by law, contract or agreement. Protection can be re-assigned by agreement. The nature and extent of the incident determines protection (for example Wildfire vs. All Hazard.)" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "protection unit" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName> <http://www.w3.org/2000/01/rdf-schema#label> "state name" .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes all categories into which wildland fires are grouped according to their origin. Broad classification of the reason the fire occurred identified as human, natural or unknown." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Fire Cause" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes point locations for all wildland fires in the United States reported to the IRWIN system. Wildland fire incidents from the IRWIN (Integrated Reporting of Wildland Fire Information) incident service that meet the following criteria:\n- Categorized as a Wildfire (WF), Prescribed Fire (RX), or Incident Complex (CX) record\n- Is Valid and not \"quarantined\" in IRWIN due to potential conflicts with other records" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes measured properties for a fire event in the NIFC's Wildland Fire Incident Locations Dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Fire Observable Property" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes observations for specific fire observable property measured for a fire event in the NIFC dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Fire Observation" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasMember> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes collections of observations corresponding to the various observable properties for a NIFC fire event." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Fre Observation Collection" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes the properties of the point of origin of the NIFC fire incident." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Fire Point Of Origin" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire> <http://www.w3.org/2000/01/rdf-schema#comment> "Two or more distinct incidents in the same general area that, by management action, are managed under a single incident commander or unified command in order to improve efficiency and simplify incident management processes." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Incident Complex Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire> <http://www.w3.org/2000/01/rdf-schema#comment> "A wildland fire originating from a planned ignition in accordance with applicable laws, policies, and regulations to meet specific objectives.​" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Prescribed Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire> <http://www.w3.org/2000/01/rdf-schema#comment> "A wildland fire originating from an unplanned ignition, such as lightning, volcanos, unauthorized and accidental human caused fires, and prescribed fires that are declared wildfires." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire> <http://www.w3.org/2000/01/rdf-schema#label> "NIFC Wildfire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause> <http://www.w3.org/2000/01/rdf-schema#label> "human cause" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause> <http://www.w3.org/2000/01/rdf-schema#label> "natural cause" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause> <http://www.w3.org/2000/01/rdf-schema#label> "undetermined cause" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause> <http://www.w3.org/2000/01/rdf-schema#label> "unknown cause" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt> <http://www.w3.org/2000/01/rdf-schema#comment> "An estimate of acres burning when the fire is first reported by the first person to call in the fire. The estimate should include number of acres within the current perimeter of a specific, individual incident, including unburned and unburnable islands." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt> <http://www.w3.org/2000/01/rdf-schema#label> "discovery acres burnt" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The total estimated cost of the incident to date." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost> <http://www.w3.org/2000/01/rdf-schema#label> "esitmated dollar cost" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt> <http://www.w3.org/2000/01/rdf-schema#comment> "Reported final acreage of incident." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt> <http://www.w3.org/2000/01/rdf-schema#label> "final acres burnt" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#Instant> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#Instant> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#Instant> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid16 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> .
+# 
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid17 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid18 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid19 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> .
+# 
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> .
+# 
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid21 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

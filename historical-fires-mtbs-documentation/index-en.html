@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for USGS's Historical Wildfires Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire","name":"Ontology for USGS's Historical Wildfires Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire", "datePublished":"2023-10-18", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for USGS's Historical Wildfires Dataset</h1>
+<h2>Release  2023-10-18</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire">http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for USGS's Historical Wildfires Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b> Monitoring Trends in Burn Severity</li>
+<li><b>Source Agency:</b> USGS, EROS and the USDA Forest Service Geospatial Technology and Applications Center (GTAC).</li>
+<li><b>Data source location:</b> <a href="https://mtbs.gov/direct-download"> MTBS Fire Bundles</a></li>
+<li><b>Metadata documentation:</b> <a href="https://burnseverity.cr.usgs.gov/glossary"> Glossary</a>, <a href="https://mtbs.gov/sites/mtbs/files/inline-files/Eidenshink-final.pdf"> paper</a>, and this <a href="https://github.com/KnowWhereGraph/kwg-seed-graph/blob/master/schemas/historical-fires-mtbs/meta-description/attribute_info.csv"> file</a></li>
+<li><b>Format of data returned:</b> ShapeFiles for Fire Occurrence Dataset and Burned Areas Boundaries Dataset</li>
+<li><b>Data update interval:</b> yearly</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/historical-fires-mtbs-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. MTBS Fires Schema Diagram.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for USGS's Historical Wildfires Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for USGS's Historical Wildfires Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">
+            <span>feature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram">Fire Mapping Program</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire">MTBS Complex Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty">MTBS Fire Observable Property</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation">MTBS Fire Observation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection">MTBS Fire Observation Collection</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire">MTBS Out Of Area Response Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire">MTBS Prescribed Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire">MTBS Unknown FIre</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire">MTBS Wildfire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse">MTBS Wildland Fire Use</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">
+            <span>observable property</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">
+            <span>observation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">
+            <span>temporal entity</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram">
+      <h3>Fire Mapping Program<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram</p>
+      <div class="comment">
+         <span class="markdown">Mapping program/protocol the fire was mapped with. Examples: MTBS, RAVG, BAER, NPS.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs">MTBS fire mapping program</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire">
+      <h3>MTBS Complex Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire</p>
+      <div class="comment">
+         <span class="markdown">Two or more individual incidents located in the same general area which are assigned to a single incident commander or unified command.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">
+      <h3>MTBS Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire</p>
+      <div class="comment">
+         <span class="markdown">This class denotes fire burned area boundaries from the Monitoring Trends in Burn Severity (MTBS) Program dataset.
+The Monitoring Trends in Burn Severity (MTBS) Program assesses the frequency, extent, and magnitude (size and severity) of all large wildland fires (including wildfires and prescribed fires) in the conterminous United States (CONUS), Alaska, Hawaii, and Puerto Rico for the period of 1984 and beyond. All fires reported as greater than 1,000 acres in the western U.S. and greater than 500 acres in the eastern U.S. are mapped across all ownerships. MTBS produces a series of geospatial and tabular data for analysis at a range of spatial, temporal, and thematic scales and are intended to meet a variety of information needs that require consistent data about fire effects through space and time. This map layer is a vector polygon shapefile of the location of all currently inventoried fires occurring between calendar year 1984 and 2019 for CONUS, Alaska, Hawaii and Puerto Rico. Fires omitted from this mapped inventory are those where suitable satellite imagery was not available or fires were not discernable from available imagery.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire">MTBS Complex Fire</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire">MTBS Out Of Area Response Fire</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire">MTBS Prescribed Fire</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire">MTBS Unknown FIre</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire">MTBS Wildfire</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse">MTBS Wildland Fire Use</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">
+      <h3>MTBS Fire Mapping Assessment Label<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel</p>
+      <div class="comment">
+         <span class="markdown">Mapping assessment label for fires collected by USGS. Data is obtained from the Monitoring Trends in Burn Severity (MTBS) dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency">fire mapping assessment label-emergency</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss">fire mapping assessment label-emergency (single scene)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended">fire mapping assessment label-extended</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss">fire mapping assessment label-extended (single scene)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial">fire mapping assessment label-initial</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss">fire mapping assessment label-initial (single scene)</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty">
+      <h3>MTBS Fire Observable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">Measured properties for a fire event in the Monitoring Trends in Burn Severity (MTBS) dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue">differenced normalized burn ratio (mean)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue">differenced normalized burn ratio (standard deviation)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned">number of acres burned</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation">
+      <h3>MTBS Fire Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation</p>
+      <div class="comment">
+         <span class="markdown">The observation for a specific fire observable property measured for a fire event in the Monitoring Trends in Burn Severity (MTBS) dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection">
+      <h3>MTBS Fire Observation Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection</p>
+      <div class="comment">
+         <span class="markdown">The collection of observations corresponding to the various observable properties for a MTBS fire event.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire">
+      <h3>MTBS Out Of Area Response Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire</p>
+      <div class="comment">
+         <span class="markdown">Multiple resource response to a wildfire incident. This term applies exclusively to wildfire incidents.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire">
+      <h3>MTBS Prescribed Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire</p>
+      <div class="comment">
+         <span class="markdown">Any fire intentionally ignited by management actions in accordance with applicable laws, policies, and regulations to meet specific objectives.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire">
+      <h3>MTBS Unknown FIre<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire</p>
+      <div class="comment">
+         <span class="markdown">A fire event whose incident type was not reported from the original reporting agency.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire">
+      <h3>MTBS Wildfire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire</p>
+      <div class="comment">
+         <span class="markdown">An unplanned, unwanted wildland fire including unauthorized human-caused fires, escaped wildland fire use events, escaped prescribed fire projects, and all other wildland fires where the objective is to put the fire out.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse">
+      <h3>MTBS Wildland Fire Use<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse</p>
+      <div class="comment">
+         <span class="markdown">An event dealing with the management of a naturally ignited wildland fire to accomplish specific prestated resource management objectives in predefined geographic areas outlined in the Fire Management Plans.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire">MTBS Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/ObservableProperty">
+      <h3>observable property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservableProperty</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty">MTBS Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sosa/Observation">
+      <h3>observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation">MTBS Fire Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#TemporalEntity">
+      <h3>temporal entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#TemporalEntity</p>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel">fire mapping assessment label</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram">mapping program</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel">
+      <h3>fire mapping assessment label<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the relation betwen MTBSFire and FireMappingAssessmentLabel.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram">
+      <h3>mapping program<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the relation betwen MTBSFire and FireMappingProgram.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID">corresponding map ID</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName">fire name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID">irwin ID</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID">
+      <h3>corresponding map ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the MTBS fire mapping ID.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName">
+      <h3>fire name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName</p>
+      <div class="comment">
+         <span class="markdown">This oroperty denotes the name of a fire.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID">
+      <h3>irwin ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the IRWIN ID, which is a unique identifier created by the Integrated Reporting of Wildland-Fire Information (IRWIN) service.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue">differenced normalized burn ratio (mean)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue">differenced normalized burn ratio (standard deviation)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency">fire mapping assessment label-emergency</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss">fire mapping assessment label-emergency (single scene)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended">fire mapping assessment label-extended</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss">fire mapping assessment label-extended (single scene)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial">fire mapping assessment label-initial</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss">fire mapping assessment label-initial (single scene)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs">MTBS fire mapping program</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned">number of acres burned</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue">
+      <h3>differenced normalized burn ratio (mean)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue</p>
+      <div class="comment">
+         <span class="markdown">The mean dNBR value sampled from an unburned area outside the fire perimeter.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty">MTBS Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue">
+      <h3>differenced normalized burn ratio (standard deviation)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue</p>
+      <div class="comment">
+         <span class="markdown">The standard deviation of the mean dNBR value sampled from an unburned area outside the fire perimeter.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty">MTBS Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency">
+      <h3>fire mapping assessment label-emergency<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency</p>
+      <div class="comment">
+         <span class="markdown">Fire mapping assessments that rely on satellite data typically required at or near fire containment in order to assist in identifying imminent post-fire threats to life, safety, property, and critical natural and cultural resources, and support emergency stabilization measures before significant storms occur.
+Imagery aquired during active incident or immediatly after fire containment.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss">
+      <h3>fire mapping assessment label-emergency (single scene)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss</p>
+      <div class="comment">
+         <span class="markdown">Fire mapping assessments that rely on single-scene satellite data typically required at or near fire containment in order to assist in identifying imminent post-fire threats to life, safety, property, and critical natural and cultural resources, and support emergency stabilization measures before significant storms occur.
+Imagery aquired during active incident or immediatly after fire containment. No pre-fire image was available; assessment based on NBR.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended">
+      <h3>fire mapping assessment label-extended<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended</p>
+      <div class="comment">
+         <span class="markdown">Fire mapping assessments that rely on satellite data typically acquired during the growing season following a fire in order to include delayed first order effects (e.g., latent tree mortality) and dominant second order effects that are ecologically significant (e.g., initial site response and early secondary effects).
+Imagery aquired during seasonal peak-of-green after fire containment.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss">
+      <h3>fire mapping assessment label-extended (single scene)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss</p>
+      <div class="comment">
+         <span class="markdown">Fire mapping assessments that rely on single-scene satellite data typically acquired during the growing season following a fire in order to include delayed first order effects (e.g., latent tree mortality) and dominant second order effects that are ecologically significant (e.g., initial site response and early secondary effects).
+Imagery aquired during seasonal peak-of-green after fire containment. No pre-fire image was available; assessment based on NBR.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial">
+      <h3>fire mapping assessment label-initial<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial</p>
+      <div class="comment">
+         <span class="markdown">Fire mapping assessments that rely on satellite data typically acquired at the first opportunity after fire to capitalize on the maximum post-fire data signal and is used primarily in ecosystems that exhibit rapid post-fire vegetation response (i.e. herbaceous and particular shrubland systems).
+Imagery aquired shortly after fire containment.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss">
+      <h3>fire mapping assessment label-initial (single scene)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss</p>
+      <div class="comment">
+         <span class="markdown">Fire mapping assessments that rely on single-scene satellite data typically acquired at the first opportunity after fire to capitalize on the maximum post-fire data signal and is used primarily in ecosystems that exhibit rapid post-fire vegetation response (i.e. herbaceous and particular shrubland systems).
+Imagery aquired shortly after fire containment. No pre-fire image was available; assessment based on NBR.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel">MTBS Fire Mapping Assessment Label</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs">
+      <h3>MTBS fire mapping program<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs</p>
+      <div class="comment">
+         <span class="markdown">Monitoring Trends in Burn Severity (MTBS) is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram">Fire Mapping Program</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned">
+      <h3>number of acres burned<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned</p>
+      <div class="comment">
+         <span class="markdown">Number of acres burned.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty">MTBS Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

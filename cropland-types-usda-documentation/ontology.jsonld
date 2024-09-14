@@ -1,0 +1,1021 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/observedProperty"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasMember"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/phenomenonTime"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/1.1/schema/qudt#Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/hasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://schema.org/domainIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/rangeIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/Cell",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cropland Observable Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cropland S2 Overlap Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "This class denotes a cropland observation corresponding to a specific cropland observable property. Each observation is member of an observation collection whose member observations overlaps a specific S2 Cell."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cropland S2 Overlap Observation Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservationCollection"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "This class denotes collections of cropland observations for different crop types that overlap a specific S2 Cell."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/Cell"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/usda-cropland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Shirly Stephen, Mitchell Faulk"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-10-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "The KnowWhereGraph Project"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology supports the KnowWhereGraph"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for USDA's CropScape Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "v 3.0"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "background"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "peanuts"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tobacco"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "open water"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.112",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "perennial ice/snow"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sweet corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.121",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "developed/open space"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.122",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "developed/low intensity"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.123",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "developed/med intensity"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.124",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "developed/high intensity"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pop or orn corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.131",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "barren"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mint"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.141",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "deciduous forest"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.142",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "evergreen forest"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mixed forest"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.152",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "shrubland"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.176",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "grassland/pasture"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.190",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "woody wetlands"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.195",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "herbaceous wetlands"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cotton"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.204",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pistachios"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.205",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "triticale"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.206",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "carrots"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.207",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "asparagus"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.208",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "garlic"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.209",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cantaloupes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "barley"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.210",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "prunes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.211",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "olives"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.212",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "oranges"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.213",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "honeydew melons"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.214",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "broccoli"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.215",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "avocados"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.216",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "peppers"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.217",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pomegranates"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.218",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nectarines"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.219",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "greens"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "durum wheat"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.220",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "plums"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.221",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "strawberries"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.222",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "squash"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.223",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "apricots"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.224",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vetch"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.225",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop winwht/corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.226",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop oats/corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.227",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lettuce"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.228",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop triticale/corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.229",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pumpkins"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "spring wheat"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.230",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop lettuce/durum wht"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.231",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop lettuce/cantaloupe"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.232",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop lettuce/cotton"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.233",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop lettuce/barley"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.234",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop durum wht/sorghum"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.235",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop barley/sorghum"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.236",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop winwht/sorghum"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.237",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop barley/corn"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.238",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop winwht/cotton"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.239",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop soybeans/cotton"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "winter wheat"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.240",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop soybeans/oats"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.241",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop corn/soybeans"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.242",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "blueberries"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.243",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cabbage"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.244",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cauliflower"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.245",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "celery"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.246",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "radishes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.247",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turnips"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.248",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "eggplants"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.249",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "gourds"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "other small grains"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.250",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cranberries"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.254",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop barley/soybeans"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dbl crop winwht/soybeans"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rye"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "oats"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "millet"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rice"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "speltz"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "canola"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "flaxseed"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "safflower"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rape seed"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mustard"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "alfalfa"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "other hay/non alfalfa"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "camelina"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "buckwheat"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sorghum"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sugarbeets"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dry beans"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "potatoes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "other crops"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sugarcane"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sweet potatoes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "misc vegs & fruits"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "watermelons"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "onions"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "soybeans"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cucumbers"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "chick peas"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lentils"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "peas"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tomatoes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "caneberries"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hops"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "herbs"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "clover/wildflowers"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sod/grass seed"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sunflower"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "switchgrass"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fallow/idle cropland"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "forest"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "shrubland"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "barren"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cherries"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "peaches"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "apples"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "grapes"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "christmas trees"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "other tree crops"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "citrus"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pecans"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "almonds"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "walnuts"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pears"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "clouds/no data"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "developed"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.83",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "water"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.87",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wetlands"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.88",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nonag/undefined"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "aquaculture"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#editorialNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#TemporalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/phenomenonTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+} ]

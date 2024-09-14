@@ -1,0 +1,361 @@
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://purl.org/dc/terms/created> "2023-10-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://purl.org/dc/terms/title> "Ontology for USGS's Historical Wildfires Dataset"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mtbs-wildfire> <http://www.w3.org/2002/07/owl#versionInfo> "v 3.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "This property denotes the relation betwen MTBSFire and FireMappingAssessmentLabel." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram> <http://www.w3.org/2000/01/rdf-schema#comment> "This property denotes the relation betwen MTBSFire and FireMappingProgram." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram> <http://www.w3.org/2000/01/rdf-schema#label> "mapping program" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID> <http://www.w3.org/2000/01/rdf-schema#comment> "This property denotes the MTBS fire mapping ID." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID> <http://www.w3.org/2000/01/rdf-schema#label> "corresponding map ID" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName> <http://www.w3.org/2000/01/rdf-schema#comment> "This oroperty denotes the name of a fire." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName> <http://www.w3.org/2000/01/rdf-schema#label> "fire name" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> <http://www.w3.org/2000/01/rdf-schema#comment> "This property denotes the IRWIN ID, which is a unique identifier created by the Integrated Reporting of Wildland-Fire Information (IRWIN) service." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> <http://www.w3.org/2000/01/rdf-schema#label> "irwin ID" .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "Mapping assessment label for fires collected by USGS. Data is obtained from the Monitoring Trends in Burn Severity (MTBS) dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Fire Mapping Assessment Label" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire> <http://www.w3.org/2000/01/rdf-schema#comment> "Any fire intentionally ignited by management actions in accordance with applicable laws, policies, and regulations to meet specific objectives." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSPrescribedFire> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Prescribed Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire> <http://www.w3.org/2000/01/rdf-schema#comment> "A fire event whose incident type was not reported from the original reporting agency." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Unknown FIre" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire> <http://www.w3.org/2000/01/rdf-schema#comment> "An unplanned, unwanted wildland fire including unauthorized human-caused fires, escaped wildland fire use events, escaped prescribed fire projects, and all other wildland fires where the objective is to put the fire out." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildFire> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Wildfire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse> <http://www.w3.org/2000/01/rdf-schema#comment> "An event dealing with the management of a naturally ignited wildland fire to accomplish specific prestated resource management objectives in predefined geographic areas outlined in the Fire Management Plans." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildlandFireUse> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Wildland Fire Use" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire> <http://www.w3.org/2000/01/rdf-schema#comment> "Two or more individual incidents located in the same general area which are assigned to a single incident commander or unified command." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_ComplexFire> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Complex Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes fire burned area boundaries from the Monitoring Trends in Burn Severity (MTBS) Program dataset.\nThe Monitoring Trends in Burn Severity (MTBS) Program assesses the frequency, extent, and magnitude (size and severity) of all large wildland fires (including wildfires and prescribed fires) in the conterminous United States (CONUS), Alaska, Hawaii, and Puerto Rico for the period of 1984 and beyond. All fires reported as greater than 1,000 acres in the western U.S. and greater than 500 acres in the eastern U.S. are mapped across all ownerships. MTBS produces a series of geospatial and tabular data for analysis at a range of spatial, temporal, and thematic scales and are intended to meet a variety of information needs that require consistent data about fire effects through space and time. This map layer is a vector polygon shapefile of the location of all currently inventoried fires occurring between calendar year 1984 and 2019 for CONUS, Alaska, Hawaii and Puerto Rico. Fires omitted from this mapped inventory are those where suitable satellite imagery was not available or fires were not discernable from available imagery." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Measured properties for a fire event in the Monitoring Trends in Burn Severity (MTBS) dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Fire Observable Property" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "The observation for a specific fire observable property measured for a fire event in the Monitoring Trends in Burn Severity (MTBS) dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Fire Observation" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/phenomenonTime> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasMember> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "The collection of observations corresponding to the various observable properties for a MTBS fire event." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Fire Observation Collection" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire> <http://www.w3.org/2000/01/rdf-schema#comment> "Multiple resource response to a wildfire incident. This term applies exclusively to wildfire incidents." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_OutOfAreaResponseFire> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS Out Of Area Response Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram> <http://www.w3.org/2000/01/rdf-schema#comment> "Mapping program/protocol the fire was mapped with. Examples: MTBS, RAVG, BAER, NPS." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram> <http://www.w3.org/2000/01/rdf-schema#label> "Fire Mapping Program" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2006/time#TemporalEntity> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/ObservationCollection> .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/ObservationCollection> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/ObservationCollection> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/sosa/ObservationCollection> .
+# 
+# http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire mapping assessments that rely on satellite data typically required at or near fire containment in order to assist in identifying imminent post-fire threats to life, safety, property, and critical natural and cultural resources, and support emergency stabilization measures before significant storms occur.\nImagery aquired during active incident or immediatly after fire containment." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label-emergency" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire mapping assessments that rely on single-scene satellite data typically required at or near fire containment in order to assist in identifying imminent post-fire threats to life, safety, property, and critical natural and cultural resources, and support emergency stabilization measures before significant storms occur.\nImagery aquired during active incident or immediatly after fire containment. No pre-fire image was available; assessment based on NBR." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.emergency_ss> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label-emergency (single scene)" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire mapping assessments that rely on satellite data typically acquired during the growing season following a fire in order to include delayed first order effects (e.g., latent tree mortality) and dominant second order effects that are ecologically significant (e.g., initial site response and early secondary effects).\nImagery aquired during seasonal peak-of-green after fire containment." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label-extended" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire mapping assessments that rely on single-scene satellite data typically acquired during the growing season following a fire in order to include delayed first order effects (e.g., latent tree mortality) and dominant second order effects that are ecologically significant (e.g., initial site response and early secondary effects).\nImagery aquired during seasonal peak-of-green after fire containment. No pre-fire image was available; assessment based on NBR." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.extended_ss> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label-extended (single scene)" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire mapping assessments that rely on satellite data typically acquired at the first opportunity after fire to capitalize on the maximum post-fire data signal and is used primarily in ecosystems that exhibit rapid post-fire vegetation response (i.e. herbaceous and particular shrubland systems).\nImagery aquired shortly after fire containment." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label-initial" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire mapping assessments that rely on single-scene satellite data typically acquired at the first opportunity after fire to capitalize on the maximum post-fire data signal and is used primarily in ecosystems that exhibit rapid post-fire vegetation response (i.e. herbaceous and particular shrubland systems).\nImagery aquired shortly after fire containment. No pre-fire image was available; assessment based on NBR." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/firemappingassessmentlabel.initial_ss> <http://www.w3.org/2000/01/rdf-schema#label> "fire mapping assessment label-initial (single scene)" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs> <http://www.w3.org/2000/01/rdf-schema#comment> "Monitoring Trends in Burn Severity (MTBS) is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mappingProgram.mtbs> <http://www.w3.org/2000/01/rdf-schema#label> "MTBS fire mapping program" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The mean dNBR value sampled from an unburned area outside the fire perimeter." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.MeandNBRValue> <http://www.w3.org/2000/01/rdf-schema#label> "differenced normalized burn ratio (mean)" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of acres burned." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.NumberOfAcresBurned> <http://www.w3.org/2000/01/rdf-schema#label> "number of acres burned" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_FireObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The standard deviation of the mean dNBR value sampled from an unburned area outside the fire perimeter." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue> <http://www.w3.org/2000/01/rdf-schema#label> "differenced normalized burn ratio (standard deviation)" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireMappingAssessmentLabel> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireMappingAssessmentLabel> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+# 
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/mappingProgram> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MappingProgram> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+# 
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireName> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+# 
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+# 
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/correspondingMapID> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBS_Fire> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

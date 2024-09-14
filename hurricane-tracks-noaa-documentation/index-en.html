@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for NOAA's Historical Hurricane Tracks Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks","name":"Ontology for NOAA's Historical Hurricane Tracks Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks", "datePublished":"2023-10-18", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for NOAA's Historical Hurricane Tracks Dataset</h1>
+<h2>Release  2023-10-18</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks">http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for NOAA's Historical Hurricane Tracks Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b>Historical hurricane tracks</li>
+<li><b>Source Agency:</b> <a href="https://www.noaa.gov/">NOAA</a></li>
+<li><b>Data source location:</b> <a href="https://coast.noaa.gov/hurricanes/api/v1/search/stormsByAOI">Query stormIDs by polygon</a>,<a href="https://coast.noaa.gov/hurricanes/api/v1/search/stormAdvisoriesGeoJSONByID?stormID=">Fetch JSON file by stormID</a>  </li>
+<li><b>Metadata description:</b> <a href="https://www.nhc.noaa.gov/data/#gis">NHC data archive documentation</a></li>
+<li><b>Type of data source:</b> API</li>
+<li><b>Format of data returned:</b>JSON</li>
+<li><b>Data update interval:</b> yearly</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/hurricane-tracks-noaa-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. NOAA Hurricane Schema Diagram.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for NOAA's Historical Hurricane Tracks Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for NOAA's Historical Hurricane Tracks Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">Hurricane Category</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">
+            <span>instant</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">
+            <span>interval</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone">NOAA Extratropical Cyclone</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane">NOAA Hurricane</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone">NOAA Tropical Cyclone</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment">NOAA Tropical Cyclone Segment</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation">NOAA Tropical Cyclone Segment Observation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection">NOAA Tropical Cyclone Segment Observation Collection</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression">NOAA Tropical Depression</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm">NOAA Tropical Storm</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">
+            <span>point</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty">Tropical Cyclone Observable Property</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">
+      <h3>Hurricane Category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory</p>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1">hurricane category 1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2">hurricane category 2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3">hurricane category 3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4">hurricane category 4</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5">hurricane category 5</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Instant">
+      <h3>instant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Instant</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#TemporalEntity"
+               target="_blank"
+               title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Interval">
+      <h3>interval<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Interval</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#TemporalEntity"
+               target="_blank"
+               title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone">
+      <h3>NOAA Extratropical Cyclone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone">NOAA Tropical Cyclone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane">
+      <h3>NOAA Hurricane<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone">NOAA Tropical Cyclone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone">
+      <h3>NOAA Tropical Cyclone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone">NOAA Extratropical Cyclone</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane">NOAA Hurricane</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression">NOAA Tropical Depression</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm">NOAA Tropical Storm</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment">
+      <h3>NOAA Tropical Cyclone Segment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation">
+      <h3>NOAA Tropical Cyclone Segment Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection">
+      <h3>NOAA Tropical Cyclone Segment Observation Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression">
+      <h3>NOAA Tropical Depression<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone">NOAA Tropical Cyclone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm">
+      <h3>NOAA Tropical Storm<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone">NOAA Tropical Cyclone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/sf#Point">
+      <h3>point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/sf#Point</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Geometry"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Geometry">geometry</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty">
+      <h3>Tropical Cyclone Observable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the set of cyclone properties measured in the NOAA Hurricane Tracks dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category">tropical cyclone segment category</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure">tropical cyclone segment minimum pressure</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed">tropical cyclone segment wind speed</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment">has cyclone segment</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory">hurricane category</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment">next segment</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment">previous segment</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment">
+      <h3>has cyclone segment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory">
+      <h3>hurricane category<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment">
+      <h3>next segment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment"
+                  title="http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment">previous segment</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment">
+      <h3>previous segment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment"
+                  title="http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment">next segment</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL">storm details URL</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID">storm ID</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName">storm name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL">storm observations URL</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID">storm segment ID</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL">
+      <h3>storm details URL<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID">
+      <h3>storm ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName">
+      <h3>storm name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL">
+      <h3>storm observations URL<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID">
+      <h3>storm segment ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1">hurricane category 1</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2">hurricane category 2</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3">hurricane category 3</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4">hurricane category 4</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5">hurricane category 5</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category">tropical cyclone segment category</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure">tropical cyclone segment minimum pressure</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed">tropical cyclone segment wind speed</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1">
+      <h3>hurricane category 1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">Hurricane Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2">
+      <h3>hurricane category 2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">Hurricane Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3">
+      <h3>hurricane category 3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">Hurricane Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4">
+      <h3>hurricane category 4<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">Hurricane Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5">
+      <h3>hurricane category 5<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory">Hurricane Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category">
+      <h3>tropical cyclone segment category<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty">Tropical Cyclone Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure">
+      <h3>tropical cyclone segment minimum pressure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty">Tropical Cyclone Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed">
+      <h3>tropical cyclone segment wind speed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty">Tropical Cyclone Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

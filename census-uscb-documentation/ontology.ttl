@@ -1,0 +1,333 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census> rdf:type owl:Ontology ;
+                                                               <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en ;
+                                                               <http://purl.org/dc/terms/created> "2023-12-06" ;
+                                                               <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en ;
+                                                               <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en ;
+                                                               <http://purl.org/dc/terms/title> "Ontology for USCB's Census Statistical Areas and American Community Survey Datasets"@en ;
+                                                               owl:versionInfo "v 3.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD> rdf:type owl:ObjectProperty ;
+                                                        rdfs:comment "This property denotes the LSAD code or particular typology for each geographic entity." ;
+                                                        rdfs:label "type of statistical area area" .
+
+
+###  http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:label "has GEOID" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:comment "This property denotes the legal statistical area code for a LSAD category." ;
+                                                      rdfs:label "lsad code" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:comment "This property denotes the name of a census statistical area." ;
+                                                                 rdfs:label "statistical area name" .
+
+
+###  http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                                  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty>
+                                                                                                ] ,
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
+                                                                                                  owl:allValuesFrom xsd:integer
+                                                                                                ] ;
+                                                                                rdfs:comment "This class denotes the census observations (corresponding to a specific census variable) for a specific statistical area and for a specific year available from the American Community Survey 5-Year Estimates dataset." ;
+                                                                                rdfs:label "American Community Survey 5-Year Estimate Observation" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservationCollection> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                                                                            owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea>
+                                                                                                          ] ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.w3.org/ns/sosa/hasMember> ;
+                                                                                                            owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation>
+                                                                                                          ] ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.w3.org/ns/sosa/phenomenonTime> ;
+                                                                                                            owl:allValuesFrom <http://www.w3.org/2006/time#Instant>
+                                                                                                          ] ;
+                                                                                          rdfs:comment "This class denotes the collection of census observations (corresponding to various census variables) for a specific statistical area and for a specific year available from the American Community Survey 5-Year Estimates dataset." ;
+                                                                                          rdfs:label "American Community Survey 5-Year Estimates Observation Collection" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                      rdfs:comment "This class denotes the set of census variables for which measurements are available in the US Census Bureau's datasets." ;
+                                                                      rdfs:label "Census Observable Property" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory> rdf:type owl:Class ;
+                                                          rdfs:comment "The legal/statistical area description (LSAD) category describe the particular typology for each geographic entity. For statistical entities, the LSAD is the term assigned by the Census Bureau or other agency defining the entity." ;
+                                                          rdfs:label "Legal/Statistical Area Description (LSAD) Category" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Region
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> ,
+                                                                             <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                                             <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> ;
+                                                                               owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> ;
+                                                                               owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> ;
+                                                                               owl:allValuesFrom <http://www.w3.org/2006/time#Instant>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> ;
+                                                                               owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                               owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                             ] ;
+                                                             rdfs:comment """This class denotes the metropolitan and micropolitan areas from the U.S. Statistical Areas dataset.
+The general concept of a metropolitan or micropolitan statistical area is that of a core area containing a substantial population nucleus, together with adjacent communities having a high degree of economic and social integration with that core.
+Each metropolitan statistical area must have at least one urban area of 50,000 or more inhabitants. Each micropolitan statistical area must have at least one urban area of at least 10,000 but less than 50,000 population.""" ;
+                                                             rdfs:label "Metropolitan and Micropolitan Statistical Area" .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation
+<http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation> rdf:type owl:NamedIndividual ,
+                                                                                                <http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty> ;
+                                                                                       rdfs:comment "ACS API variable: B01001_026E" ;
+                                                                                       rdfs:label "total female population estimate" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits
+<http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits> rdf:type owl:NamedIndividual ,
+                                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty> ;
+                                                                                     rdfs:comment "ACS API variable: B11011_001E" ;
+                                                                                     rdfs:label "total household units estimate" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation
+<http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation> rdf:type owl:NamedIndividual ,
+                                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty> ;
+                                                                                     rdfs:comment "ACS API variable: B01001_002E" ;
+                                                                                     rdfs:label "total male population estimate" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation
+<http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation> rdf:type owl:NamedIndividual ,
+                                                                                               <http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty> ;
+                                                                                      rdfs:comment "ACS API variable: B01001_001E" ;
+                                                                                      rdfs:label "total population estimate" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1
+<http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1> rdf:type owl:NamedIndividual ,
+                                                                      <http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory> ;
+                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode> "M1" ;
+                                                             rdfs:label "metro area" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2
+<http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2> rdf:type owl:NamedIndividual ,
+                                                                      <http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory> ;
+                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode> "M2" ;
+                                                             rdfs:label "micro area" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea>
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

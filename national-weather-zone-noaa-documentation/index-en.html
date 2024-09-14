@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for NOAA's National Weather Service Public Forecast Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone","name":"Ontology for NOAA's National Weather Service Public Forecast Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone", "datePublished":"2023-12-06", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for NOAA's National Weather Service Public Forecast Dataset</h1>
+<h2>Release  2023-12-06</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone">http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for NOAA's National Weather Service Public Forecast Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b>Public forecast zones</li>
+<li><b>Source Agency:</b> <a href="https://www.weather.gov/">National Weather Service</a></li>
+<li><b>Data source location:</b> <a href="https://www.weather.gov/gis/PublicZones">Public forecast zones download</a></li>
+<li><b>Metadata description:</b> <a href="https://www.weather.gov/gis/PublicZones">Public forecast zones download metadata</a></li>
+<li><b>Type of data source:</b> Shape files</li>
+<li><b>Format of data returned:</b>.shp files</li>
+<li><b>Data update interval:</b> monthly random updates</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/national-weather-zone-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. NWS National Weather Zone Schema Diagram.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for NOAA's National Weather Service Public Forecast Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for NOAA's National Weather Service Public Forecast Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone">National Public Forecast Zone</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone">
+      <h3>National Public Forecast Zone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone</p>
+      <div class="comment">
+         <span class="markdown">This class denotes public forecast zones from NOAA's National Weather Service dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"
+               target="_blank"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region">region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber">national public forecast zone number</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber">
+      <h3>national public forecast zone number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

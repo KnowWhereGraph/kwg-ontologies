@@ -1,0 +1,615 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/observedProperty"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasMember"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes all categories into which wildland fires are grouped according to their origin. Broad classification of the reason the fire occurred identified as human, natural or unknown."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Fire Cause"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes point locations for all wildland fires in the United States reported to the IRWIN system. Wildland fire incidents from the IRWIN (Integrated Reporting of Wildland Fire Information) incident service that meet the following criteria:\n- Categorized as a Wildfire (WF), Prescribed Fire (RX), or Incident Complex (CX) record\n- Is Valid and not \"quarantined\" in IRWIN due to potential conflicts with other records"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Fire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes measured properties for a fire event in the NIFC's Wildland Fire Incident Locations Dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Fire Observable Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes observations for specific fire observable property measured for a fire event in the NIFC dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Fire Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes collections of observations corresponding to the various observable properties for a NIFC fire event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Fre Observation Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservationCollection"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes the properties of the point of origin of the NIFC fire incident."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Fire Point Of Origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Two or more distinct incidents in the same general area that, by management action, are managed under a single incident commander or unified command in order to improve efficiency and simplify incident management processes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Incident Complex Fire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A wildland fire originating from a planned ignition in accordance with applicable laws, policies, and regulations to meet specific objectives.​"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Prescribed Fire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A wildland fire originating from an unplanned ignition, such as lightning, volcanos, unauthorized and accidental human caused fires, and prescribed fires that are declared wildfires."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NIFC Wildfire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "county name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A unique identifier for the dispatch center that intersects with the incident point of origin."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dispatch center ID"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property is used to indicate the reason the fire occurred."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fire cause"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property is used to indicate the date and time a fire was reported as discovered or confirmed to exist. May also be the start date for reporting purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fire discovery time"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property is used to indicate the date and time when a fire is declared out."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fire out time"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property is used to indicate the point of origin of a fire incident."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fire point of origin"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property is used to indicate the date/time of the initial response to the incident (when the IC arrives and performs initial size up)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fire response time"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A code that identifies the wildland fire geographic area coordination center (GACC) at the point of origin for the incident. A GACC is a facility used for the coordination of agency or jurisdictional resources in support of one or more incidents within a geographic area."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "geographic area coordination center"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "incident name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "irwin ID"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Shirly Stephen, Mitchell Faulk"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-11-15"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "The KnowWhereGraph Project"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology supports the KnowWhereGraph"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for NIFC's Wildland Fire Incident Locations Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "v 3.0"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the agency that has protection responsibility at the point of origin of a fire incident."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "protection agency"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "NWCG Unit responsible for providing direct incident management and services to an incident pursuant in its jurisdictional responsibility or as specified by law, contract or agreement. Protection can be re-assigned by agreement. The nature and extent of the incident determines protection (for example Wildfire vs. All Hazard.)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "protection unit"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "state name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "human cause"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "natural cause"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "undetermined cause"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unknown cause"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An estimate of acres burning when the fire is first reported by the first person to call in the fire. The estimate should include number of acres within the current perimeter of a specific, individual incident, including unburned and unburnable islands."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "discovery acres burnt"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The total estimated cost of the incident to date."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "esitmated dollar cost"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reported final acreage of incident."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "final acres burnt"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#TemporalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/phenomenonTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+} ]

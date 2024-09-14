@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone#"
+     xml:base="http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-national-weather-zone">
+        <terms:contributor xml:lang="en">Shirly Stephen, Mitchell Faulk</terms:contributor>
+        <terms:created>2023-12-06</terms:created>
+        <terms:creator xml:lang="en">The KnowWhereGraph Project</terms:creator>
+        <terms:description xml:lang="en">This ontology supports the KnowWhereGraph</terms:description>
+        <terms:title xml:lang="en">Ontology for NOAA&apos;s National Weather Service Public Forecast Dataset</terms:title>
+        <owl:versionInfo xml:lang="en">v 3.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasDefaultGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasDefaultGeometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber">
+        <rdfs:label>national public forecast zone number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"/>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"/>
+                <owl:someValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"/>
+                <owl:someValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasDefaultGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class denotes public forecast zones from NOAA&apos;s National Weather Service dataset.</rdfs:comment>
+        <rdfs:label>National Public Forecast Zone</rdfs:label>
+        <skos:description>NOAA&apos;s National Weather Service (NWS) issues forecasts and some watches and warnings for public zones which usually are the same as counties but in many cases are subsets of counties.  Counties are subset into zones to allow for more accurate forecasts because of the differences in weather within a county due to such things as elevation or proximity to large bodies of water.</skos:description>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/Region -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"/>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/zoneNumber"/>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NationalWeatherZone"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

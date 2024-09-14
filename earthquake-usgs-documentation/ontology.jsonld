@@ -1,0 +1,500 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/EarthquakeObservation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasMember"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/phenomenonTime"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/observedProperty"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes earthquakes from USGS's Earthquake Catalog."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Earthquake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes measured properties for an earthquake event in the USGS’s Earthquake Catalog dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Earthquake Observable Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Earthquake Observation Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservationCollection"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "This class denotes collections of observations corresponding to the various observable properties for an earthquake event."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/Region",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Shirly Stephen, Mitchell Faulk"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-10-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "The KnowWhereGraph Project"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology supports the KnowWhereGraph"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for USGS's Earthquake Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "v 3.0"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "alert"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The alert level from the PAGER earthquake impact scale (https://earthquake.usgs.gov/data/pager/)."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cdi"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The maximum reported intensity for the event. Computed by DYFI (https://earthquake.usgs.gov/data/dyfi/). While typically reported as a roman numeral, for the purposes of this API, intensity is expected as the decimal equivalent of the roman numeral."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "code"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "An identifying code assigned by - and unique from - the corresponding source (https://earthquake.usgs.gov/data/comcat/index.php#net) for the event."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "depth"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Depth of the event in kilometers."
+  }, {
+    "@value" : "The depth where the earthquake begins to rupture. This depth may be relative to the WGS84 geoid, mean sea-level, or the average elevation of the seismic stations which provided arrival-time data for the earthquake location. The choice of reference depth is dependent on the method used to locate the earthquake, which varies by seismic network. Since ComCat includes data from many different seismic networks, the process for determining the depth is different for different events. The depth is the least-constrained parameter in the earthquake location, and the error bars are generally larger than the variation due to different depth determination methods.\n\nSometimes when depth is poorly constrained by available seismic data, the location program will set the depth at a fixed value. For example, 33 km is often used as a default depth for earthquakes determined to be shallow, but whose depth is not satisfactorily determined by the data, whereas default depths of 5 or 10 km are often used in mid-continental areas and on mid-ocean ridges since earthquakes in these areas are usually shallower than 33 km."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dmin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Horizontal distance from the epicenter to the nearest station (in degrees)."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "felt"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The total number of felt reports submitted to the DYFI (https://earthquake.usgs.gov/data/dyfi/) system."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "gap"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The largest azimuthal gap between azimuthally adjacent stations (in degrees)."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "id"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "A unique identifier for the event. This is the current preferred id for the event, and may change over time."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "magnitude"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The magnitude for the event."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "magType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The method or algorithm used to calculate the preferred magnitude for the event."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mmi"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The maximum estimated instrumental intensity for the event. Computed by ShakeMap (https://earthquake.usgs.gov/data/shakemap/). While typically reported as a roman numeral, for the purposes of this API, intensity is expected as the decimal equivalent of the roman numeral."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "net"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The ID of a data contributor."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nst"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The total number of seismic stations used to determine earthquake location."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "place"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Textual description of named geographic region near to the event. This may be a city name, or a Flinn-Engdahl Region (https://earthquake.usgs.gov/data/flinn_engdahl.php) name."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rms"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "The root-mean-square (RMS) travel time residual, in sec, using all weights."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sig"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "A number describing how significant the event is. Larger numbers indicate a more significant event. This value is determined on a number of factors, including: magnitude, maximum MMI, felt reports, and estimated impact."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sources"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "A comma-separated list of network contributors (https://earthquake.usgs.gov/data/comcat/index.php#net)."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "status"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Indicates whether the event has been reviewed by a human."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tsunami"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "This flag is set to \"1\" for large events in oceanic regions and \"0\" otherwise. The existence or value of this flag does not indicate if a tsunami actually did or will exist. If the flag value is \"1\", the event will include a link to the NOAA Tsunami website for tsunami information."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Type of seismic event."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "types"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "A comma-separated list of product types associated to this event."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tz"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Timezone offset from UTC in minutes at the event epicenter."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "updated"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Time when the event was most recently updated. Times are reported in milliseconds since the epoch. In certain output formats, the date is formatted for readability."
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "url"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#description" : [ {
+    "@value" : "Link to USGS Event Page for event."
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Instant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#TemporalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#inXSDDateTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/EarthquakeObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes earthquake observations for specific earthquake observable properties."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Earthquake Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/phenomenonTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+} ]

@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas#"
+     xml:base="http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas">
+        <terms:contributor xml:lang="en">Shirly Stephen, Mitchell Faulk</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-18</terms:created>
+        <terms:creator xml:lang="en">The KnowWhereGraph Project</terms:creator>
+        <terms:description xml:lang="en">This ontology supports the KnowWhereGraph</terms:description>
+        <terms:title xml:lang="en">Ontology for GADM&apos;s Administrative Areas Dataset</terms:title>
+        <owl:versionInfo xml:lang="en">v 3.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/administrativePartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/administrativePartOf">
+        <rdfs:comment>This relation is used to denote the administrative sovereignty or jurisdiction that an administrative region belongs with.</rdfs:comment>
+        <rdfs:label>administrative part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#haDefaultGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#haDefaultGeometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS -->
+
+
+    <owl:DatatypeProperty rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS">
+        <rdfs:subPropertyOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID"/>
+        <rdfs:comment>This property is used to denote the FIPS code of an administrative region within the US. Federal Information Processing System (FIPS) Codes are numbers which uniquely identify geographic areas. The number of digits in FIPS codes vary depending on the level of geography. State-level FIPS codes have two digits, county-level FIPS codes have five digits of which the first two are the FIPS code of the state to which the county belongs. When using the list below to look up county FIPS codes, it is advisable to first look up the FIPS code for the state to which the county belongs. This will help you identify the right section of the list while scrolling down, which can be important since there are over 3000 counties and county-equivalents (e.g.independent cities, parishes, boroughs) in the United States.</rdfs:comment>
+        <rdfs:label>has FIPS</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID">
+        <rdfs:comment>This property is used to denote the GID of an administrative region. The GID starts with the three letter ISO 3166-1 alpha-3 country code. ISO 3166-1 alpha-3 codes are three-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), to represent countries, dependent territories, and special areas of geographical interest.</rdfs:comment>
+        <rdfs:label>has GID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#haDefaultGeometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:allValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class denotes administrative areas of all countries, at all levels of sub-division from the Global Administrative Areas (GADM) dataset series. The dataset series is comprised of the six administrative levels global datasets for: National (level 0), State/province/equivalent (level 1), County/district/equivalent (level 2), Commune/municipality/equivalent (level 3) and smaller Levels 4 and 5.</rdfs:comment>
+        <rdfs:label>Administrative Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"/>
+        <rdfs:comment>The Country boundaries at level 0 dataset is part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. GADM makes use of high spatial resolution images and an extensive set of attributes to map administrative areas at all levels of political sub-division. The National level 0 attributes comprise country name in English and ISO 3166-1 alpha3 coding. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</rdfs:comment>
+        <rdfs:label>Administrative Region (level 0)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"/>
+        <rdfs:comment>The Administrative boundaries at the level 1 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 1 distinguishes States, Provinces and equivalent. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local and English. Please read the GADM  - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</rdfs:comment>
+        <rdfs:label>Administrative Region (level 1)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"/>
+        <rdfs:comment>The Administrative boundaries at level 2 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 2 distinguishes Countries, Districts and equivalent. GADM makes use of high spatial resolution images and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local and English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</rdfs:comment>
+        <rdfs:label>Administrative Region (level 2)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"/>
+        <rdfs:comment>The Administrative boundaries at the level 3 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 3 distinguishes Communes, Municipalities and equivalent. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local and English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</rdfs:comment>
+        <rdfs:label>Administrative Region (level 3)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"/>
+        <rdfs:comment>The Administrative boundaries at the level 4 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 4 distinguishes sub-national administrative boundaries smaller than Communes and Municipalities and is available for 20 countries. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local an English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</rdfs:comment>
+        <rdfs:label>Administrative Region (level 4)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"/>
+        <rdfs:comment>The Administrative boundaries at the level 5 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 5 distinguishes sub-national administrative boundaries smaller than Communes and Municipalities and is available for France and Rwanda. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local an English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</rdfs:comment>
+        <rdfs:label>Administrative Region (level 5)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/Region -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

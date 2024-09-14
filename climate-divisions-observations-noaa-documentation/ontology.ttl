@@ -1,0 +1,403 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation> rdf:type owl:Ontology ;
+                                                                                <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en ;
+                                                                                <http://purl.org/dc/terms/created> "2023-10-18"^^xsd:date ;
+                                                                                <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en ;
+                                                                                <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en ;
+                                                                                <http://purl.org/dc/terms/title> "Ontology for NOAA's Climate Division Boundary and Observation Dataset"@en ;
+                                                                                owl:versionInfo "v 3.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasDefaultGeometry
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasDefaultGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty .
+
+
+###  https://qudt.org/schema/qudt/hasUnit
+<https://qudt.org/schema/qudt/hasUnit> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:comment "This property denotes the FIPS code for a climate division boundary." ;
+                                                                 rdfs:label "climate division FIPS" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:comment "This property denotes the name of a climate division boundary." ;
+                                                                 rdfs:label "climate division name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:comment "This property denotes the number of a climate division boundary." ;
+                                                                   rdfs:label "climate division number" .
+
+
+###  http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> rdf:type owl:DatatypeProperty .
+
+
+###  https://qudt.org/schema/qudt/numericValue
+<https://qudt.org/schema/qudt/numericValue> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                                             <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> ;
+                                                                               owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> ;
+                                                                               owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasDefaultGeometry> ;
+                                                                               owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                               owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry>
+                                                                             ] ;
+                                                             rdfs:comment """This class denotes climate divisions in the NOAA CONUS climate divisional dataset.
+
+Climate division used to generate climate analyses for the contiguous United States (CONUS).""" ;
+                                                             rdfs:label "Climate Division" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                                                 owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/phenomenonTime> ;
+                                                                                                 owl:allValuesFrom <http://www.w3.org/2006/time#DateTimeDescription>
+                                                                                               ] ;
+                                                                               rdfs:comment "This class denotes monthly observations measured at a climate division for a specific climate property." ;
+                                                                               rdfs:label "Climate Division Monthly Observation" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                                                                           owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision>
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.w3.org/ns/sosa/hasMember> ;
+                                                                                                           owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property>
+                                                                                                         ] ;
+                                                                                         rdfs:comment "This class denotes observation collection for a specific climate division and for a specific month." ;
+                                                                                         rdfs:label "Climate Division Monthly Observation Collection" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.w3.org/ns/sosa/hasMember> ;
+                                                                                                                    owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation>
+                                                                                                                  ] ,
+                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                                                    owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty>
+                                                                                                                  ] ;
+                                                                                                  rdfs:comment "This class denotes observation collections for a specific climate division, for a specific month.and a specific climate property." ;
+                                                                                                  rdfs:label "Climate Division Monthly Observation Collection (Property Aggregated)" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.w3.org/ns/sosa/Result> ,
+                                                                                          <https://qudt.org/schema/qudt/QuantityValue> ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://qudt.org/schema/qudt/hasUnit> ;
+                                                                                            owl:allValuesFrom <https://qudt.org/schema/qudt/Unit>
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://qudt.org/schema/qudt/numericValue> ;
+                                                                                            owl:allValuesFrom xsd:float
+                                                                                          ] ;
+                                                                          rdfs:comment "This class denotes measured climate results corresponding to an individual monthly observation measured at a climate division for a specific climate property." ;
+                                                                          rdfs:label "Climate Division Monthly Observation Result" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                       rdfs:comment "This class denotes the set of climate properties measured by NOAA in their U.S. climate divisional dataset." ;
+                                                                       rdfs:label "Climate Observable Property" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#DateTimeDescription
+<http://www.w3.org/2006/time#DateTimeDescription> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Result
+<http://www.w3.org/ns/sosa/Result> rdf:type owl:Class .
+
+
+###  https://qudt.org/schema/qudt/QuantityValue
+<https://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
+
+
+###  https://qudt.org/schema/qudt/Unit
+<https://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "precipitation" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "average temperature" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "palmer drought severity index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "palmer hydrological drought index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "palmer z index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "modified palmer drought severity index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "heating degree days" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "cooling degree days" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "maximum temperature" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "minimum temperature" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "1-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "2-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "3-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "6-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "9-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "12-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77
+<http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77> rdf:type owl:NamedIndividual ,
+                                                                                   <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty> ;
+                                                                          rdfs:label "24-month standardized precipitation index" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/unit.DEG_F-DAY
+<http://stko-kwg.geog.ucsb.edu/lod/resource/unit.DEG_F-DAY> rdf:type owl:NamedIndividual ,
+                                                                     <https://qudt.org/schema/qudt/Unit> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber> ;
+  owl:allValuesFrom xsd:integer ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision>
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

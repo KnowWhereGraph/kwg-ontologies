@@ -1,0 +1,1705 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://stko-kwg.geog.ucsb.edu/lod/ontology/usda-cropland#"
+     xml:base="http://stko-kwg.geog.ucsb.edu/lod/ontology/usda-cropland"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/usda-cropland">
+        <terms:contributor xml:lang="en">Shirly Stephen, Mitchell Faulk</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-18</terms:created>
+        <terms:creator xml:lang="en">The KnowWhereGraph Project</terms:creator>
+        <terms:description xml:lang="en">This ontology supports the KnowWhereGraph</terms:description>
+        <terms:title xml:lang="en">Ontology for USDA&apos;s CropScape Dataset</terms:title>
+        <owl:versionInfo xml:lang="en">v 3.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasUnit"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasMember"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/phenomenonTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/phenomenonTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSimpleResult -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/1.1/schema/qudt#Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/1.1/schema/qudt#Unit"/>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/Cell -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/Cell"/>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label>Cropland Observable Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservation -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:allValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Cropland S2 Overlap Observation</rdfs:label>
+        <skos:description>This class denotes a cropland observation corresponding to a specific cropland observable property. Each observation is member of an observation collection whose member observations overlaps a specific S2 Cell.</skos:description>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservationCollection -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservationCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandS2OverlapObservation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/phenomenonTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Cropland S2 Overlap Observation Collection</rdfs:label>
+        <skos:description>This class denotes collections of cropland observations for different crop types that overlap a specific S2 Cell.</skos:description>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Cell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13 -->
+
+
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservationCollection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.0">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>background</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.1">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.10">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>peanuts</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.11">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>tobacco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.111 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.111">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>open water</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.112 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.112">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>perennial ice/snow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.12">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sweet corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.121 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.121">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>developed/open space</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.122 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.122">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>developed/low intensity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.123 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.123">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>developed/med intensity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.124 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.124">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>developed/high intensity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.13">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>pop or orn corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.131 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.131">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>barren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.14">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>mint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.141 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.141">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>deciduous forest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.142 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.142">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>evergreen forest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.143 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.143">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>mixed forest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.152 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.152">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>shrubland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.176 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.176">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>grassland/pasture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.190 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.190">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>woody wetlands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.195 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.195">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>herbaceous wetlands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.2">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cotton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.204 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.204">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>pistachios</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.205 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.205">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>triticale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.206 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.206">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>carrots</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.207 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.207">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>asparagus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.208 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.208">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>garlic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.209 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.209">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cantaloupes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.21 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.21">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>barley</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.210 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.210">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>prunes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.211 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.211">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>olives</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.212 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.212">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>oranges</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.213 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.213">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>honeydew melons</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.214 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.214">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>broccoli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.215 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.215">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>avocados</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.216 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.216">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>peppers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.217 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.217">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>pomegranates</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.218 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.218">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>nectarines</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.219 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.219">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>greens</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.22 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.22">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>durum wheat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.220 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.220">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>plums</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.221 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.221">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>strawberries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.222 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.222">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>squash</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.223 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.223">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>apricots</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.224 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.224">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>vetch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.225 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.225">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop winwht/corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.226 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.226">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop oats/corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.227 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.227">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>lettuce</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.228 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.228">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop triticale/corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.229 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.229">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>pumpkins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.23 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.23">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>spring wheat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.230 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.230">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop lettuce/durum wht</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.231 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.231">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop lettuce/cantaloupe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.232 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.232">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop lettuce/cotton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.233 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.233">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop lettuce/barley</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.234 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.234">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop durum wht/sorghum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.235 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.235">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop barley/sorghum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.236 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.236">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop winwht/sorghum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.237 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.237">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop barley/corn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.238 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.238">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop winwht/cotton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.239 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.239">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop soybeans/cotton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.24 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.24">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>winter wheat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.240 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.240">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop soybeans/oats</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.241 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.241">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop corn/soybeans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.242 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.242">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>blueberries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.243 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.243">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cabbage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.244 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.244">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cauliflower</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.245 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.245">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>celery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.246 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.246">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>radishes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.247 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.247">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>turnips</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.248 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.248">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>eggplants</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.249 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.249">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>gourds</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.25 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.25">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>other small grains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.250 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.250">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cranberries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.254 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.254">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop barley/soybeans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.26 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.26">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dbl crop winwht/soybeans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.27 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.27">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>rye</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.28 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.28">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>oats</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.29 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.29">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>millet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.3">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>rice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.30 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.30">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>speltz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.31 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.31">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>canola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.32 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.32">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>flaxseed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.33 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.33">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>safflower</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.34 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.34">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>rape seed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.35 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.35">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>mustard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.36 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.36">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>alfalfa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.37 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.37">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>other hay/non alfalfa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.38 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.38">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>camelina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.39 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.39">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>buckwheat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.4">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sorghum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.41 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.41">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sugarbeets</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.42 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.42">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>dry beans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.43 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.43">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>potatoes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.44 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.44">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>other crops</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.45 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.45">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sugarcane</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.46 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.46">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sweet potatoes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.47 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.47">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>misc vegs &amp; fruits</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.48 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.48">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>watermelons</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.49 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.49">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>onions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.5">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>soybeans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.50 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.50">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cucumbers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.51 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.51">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>chick peas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.52 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.52">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>lentils</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.53 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.53">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>peas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.54 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.54">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>tomatoes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.55 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.55">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>caneberries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.56 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.56">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>hops</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.57 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.57">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>herbs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.58 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.58">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>clover/wildflowers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.59 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.59">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sod/grass seed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.6">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>sunflower</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.60 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.60">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>switchgrass</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.61 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.61">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>fallow/idle cropland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.63 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.63">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>forest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.64 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.64">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>shrubland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.65 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.65">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>barren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.66 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.66">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>cherries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.67 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.67">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>peaches</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.68 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.68">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>apples</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.69 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.69">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>grapes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.70 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.70">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>christmas trees</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.71 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.71">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>other tree crops</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.72 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.72">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>citrus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.74 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.74">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>pecans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.75 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.75">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>almonds</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.76 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.76">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>walnuts</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.77 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.77">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>pears</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.81 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.81">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>clouds/no data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.82 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.82">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>developed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.83 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.83">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>water</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.87 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.87">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>wetlands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.88 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.88">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>nonag/undefined</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.92 -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/croplandObservableProperty.92">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/CroplandObservableProperty"/>
+        <rdfs:label>aquaculture</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

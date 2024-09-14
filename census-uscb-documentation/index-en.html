@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for USCB's Census Statistical Areas and American Community Survey Datasets</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census","name":"Ontology for USCB's Census Statistical Areas and American Community Survey Datasets", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census", "datePublished":"2023-12-06", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for USCB's Census Statistical Areas and American Community Survey Datasets</h1>
+<h2>Release  2023-12-06</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census">http://stko-kwg.geog.ucsb.edu/lod/ontology/uscb-cbsa-census</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for USCB's Census Statistical Areas and American Community Survey Datasets. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b> Metropolitan/Micropolitan Statistical Area</li>
+<li><b>Source Agency:</b> <a href="https://www.census.gov/en.html">U.S. Census Bureau</a></li>
+<li><b>Data source location:</b> <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-data.2021.html#list-tab-1656998034">TIGER/Line with Selected Demographic and Economic Data</a></li>
+<li><b>Metadata description:</b> <a href="https://www2.census.gov/geo/tiger/TIGER_DP/2019ACS/Metadata/MSA_METADATA_2019.txt">statistical area metadata</a></li>
+<li><b>Format of data available:</b> Geodatabase (.gdb)</li>
+<li><b>Temporal update frequency:</b> yearly but the latest release is from 2021</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/census-uscb-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. U.S. Census Bureau's Statistical Areas Schema Diagram. </figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for USCB's Census Statistical Areas and American Community Survey Datasets classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for USCB's Census Statistical Areas and American Community Survey Datasets.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation">American Community Survey 5-Year Estimate Observation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservationCollection"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservationCollection">American Community Survey 5-Year Estimates Observation Collection</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty">Census Observable Property</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory">Legal/Statistical Area Description (LSAD) Category</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea">Metropolitan and Micropolitan Statistical Area</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation">
+      <h3>American Community Survey 5-Year Estimate Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservation</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the census observations (corresponding to a specific census variable) for a specific statistical area and for a specific year available from the American Community Survey 5-Year Estimates dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservationCollection">
+      <h3>American Community Survey 5-Year Estimates Observation Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusACS5YearEstimatesObservationCollection</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the collection of census observations (corresponding to various census variables) for a specific statistical area and for a specific year available from the American Community Survey 5-Year Estimates dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty">
+      <h3>Census Observable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the set of census variables for which measurements are available in the US Census Bureau's datasets.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation">total female population estimate</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits">total household units estimate</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation">total male population estimate</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation">total population estimate</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory">
+      <h3>Legal/Statistical Area Description (LSAD) Category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory</p>
+      <div class="comment">
+         <span class="markdown">The legal/statistical area description (LSAD) category describe the particular typology for each geographic entity. For statistical entities, the LSAD is the term assigned by the Census Bureau or other agency defining the entity.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1">metro area</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2">micro area</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea">
+      <h3>Metropolitan and Micropolitan Statistical Area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/StatisticalArea</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the metropolitan and micropolitan areas from the U.S. Statistical Areas dataset.
+The general concept of a metropolitan or micropolitan statistical area is that of a core area containing a substantial population nucleus, together with adjacent communities having a high degree of economic and social integration with that core.
+Each metropolitan statistical area must have at least one urban area of 50,000 or more inhabitants. Each micropolitan statistical area must have at least one urban area of at least 10,000 but less than 50,000 population.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"
+               target="_blank"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region">region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD">type of statistical area area</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD">
+      <h3>type of statistical area area<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/typeOfLSAD</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the LSAD code or particular typology for each geographic entity.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID">has GEOID</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode">lsad code</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName">statistical area name</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID">
+      <h3>has GEOID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGEOID</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode">
+      <h3>lsad code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the legal statistical area code for a LSAD category.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName">
+      <h3>statistical area name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/statisticalAreaName</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the name of a census statistical area.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1">metro area</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2">micro area</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation">total female population estimate</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits">total household units estimate</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation">total male population estimate</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation">total population estimate</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1">
+      <h3>metro area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory">Legal/Statistical Area Description (LSAD) Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode">lsad code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"M1"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2">
+      <h3>micro area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/lsadCategory.M2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/LSADCategory">Legal/Statistical Area Description (LSAD) Category</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/lsadCode">lsad code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"M2"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation">
+      <h3>total female population estimate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.femalePopulation</p>
+      <div class="comment">
+         <span class="markdown">ACS API variable: B01001_026E</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty">Census Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits">
+      <h3>total household units estimate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.householdUnits</p>
+      <div class="comment">
+         <span class="markdown">ACS API variable: B11011_001E</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty">Census Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation">
+      <h3>total male population estimate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.malePopulation</p>
+      <div class="comment">
+         <span class="markdown">ACS API variable: B01001_002E</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty">Census Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation">
+      <h3>total population estimate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/censusObservableProperty.totalPopulation</p>
+      <div class="comment">
+         <span class="markdown">ACS API variable: B01001_001E</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/CensusObservableProperty">Census Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

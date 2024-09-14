@@ -1,0 +1,679 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality> rdf:type owl:Ontology ;
+                                                              <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en ;
+                                                              <http://purl.org/dc/terms/created> "2023-10-18"^^xsd:date ;
+                                                              <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en ;
+                                                              <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en ;
+                                                              <http://purl.org/dc/terms/title> "Ontology for EPA's Air Quality Daily Summaries Dataset"@en ;
+                                                              owl:versionInfo "v 3.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://w3id.org/lindt/custom_datatypes#ucum
+<http://w3id.org/lindt/custom_datatypes#ucum> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:comment "The relation between AirPollutantStandard and AirPollutantType." ;
+                                                                   rdfs:label "air pollutant parameter" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:comment "The relation betwen AirQualityDailySummaryObservation and AirPollutantStandard." ;
+                                                                  rdfs:label "air pollutant standard" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS> rdf:type owl:ObjectProperty ;
+                                                       rdfs:comment "The relation between AirQualityDailySummaryObservationCollection and AirQualitySite." ;
+                                                       rdfs:label "made at air quality site" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hosts
+<http://www.w3.org/ns/sosa/hosts> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddress
+<https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddress> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:comment "The code of a CBSA region. A CBSA region (core-based statistical area) is a U.S. geographic area defined by the Office of Management and Budget that consists of one or more counties anchored by an urban center of at least 10,000 people plus adjacent counties that are socioeconomically tied to the urban center by commuting." ;
+                                                      rdfs:label "cbsa code" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:comment "The name of a CBSA region. A CBSA region (core-based statistical area) is a U.S. geographic area defined by the Office of Management and Budget that consists of one or more counties anchored by an urban center of at least 10,000 people plus adjacent counties that are socioeconomically tied to the urban center by commuting." ;
+                                                      rdfs:label "cbsa name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:label "county code" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:label "county name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:comment "Air Quality Index values for the specified year and location recorded by EPA's AQS dataset." ;
+                                                           rdfs:label "daily AQI value" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:comment "EPA's Air Quality System (AQS) site local name." ;
+                                                           rdfs:label "local site name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:comment "The parameter name associated with and air pollutant standard." ;
+                                                           rdfs:label "air pollutant parameter name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:comment "The poc (Parameter Occurrence Code) value used to uniquely identify a monitor if there is more than one device measuring the same pollutant at a site." ;
+                                                                     rdfs:label "parameter occurence code" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:comment "The description associated with and air pollutant standard (parameter)." ;
+                                                                          rdfs:label "air pollutant standard description" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:comment "EPA's Air Quality System (AQS) site number." ;
+                                                        rdfs:label "site number" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:label "state code" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:label "state name" .
+
+
+###  http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> rdf:type owl:DatatypeProperty .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddressLine1
+<https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddressLine1> rdf:type owl:DatatypeProperty .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/hasCityName
+<https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/hasCityName> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> rdf:type owl:Class ;
+                                                                  rdfs:comment """This class denotes EPA's air pollutant standards for different air pollutant types.
+
+The National Ambient Air Quality Standards (NAAQS) established for six \"criteria pollutants\" in outdoor air. NAAQS are currently set for carbon monoxide, lead, ground-level ozone, nitrogen dioxide, particulate matter, and sulfur dioxide.""" ;
+                                                                  rdfs:label "EPA Air Pollutant Standard" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                              rdfs:comment "This class denotes the set of air pollutants measured in the EPA’s Air Quality System (AQS) dataset." ;
+                                                              rdfs:label "EPA Air Pollutant Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/phenomenonTime> ;
+                                                                                                 owl:allValuesFrom <http://www.w3.org/2006/time#DateTimeDescription>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
+                                                                                                 owl:allValuesFrom xsd:float
+                                                                                               ] ;
+                                                                               rdfs:comment "This class denotes the observation (including AQI) for a specific air pollutant type measured at an air quality site on a specific day." ;
+                                                                               rdfs:label "EPA Air Quality Daily Summary Observation" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.w3.org/ns/sosa/hasMember> ;
+                                                                                                           owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation>
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.w3.org/ns/sosa/madeBySensor> ;
+                                                                                                           owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor>
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                                           owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType>
+                                                                                                         ] ;
+                                                                                         rdfs:comment "This class denotes the collections of observations for a specific air pollutant type measured at various air quality sites." ;
+                                                                                         rdfs:label "EPA Air Quality Daily Summary Observation Collection" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+                                                               rdfs:comment "This class denotes the devices measuring various air pollutant parameter at the air quality sites." ;
+                                                               rdfs:label "EPA Air Quality Monitor" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                                            <http://www.w3.org/ns/sosa/Platform> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> ;
+                                                                              owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> ;
+                                                                              owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> ;
+                                                                              owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                              owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.w3.org/ns/sosa/hosts> ;
+                                                                              owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor>
+                                                                            ] ;
+                                                            rdfs:comment """This class denotes EPA's air quality sites.
+
+EPA's Air Quality System (AQS) site is a distinct geographic location that has one or more air quality monitors. Not every site measures the same air pollutant parameters.""" ;
+                                                            rdfs:label "EPA Air Quality Site" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Region
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#DateTimeDescription
+<http://www.w3.org/2006/time#DateTimeDescription> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Platform
+<http://www.w3.org/ns/sosa/Platform> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Lead (TSP) STP" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Lead (TSP) LC" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Carbon monoxide" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Sulfur dioxide" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Nitrogen dioxide (NO2)" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Ozone" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "PM10 Total 0-10um STP" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "Lead PM10 LC FRM/FEM" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> rdf:type owl:NamedIndividual ,
+                                                                                  <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType> ;
+                                                                         rdfs:label "PM2.5 - Local Conditions" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Lead (TSP) STP" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Original lead standard based on calendar quarterly average." ;
+                                                                    rdfs:label "Lead Quarterly 1978" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Ozone" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Ozone 1-hour Daily Maximum value based on data completeness betweeen 9 AM and 9 pm" ;
+                                                                     rdfs:label "Ozone 8-Hour 1997" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Ozone" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Ozone 8-hour running average stored in begin hour from 1997" ;
+                                                                     rdfs:label "Ozone 8-Hour 2008" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM10 Total 0-10um STP" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM10 24-hour standard. Violations include actual exceedences and expected exceedences where data is missing" ;
+                                                                     rdfs:label "PM10 24-hour 2006" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Lead PM10 LC FRM/FEM" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM10 Surgate (instead of TSP) for the new lead 3 month rolling average site level summary" ;
+                                                                     rdfs:label "Lead 3-Month PM10 Surrogate 2009" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM2.5 - Local Conditions" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM25 annual weighted mean was reaffirmed in 2006 with the same level as originally promulgated" ;
+                                                                     rdfs:label "PM25 24-hour 2006" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM2.5 - Local Conditions" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM25 annual weighted mean was reaffirmed in 2006 with the same level as originally promulgated" ;
+                                                                     rdfs:label "PM25 Annual 2006" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Sulfur dioxide" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Sulphur Dioxide 1-hour standard from 2010" ;
+                                                                     rdfs:label "SO2 1-hour 2010" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Lead (TSP) LC" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Lead 3 month rolling average site level summary based on TSP lead at local conditions" ;
+                                                                    rdfs:label "Lead 3-Month 2009" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Nitrogen dioxide (NO2)" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Nitrogen Dioxide 1-hour standard" ;
+                                                                     rdfs:label "NO2 1-hour 2010" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM2.5 - Local Conditions" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM25 24-hour standard was reaffirmed in 2013 with the same level as previously promulgated" ;
+                                                                     rdfs:label "PM25 24-hour 2012" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM2.5 - Local Conditions" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM25 annual standard was lowered in 2013 to increase protection against health effects with long-term exposures" ;
+                                                                     rdfs:label "PM25 Annual 2012" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Ozone" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Ozone 8-hour 2015 -- Daily 8-hour maximum between 7:00 AM and 11:00 PM" ;
+                                                                     rdfs:label "Ozone 8-hour 2015" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM2.5 - Local Conditions" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM25 24-hour standard for 1997. Created for Region 9 / AQAD" ;
+                                                                     rdfs:label "PM25 24-hour 1997" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25> rdf:type owl:NamedIndividual ,
+                                                                              <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101> ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "PM2.5 - Local Conditions" ;
+                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "PM25 Annual standard for 1997. Created for Region 9 / AQAD	" ;
+                                                                     rdfs:label "PM25 Annual 1997" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Carbon monoxide" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Carbon Monoxide 1-hour standard from 1971" ;
+                                                                    rdfs:label "CO 1-hour 1971" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Carbon monoxide" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Carbon Monoxide 8-hour running average from 1971" ;
+                                                                    rdfs:label "CO 8-hour 1971" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Sulfur dioxide" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Sulfur Dioxide 3-hour Block Average from 1971" ;
+                                                                    rdfs:label "SO2 3-hour 1971" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Sulfur dioxide" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Sulfur Dioxide Annual Mean Standard from 1971" ;
+                                                                    rdfs:label "SO2 24-hour 1971" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Sulfur dioxide" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Sulfur Dioxide Annual Mean Standard from 1971" ;
+                                                                    rdfs:label "SO2 Annual 1971" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Nitrogen dioxide (NO2)" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Nitrogen Dioxide Annual Mean from 1971" ;
+                                                                    rdfs:label "NO2 Annual 1971" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9
+<http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter> <http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201> ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> "Ozone" ;
+                                                                    <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> "Ozone 1-hour Daily Maximum value based on data completeness betweeen 9 AM and 9 pm" ;
+                                                                    rdfs:label "Ozone 1-hour 1979" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue> ;
+  owl:allValuesFrom xsd:integer ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode> ;
+  owl:allValuesFrom xsd:integer ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite>
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

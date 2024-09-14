@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for NOAA's Climate Division Boundary and Observation Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation","name":"Ontology for NOAA's Climate Division Boundary and Observation Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation", "datePublished":"2023-10-18", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for NOAA's Climate Division Boundary and Observation Dataset</h1>
+<h2>Release  2023-10-18</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation">http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-climate-division-observation</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for NOAA's Climate Division Boundary and Observation Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b> Climate division boundaries and climate observations</li>
+<li><b>Source Agency:</b> <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/">NOAA</a></li>
+<li><b>Data source location:</b> <a href="https://www.ncei.noaa.gov/pub/data/cirs/climdiv/CONUS_CLIMATE_DIVISIONS.shp.zip">climate division boundary shapefile</a></li>
+<li><b>Metadata description:</b> <a href="https://psl.noaa.gov/data/usclimdivs/boundaries.html">climate division boundary metadata</a></li>
+<li><b>Data source location:</b> <a href="https://www.ncei.noaa.gov/pub/data/cirs/climdiv/">climate observations directory</a></li>
+<li><b>Metadata description:</b> <a href="https://www.ncei.noaa.gov/pub/data/cirs/climdiv/divisional-readme.txt">climate division observations metadata</a></li>
+<li><b>Temporal update frequency (observation data):</b> monthly</li>
+<li><b>Reference system:</b> NAD83 (requires transformation to WGS84 using geopandas)</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/climate-divisions-observations-noaa-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. Climate Division and Observations Schema Diagram. See <a href="https://github.com/KnowWhereGraph/kwg-seed-graph/blob/master/schemas/climate-divisions-observations-noaa/climate-divisions-observations-noaa-schema-diagram.ttl">climate-divisions-observations-noaa-schema-diagram.ttl</a> for members of <TT>kwg-ont:ClimateObservableProperty</TT>.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for NOAA's Climate Division Boundary and Observation Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for NOAA's Climate Division Boundary and Observation Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision">Climate Division</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation">Climate Division Monthly Observation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection">Climate Division Monthly Observation Collection</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property">Climate Division Monthly Observation Collection (Property Aggregated)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult">Climate Division Monthly Observation Result</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">
+            <span>feature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry">
+            <span>geometry</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision">
+      <h3>Climate Division<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision</p>
+      <div class="comment">
+         <span class="markdown">This class denotes climate divisions in the NOAA CONUS climate divisional dataset.
+
+Climate division used to generate climate analyses for the contiguous United States (CONUS).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation">
+      <h3>Climate Division Monthly Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservation</p>
+      <div class="comment">
+         <span class="markdown">This class denotes monthly observations measured at a climate division for a specific climate property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection">
+      <h3>Climate Division Monthly Observation Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection</p>
+      <div class="comment">
+         <span class="markdown">This class denotes observation collection for a specific climate division and for a specific month.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property">
+      <h3>Climate Division Monthly Observation Collection (Property Aggregated)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyObservationCollection_Property</p>
+      <div class="comment">
+         <span class="markdown">This class denotes observation collections for a specific climate division, for a specific month.and a specific climate property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult">
+      <h3>Climate Division Monthly Observation Result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivisionMonthlyResult</p>
+      <div class="comment">
+         <span class="markdown">This class denotes measured climate results corresponding to an individual monthly observation measured at a climate division for a specific climate property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="https://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">
+      <h3>Climate Observable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the set of climate properties measured by NOAA in their U.S. climate divisional dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71">1-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76">12-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72">2-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77">24-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73">3-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74">6-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75">9-month standardized precipitation index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02">average temperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26">cooling degree days</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25">heating degree days</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27">maximum temperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28">minimum temperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08">modified palmer drought severity index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05">palmer drought severity index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06">palmer hydrological drought index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07">palmer z index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01">precipitation</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#SpatialObject"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">spatial object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateDivision">Climate Division</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry">
+      <h3>geometry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/Geometry</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#SpatialObject"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">spatial object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS">climate division FIPS</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName">climate division name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber">climate division number</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS">
+      <h3>climate division FIPS<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionFIPS</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the FIPS code for a climate division boundary.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName">
+      <h3>climate division name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionName</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the name of a climate division boundary.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber">
+      <h3>climate division number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/climateDivisionNumber</p>
+      <div class="comment">
+         <span class="markdown">This property denotes the number of a climate division boundary.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71">1-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76">12-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72">2-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77">24-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73">3-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74">6-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75">9-month standardized precipitation index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02">average temperature</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26">cooling degree days</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25">heating degree days</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27">maximum temperature</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28">minimum temperature</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08">modified palmer drought severity index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05">palmer drought severity index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06">palmer hydrological drought index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07">palmer z index</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01">precipitation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/unit.DEG_F-DAY"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/unit.DEG_F-DAY">
+            <span>unit. d e g f d a y</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71">
+      <h3>1-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.71</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76">
+      <h3>12-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.76</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72">
+      <h3>2-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.72</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77">
+      <h3>24-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.77</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73">
+      <h3>3-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.73</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74">
+      <h3>6-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.74</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75">
+      <h3>9-month standardized precipitation index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.75</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02">
+      <h3>average temperature<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.02</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26">
+      <h3>cooling degree days<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.26</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25">
+      <h3>heating degree days<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.25</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27">
+      <h3>maximum temperature<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.27</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28">
+      <h3>minimum temperature<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.28</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08">
+      <h3>modified palmer drought severity index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.08</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05">
+      <h3>palmer drought severity index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.05</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06">
+      <h3>palmer hydrological drought index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.06</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07">
+      <h3>palmer z index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.07</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01">
+      <h3>precipitation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/climateObservableProperty.01</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservableProperty">Climate Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/unit.DEG_F-DAY">
+      <h3>unit. d e g f d a y<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/unit.DEG_F-DAY</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="https://qudt.org/schema/qudt/Unit"
+               target="_blank"
+               title="https://qudt.org/schema/qudt/Unit">unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

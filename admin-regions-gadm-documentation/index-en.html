@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for GADM's Administrative Areas Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas","name":"Ontology for GADM's Administrative Areas Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas", "datePublished":"2023-10-18", "version":"v 3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for GADM's Administrative Areas Dataset</h1>
+<h2>Release  2023-10-18</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas">http://stko-kwg.geog.ucsb.edu/lod/ontology/gadm-administrative-areas</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for GADM's Administrative Areas Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw datasets <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b> Global Adminstrative Areas (GADM) Dataset Series & Federal Information Processing Series (FIPS) Dataset</li>
+<li><b>Source Agency:</b> <a href="https://gadm.org/">GADM</a> & <a href="https://www.census.gov/">U.S. Census Bureau</a></li>
+<li><b>Data source location:</b> <a href="https://gadm.org/data.html">GADM maps and data</a> & <a href="https://www.census.gov/library/reference/code-lists/ansi.html">ANSI and FIPS Codes</a></li>
+<li><b>Metadata description:</b> <a href="https://gadm.org/metadata.html">GADM metadata</a> & <a href="https://www.census.gov/library/reference/code-lists/ansi.html">FIPS metadata</a></li>
+<li><b>Format of data returned: </b>Geopackage and Geodatabase for the world subdivisions at the finest level; Geopackage, Shape, GeoJSON, and KMZ for each country at every level of subdivision; text files for databases about FIPS codes that are separated by the character |.</li>
+<li><b>Data update interval:</b>L atest release is from July 2022 for GADM, latest release is from 2020 for FIPS codes</li>
+<li><b>General comments:</b> It is worth mentioning that some counties containing the string "Lake", such as " Lake Michigan", are missing an associated FIPS code in these data.</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/admin-regions-gadm-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. GADM and FIPS Areas Schema Diagram.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for GADM's Administrative Areas Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for GADM's Administrative Areas Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0">Administrative Region (level 0)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1">Administrative Region (level 1)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2">Administrative Region (level 2)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3">Administrative Region (level 3)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4">Administrative Region (level 4)</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5">Administrative Region (level 5)</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">
+      <h3>Administrative Region<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion</p>
+      <div class="comment">
+         <span class="markdown">This class denotes administrative areas of all countries, at all levels of sub-division from the Global Administrative Areas (GADM) dataset series. The dataset series is comprised of the six administrative levels global datasets for: National (level 0), State/province/equivalent (level 1), County/district/equivalent (level 2), Commune/municipality/equivalent (level 3) and smaller Levels 4 and 5.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region"
+               target="_blank"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/Region">region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0">Administrative Region (level 0)</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1">Administrative Region (level 1)</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2">Administrative Region (level 2)</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3">Administrative Region (level 3)</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4">Administrative Region (level 4)</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5">Administrative Region (level 5)</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0">
+      <h3>Administrative Region (level 0)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_0</p>
+      <div class="comment">
+         <span class="markdown">The Country boundaries at level 0 dataset is part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. GADM makes use of high spatial resolution images and an extensive set of attributes to map administrative areas at all levels of political sub-division. The National level 0 attributes comprise country name in English and ISO 3166-1 alpha3 coding. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1">
+      <h3>Administrative Region (level 1)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_1</p>
+      <div class="comment">
+         <span class="markdown">The Administrative boundaries at the level 1 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 1 distinguishes States, Provinces and equivalent. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local and English. Please read the GADM  - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2">
+      <h3>Administrative Region (level 2)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2</p>
+      <div class="comment">
+         <span class="markdown">The Administrative boundaries at level 2 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 2 distinguishes Countries, Districts and equivalent. GADM makes use of high spatial resolution images and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local and English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3">
+      <h3>Administrative Region (level 3)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_3</p>
+      <div class="comment">
+         <span class="markdown">The Administrative boundaries at the level 3 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 3 distinguishes Communes, Municipalities and equivalent. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local and English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4">
+      <h3>Administrative Region (level 4)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_4</p>
+      <div class="comment">
+         <span class="markdown">The Administrative boundaries at the level 4 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 4 distinguishes sub-national administrative boundaries smaller than Communes and Municipalities and is available for 20 countries. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local an English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5">
+      <h3>Administrative Region (level 5)<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_5</p>
+      <div class="comment">
+         <span class="markdown">The Administrative boundaries at the level 5 dataset are part of the Global Administrative Areas (GADM) 3.6 vector dataset series which includes distinct datasets representing administrative boundaries for all countries in the world. The Administrative level 5 distinguishes sub-national administrative boundaries smaller than Communes and Municipalities and is available for France and Rwanda. GADM makes use of high spatial resolution images, and an extensive set of attributes to map administrative areas at all levels of political sub-division. Information on administrative units associated attributes includes official names in Latin and non-Latin scripts, variant names, administrative type in local an English. Please read the GADM - Global Administrative Areas dataset series metadata (https://gadm.org/metadata.html) for more information.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion">Administrative Region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/administrativePartOf"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/administrativePartOf">administrative part of</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/administrativePartOf">
+      <h3>administrative part of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/administrativePartOf</p>
+      <div class="comment">
+         <span class="markdown">This relation is used to denote the administrative sovereignty or jurisdiction that an administrative region belongs with.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS">has FIPS</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID" title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID">has GID</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS">
+      <h3>has FIPS<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS</p>
+      <div class="comment">
+         <span class="markdown">This property is used to denote the FIPS code of an administrative region within the US. Federal Information Processing System (FIPS) Codes are numbers which uniquely identify geographic areas. The number of digits in FIPS codes vary depending on the level of geography. State-level FIPS codes have two digits, county-level FIPS codes have five digits of which the first two are the FIPS code of the state to which the county belongs. When using the list below to look up county FIPS codes, it is advisable to first look up the FIPS code for the state to which the county belongs. This will help you identify the right section of the list while scrolling down, which can be important since there are over 3000 counties and county-equivalents (e.g.independent cities, parishes, boroughs) in the United States.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID" title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID">has GID</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID">
+      <h3>has GID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/hasGID</p>
+      <div class="comment">
+         <span class="markdown">This property is used to denote the GID of an administrative region. The GID starts with the three letter ISO 3166-1 alpha-3 country code. ISO 3166-1 alpha-3 codes are three-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), to represent countries, dependent territories, and special areas of geographical interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS"
+                  title="http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS">has FIPS</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

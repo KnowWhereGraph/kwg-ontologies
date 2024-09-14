@@ -1,0 +1,405 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> rdf:type owl:Ontology ;
+                                                              <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en ;
+                                                              <http://purl.org/dc/terms/created> "2023-10-18"^^xsd:date ;
+                                                              <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en ;
+                                                              <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en ;
+                                                              <http://purl.org/dc/terms/title> "Ontology for USGS's Earthquake Dataset"@en ;
+                                                              owl:versionInfo "v 3.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+
+
+###  http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#inXSDDateTime
+<http://www.w3.org/2006/time#inXSDDateTime> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                                        <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> ;
+                                                                          owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> ;
+                                                                          owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> ;
+                                                                          owl:allValuesFrom <http://www.w3.org/2006/time#Instant>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> ;
+                                                                          owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                          owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                        ] ;
+                                                        rdfs:comment "This class denotes earthquakes from USGS's Earthquake Catalog." ;
+                                                        rdfs:label "Earthquake" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                          rdfs:comment "This class denotes measured properties for an earthquake event in the USGS’s Earthquake Catalog dataset." ;
+                                                                          rdfs:label "Earthquake Observable Property" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                                                               owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake>
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.w3.org/ns/sosa/hasMember> ;
+                                                                                               owl:allValuesFrom <http://www.w3.org/ns/sosa/EarthquakeObservation>
+                                                                                             ] ,
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty <http://www.w3.org/ns/sosa/phenomenonTime> ;
+                                                                                               owl:allValuesFrom <http://www.w3.org/2006/time#Instant>
+                                                                                             ] ;
+                                                                             rdfs:label "Earthquake Observation Collection" ;
+                                                                             <http://www.w3.org/2004/02/skos/core#description> "This class denotes collections of observations corresponding to the various observable properties for an earthquake event." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Region
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/EarthquakeObservation
+<http://www.w3.org/ns/sosa/EarthquakeObservation> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                    owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty>
+                                                                  ] ;
+                                                  rdfs:comment "This class denotes earthquake observations for specific earthquake observable properties." ;
+                                                  rdfs:label "Earthquake Observation" .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert> rdf:type owl:NamedIndividual ,
+                                                                                         <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                rdfs:label "alert" ;
+                                                                                <http://www.w3.org/2004/02/skos/core#description> "The alert level from the PAGER earthquake impact scale (https://earthquake.usgs.gov/data/pager/)." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "cdi" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The maximum reported intensity for the event. Computed by DYFI (https://earthquake.usgs.gov/data/dyfi/). While typically reported as a roman numeral, for the purposes of this API, intensity is expected as the decimal equivalent of the roman numeral." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code> rdf:type owl:NamedIndividual ,
+                                                                                        <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                               rdfs:label "code" ;
+                                                                               <http://www.w3.org/2004/02/skos/core#description> "An identifying code assigned by - and unique from - the corresponding source (https://earthquake.usgs.gov/data/comcat/index.php#net) for the event." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth> rdf:type owl:NamedIndividual ,
+                                                                                         <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                rdfs:label "depth" ;
+                                                                                <http://www.w3.org/2004/02/skos/core#description> "Depth of the event in kilometers." ,
+                                                                                                                                  """The depth where the earthquake begins to rupture. This depth may be relative to the WGS84 geoid, mean sea-level, or the average elevation of the seismic stations which provided arrival-time data for the earthquake location. The choice of reference depth is dependent on the method used to locate the earthquake, which varies by seismic network. Since ComCat includes data from many different seismic networks, the process for determining the depth is different for different events. The depth is the least-constrained parameter in the earthquake location, and the error bars are generally larger than the variation due to different depth determination methods.
+
+Sometimes when depth is poorly constrained by available seismic data, the location program will set the depth at a fixed value. For example, 33 km is often used as a default depth for earthquakes determined to be shallow, but whose depth is not satisfactorily determined by the data, whereas default depths of 5 or 10 km are often used in mid-continental areas and on mid-ocean ridges since earthquakes in these areas are usually shallower than 33 km.""" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin> rdf:type owl:NamedIndividual ,
+                                                                                        <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                               rdfs:label "dmin" ;
+                                                                               <http://www.w3.org/2004/02/skos/core#description> "Horizontal distance from the epicenter to the nearest station (in degrees)." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt> rdf:type owl:NamedIndividual ,
+                                                                                        <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                               rdfs:label "felt" ;
+                                                                               <http://www.w3.org/2004/02/skos/core#description> "The total number of felt reports submitted to the DYFI (https://earthquake.usgs.gov/data/dyfi/) system." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "gap" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The largest azimuthal gap between azimuthally adjacent stations (in degrees)." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "id" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "A unique identifier for the event. This is the current preferred id for the event, and may change over time." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "magnitude" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The magnitude for the event." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType> rdf:type owl:NamedIndividual ,
+                                                                                           <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                  rdfs:label "magType" ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#description> "The method or algorithm used to calculate the preferred magnitude for the event." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "mmi" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The maximum estimated instrumental intensity for the event. Computed by ShakeMap (https://earthquake.usgs.gov/data/shakemap/). While typically reported as a roman numeral, for the purposes of this API, intensity is expected as the decimal equivalent of the roman numeral." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "net" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The ID of a data contributor." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "nst" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The total number of seismic stations used to determine earthquake location." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place> rdf:type owl:NamedIndividual ,
+                                                                                         <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                rdfs:label "place" ;
+                                                                                <http://www.w3.org/2004/02/skos/core#description> "Textual description of named geographic region near to the event. This may be a city name, or a Flinn-Engdahl Region (https://earthquake.usgs.gov/data/flinn_engdahl.php) name." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "rms" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "The root-mean-square (RMS) travel time residual, in sec, using all weights." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "sig" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "A number describing how significant the event is. Larger numbers indicate a more significant event. This value is determined on a number of factors, including: magnitude, maximum MMI, felt reports, and estimated impact." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources> rdf:type owl:NamedIndividual ,
+                                                                                           <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                  rdfs:label "sources" ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#description> "A comma-separated list of network contributors (https://earthquake.usgs.gov/data/comcat/index.php#net)." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status> rdf:type owl:NamedIndividual ,
+                                                                                          <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                 rdfs:label "status" ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#description> "Indicates whether the event has been reviewed by a human." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami> rdf:type owl:NamedIndividual ,
+                                                                                           <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                  rdfs:label "tsunami" ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#description> "This flag is set to \"1\" for large events in oceanic regions and \"0\" otherwise. The existence or value of this flag does not indicate if a tsunami actually did or will exist. If the flag value is \"1\", the event will include a link to the NOAA Tsunami website for tsunami information." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type> rdf:type owl:NamedIndividual ,
+                                                                                        <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                               rdfs:label "type" ;
+                                                                               <http://www.w3.org/2004/02/skos/core#description> "Type of seismic event." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types> rdf:type owl:NamedIndividual ,
+                                                                                         <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                rdfs:label "types" ;
+                                                                                <http://www.w3.org/2004/02/skos/core#description> "A comma-separated list of product types associated to this event." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz> rdf:type owl:NamedIndividual ,
+                                                                                      <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                             rdfs:label "tz" ;
+                                                                             <http://www.w3.org/2004/02/skos/core#description> "Timezone offset from UTC in minutes at the event epicenter." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated> rdf:type owl:NamedIndividual ,
+                                                                                           <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                                  rdfs:label "updated" ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#description> "Time when the event was most recently updated. Times are reported in milliseconds since the epoch. In certain output formats, the date is formatted for readability." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url> rdf:type owl:NamedIndividual ,
+                                                                                       <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> ;
+                                                                              rdfs:label "url" ;
+                                                                              <http://www.w3.org/2004/02/skos/core#description> "Link to USGS Event Page for event." .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

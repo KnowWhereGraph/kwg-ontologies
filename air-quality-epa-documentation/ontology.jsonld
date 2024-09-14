@@ -1,0 +1,932 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#DateTimeDescription"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/phenomenonTime"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hosts"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite"
+  } ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/hasMember"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/madeBySensor"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/observedProperty"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/domainIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/rangeIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes EPA's air pollutant standards for different air pollutant types.\n\nThe National Ambient Air Quality Standards (NAAQS) established for six \"criteria pollutants\" in outdoor air. NAAQS are currently set for carbon monoxide, lead, ground-level ozone, nitrogen dioxide, particulate matter, and sulfur dioxide."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPA Air Pollutant Standard"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes the set of air pollutants measured in the EPA’s Air Quality System (AQS) dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPA Air Pollutant Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes the observation (including AQI) for a specific air pollutant type measured at an air quality site on a specific day."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPA Air Quality Daily Summary Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityDailySummaryObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes the collections of observations for a specific air pollutant type measured at various air quality sites."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPA Air Quality Daily Summary Observation Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservationCollection"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualityMonitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes the devices measuring various air pollutant parameter at the air quality sites."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPA Air Quality Monitor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirQualitySite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class denotes EPA's air quality sites.\n\nEPA's Air Quality System (AQS) site is a distinct geographic location that has one or more air quality monitors. Not every site measures the same air pollutant parameters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPA Air Quality Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/Region",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The relation between AirPollutantStandard and AirPollutantType."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air pollutant parameter"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantStandard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The relation betwen AirQualityDailySummaryObservation and AirPollutantStandard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air pollutant standard"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The code of a CBSA region. A CBSA region (core-based statistical area) is a U.S. geographic area defined by the Office of Management and Budget that consists of one or more counties anchored by an urban center of at least 10,000 people plus adjacent counties that are socioeconomically tied to the urban center by commuting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cbsa code"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/cbsaName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of a CBSA region. A CBSA region (core-based statistical area) is a U.S. geographic area defined by the Office of Management and Budget that consists of one or more counties anchored by an urban center of at least 10,000 people plus adjacent counties that are socioeconomically tied to the urban center by commuting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cbsa name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/countyCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "county code"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "county name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/dailyAQIValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Air Quality Index values for the specified year and location recorded by EPA's AQS dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "daily AQI value"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/epa-air-quality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Shirly Stephen, Mitchell Faulk"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-10-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "The KnowWhereGraph Project"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology supports the KnowWhereGraph"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for EPA's Air Quality Daily Summaries Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "v 3.0"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/localSiteName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "EPA's Air Quality System (AQS) site local name."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "local site name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/madeAtAQS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The relation between AirQualityDailySummaryObservationCollection and AirQualitySite."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "made at air quality site"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The parameter name associated with and air pollutant standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air pollutant parameter name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterOccurrenceCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The poc (Parameter Occurrence Code) value used to uniquely identify a monitor if there is more than one device measuring the same pollutant at a site."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "parameter occurence code"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The description associated with and air pollutant standard (parameter)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air pollutant standard description"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/siteNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "EPA's Air Quality System (AQS) site number."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "site number"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/stateCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "state code"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "state name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead (TSP) STP"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead (TSP) LC"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Carbon monoxide"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sulfur dioxide"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nitrogen dioxide (NO2)"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM10 Total 0-10um STP"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead PM10 LC FRM/FEM"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.12128"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Lead (TSP) STP"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Original lead standard based on calendar quarterly average."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead Quarterly 1978"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Ozone"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Ozone 1-hour Daily Maximum value based on data completeness betweeen 9 AM and 9 pm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone 8-Hour 1997"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Ozone"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Ozone 8-hour running average stored in begin hour from 1997"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone 8-Hour 2008"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.81102"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM10 Total 0-10um STP"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM10 24-hour standard. Violations include actual exceedences and expected exceedences where data is missing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM10 24-hour 2006"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.85129"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Lead PM10 LC FRM/FEM"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM10 Surgate (instead of TSP) for the new lead 3 month rolling average site level summary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead 3-Month PM10 Surrogate 2009"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM25 annual weighted mean was reaffirmed in 2006 with the same level as originally promulgated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM25 24-hour 2006"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM25 annual weighted mean was reaffirmed in 2006 with the same level as originally promulgated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM25 Annual 2006"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Sulfur dioxide"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Sulphur Dioxide 1-hour standard from 2010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SO2 1-hour 2010"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.14129"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Lead (TSP) LC"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Lead 3 month rolling average site level summary based on TSP lead at local conditions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead 3-Month 2009"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Nitrogen dioxide (NO2)"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Nitrogen Dioxide 1-hour standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NO2 1-hour 2010"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM25 24-hour standard was reaffirmed in 2013 with the same level as previously promulgated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM25 24-hour 2012"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM25 annual standard was lowered in 2013 to increase protection against health effects with long-term exposures"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM25 Annual 2012"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Ozone"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Ozone 8-hour 2015 -- Daily 8-hour maximum between 7:00 AM and 11:00 PM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone 8-hour 2015"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM25 24-hour standard for 1997. Created for Region 9 / AQAD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM25 24-hour 1997"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.88101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "PM2.5 - Local Conditions"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "PM25 Annual standard for 1997. Created for Region 9 / AQAD\t"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM25 Annual 1997"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Carbon monoxide"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Carbon Monoxide 1-hour standard from 1971"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CO 1-hour 1971"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42101"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Carbon monoxide"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Carbon Monoxide 8-hour running average from 1971"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CO 8-hour 1971"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Sulfur dioxide"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Sulfur Dioxide 3-hour Block Average from 1971"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SO2 3-hour 1971"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Sulfur dioxide"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Sulfur Dioxide Annual Mean Standard from 1971"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SO2 24-hour 1971"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42401"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Sulfur dioxide"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Sulfur Dioxide Annual Mean Standard from 1971"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SO2 Annual 1971"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.42602"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Nitrogen dioxide (NO2)"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Nitrogen Dioxide Annual Mean from 1971"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NO2 Annual 1971"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantStandard.9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/ontology/AirPollutantStandard" ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/airPollutantParameter" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/resource/airPollutantParameter.44201"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/parameterName" : [ {
+    "@value" : "Ozone"
+  } ],
+  "http://stko-kwg.geog.ucsb.edu/lod/ontology/pollutantStandardDescription" : [ {
+    "@value" : "Ozone 1-hour Daily Maximum value based on data completeness betweeen 9 AM and 9 pm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ozone 1-hour 1979"
+  } ]
+}, {
+  "@id" : "http://w3id.org/lindt/custom_datatypes#ucum",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#editorialNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#DateTimeDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservationCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Platform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hosts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/madeBySensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/phenomenonTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddressLine1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/hasCityName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+} ]

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for NIFC's Wildland Fire Incident Locations Dataset</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire","name":"Ontology for NIFC's Wildland Fire Incident Locations Dataset", "headline":"Document describing the ontology http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire", "datePublished":"2023-11-15", "version":"v 3.0", "author":[{"@type":"Person","name":"The KnowWhereGraph Project"}], "contributor":[{"@type":"Person","name":"Shirly Stephen, Mitchell Faulk"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for NIFC's Wildland Fire Incident Locations Dataset</h1>
+<h2>Release  2023-11-15</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire">http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire</a></dd>
+<dt>Revision:</dt>
+<dd>v 3.0</dd>
+<dt>Authors:</dt>
+<dd>The KnowWhereGraph Project</dd>
+
+<dt>Contributors:</dt>
+<dd>Shirly Stephen, Mitchell Faulk</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>The KnowWhereGraph Project. Ontology for NIFC's Wildland Fire Incident Locations Dataset. Revision: v 3.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+		.itemize{
+			list-style: square;
+			list-style: inside;
+			padding-left: 15px;
+		}
+    </style>
+<!-- SCHEMA.ORG METADATA -->
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Overview of the raw dataset <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	
+<span>
+<ul class ="itemize">
+<li><b>Name of dataset:</b> NIFC Wildland Fire Incident Locations</li>
+<li><b>Source Agency:</b> <a href="https://www.nifc.gov/">National Interagency Fire Center</a></li>
+<li><b>Data source location:</b> <a href="https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/WFIGS_Incident_Locations/FeatureServer/0/query"> NIFC Incidents API</a></li>
+<li><b>Metadata documentation:</b> <a href="https://data-nifc.opendata.arcgis.com/datasets/nifc::wildland-fire-incident-locations/about"> Wildland Fire Incident Locations (About)</a></li>
+<li><b>Format of data returned:</b> json</li>
+<li><b>Data update interval:</b> daily</li>
+</ul> 
+</span>
+<div id="description">
+<br>
+<h4 id="desc" class="list">Schema Diagram</h4>
+<div class="imgbox">
+    <img src='figures/wildfire-nifc-schema-diagram.png' class="center-fit" />
+    <figcaption align="center"><b>Figure. NIFC Fires Schema Diagram.</figcaption>
+	
+</div>
+</div>
+</div>
+</body>
+</html></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Ontology for NIFC's Wildland Fire Incident Locations Dataset classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for NIFC's Wildland Fire Incident Locations Dataset.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">
+            <span>instant</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire">NIFC Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause">NIFC Fire Cause</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty">NIFC Fire Observable Property</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation">NIFC Fire Observation</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin">NIFC Fire Point Of Origin</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection">NIFC Fre Observation Collection</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire">NIFC Incident Complex Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire">NIFC Prescribed Fire</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire">NIFC Wildfire</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/2006/time#Instant">
+      <h3>instant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Instant</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2006/time#TemporalEntity"
+               target="_blank"
+               title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire">
+      <h3>NIFC Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire</p>
+      <div class="comment">
+         <span class="markdown">This class denotes point locations for all wildland fires in the United States reported to the IRWIN system. Wildland fire incidents from the IRWIN (Integrated Reporting of Wildland Fire Information) incident service that meet the following criteria:
+- Categorized as a Wildfire (WF), Prescribed Fire (RX), or Incident Complex (CX) record
+- Is Valid and not "quarantined" in IRWIN due to potential conflicts with other records</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire">NIFC Incident Complex Fire</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire">NIFC Prescribed Fire</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire">NIFC Wildfire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause">
+      <h3>NIFC Fire Cause<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause</p>
+      <div class="comment">
+         <span class="markdown">This class denotes all categories into which wildland fires are grouped according to their origin. Broad classification of the reason the fire occurred identified as human, natural or unknown.</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause">human cause</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause">natural cause</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause">undetermined cause</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause">unknown cause</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty">
+      <h3>NIFC Fire Observable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">This class denotes measured properties for a fire event in the NIFC's Wildland Fire Incident Locations Dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt">discovery acres burnt</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost">esitmated dollar cost</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt"
+               title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt">final acres burnt</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation">
+      <h3>NIFC Fire Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation</p>
+      <div class="comment">
+         <span class="markdown">This class denotes observations for specific fire observable property measured for a fire event in the NIFC dataset.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin">
+      <h3>NIFC Fire Point Of Origin<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin</p>
+      <div class="comment">
+         <span class="markdown">This class denotes the properties of the point of origin of the NIFC fire incident.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection">
+      <h3>NIFC Fre Observation Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection</p>
+      <div class="comment">
+         <span class="markdown">This class denotes collections of observations corresponding to the various observable properties for a NIFC fire event.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservationCollection"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservationCollection">observation collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire">
+      <h3>NIFC Incident Complex Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire</p>
+      <div class="comment">
+         <span class="markdown">Two or more distinct incidents in the same general area that, by management action, are managed under a single incident commander or unified command in order to improve efficiency and simplify incident management processes.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire">NIFC Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire">
+      <h3>NIFC Prescribed Fire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire</p>
+      <div class="comment">
+         <span class="markdown">A wildland fire originating from a planned ignition in accordance with applicable laws, policies, and regulations to meet specific objectives.​</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire">NIFC Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire">
+      <h3>NIFC Wildfire<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire</p>
+      <div class="comment">
+         <span class="markdown">A wildland fire originating from an unplanned ignition, such as lightning, volcanos, unauthorized and accidental human caused fires, and prescribed fires that are declared wildfires.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire">NIFC Fire</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause">fire cause</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime">fire discovery time</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime">fire out time</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin">fire point of origin</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime">fire response time</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause">
+      <h3>fire cause<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause</p>
+      <div class="comment">
+         <span class="markdown">This property is used to indicate the reason the fire occurred.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime">
+      <h3>fire discovery time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime</p>
+      <div class="comment">
+         <span class="markdown">This property is used to indicate the date and time a fire was reported as discovered or confirmed to exist. May also be the start date for reporting purposes.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime">
+      <h3>fire out time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime</p>
+      <div class="comment">
+         <span class="markdown">This property is used to indicate the date and time when a fire is declared out.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin">
+      <h3>fire point of origin<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin</p>
+      <div class="comment">
+         <span class="markdown">This property is used to indicate the point of origin of a fire incident.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime">
+      <h3>fire response time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime</p>
+      <div class="comment">
+         <span class="markdown">This property is used to indicate the date/time of the initial response to the incident (when the IC arrives and performs initial size up)</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName">county name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID">dispatch center ID</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc" title="http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc">geographic area coordination center</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName">incident name</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID">irwin ID</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency">protection agency</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit">protection unit</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName"
+            title="http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName">state name</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName">
+      <h3>county name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID">
+      <h3>dispatch center ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID</p>
+      <div class="comment">
+         <span class="markdown">A unique identifier for the dispatch center that intersects with the incident point of origin.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc">
+      <h3>geographic area coordination center<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc</p>
+      <div class="comment">
+         <span class="markdown">A code that identifies the wildland fire geographic area coordination center (GACC) at the point of origin for the incident. A GACC is a facility used for the coordination of agency or jurisdictional resources in support of one or more incidents within a geographic area.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName">
+      <h3>incident name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID">
+      <h3>irwin ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID</p>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency">
+      <h3>protection agency<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency</p>
+      <div class="comment">
+         <span class="markdown">Indicates the agency that has protection responsibility at the point of origin of a fire incident.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit">
+      <h3>protection unit<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit</p>
+      <div class="comment">
+         <span class="markdown">NWCG Unit responsible for providing direct incident management and services to an incident pursuant in its jurisdictional responsibility or as specified by law, contract or agreement. Protection can be re-assigned by agreement. The nature and extent of the incident determines protection (for example Wildfire vs. All Hazard.)</span>
+      </div>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName">
+      <h3>state name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt">discovery acres burnt</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost">esitmated dollar cost</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt">final acres burnt</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause">human cause</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause">natural cause</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause">undetermined cause</a>
+      </li>
+      <li>
+         <a href="#http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause"
+            title="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause">unknown cause</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt">
+      <h3>discovery acres burnt<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt</p>
+      <div class="comment">
+         <span class="markdown">An estimate of acres burning when the fire is first reported by the first person to call in the fire. The estimate should include number of acres within the current perimeter of a specific, individual incident, including unburned and unburnable islands.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty">NIFC Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost">
+      <h3>esitmated dollar cost<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost</p>
+      <div class="comment">
+         <span class="markdown">The total estimated cost of the incident to date.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty">NIFC Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt">
+      <h3>final acres burnt<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt</p>
+      <div class="comment">
+         <span class="markdown">Reported final acreage of incident.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty">NIFC Fire Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause">
+      <h3>human cause<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause">NIFC Fire Cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause">
+      <h3>natural cause<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause">NIFC Fire Cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause">
+      <h3>undetermined cause<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause">NIFC Fire Cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause">
+      <h3>unknown cause<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause"
+               title="http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause">NIFC Fire Cause</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

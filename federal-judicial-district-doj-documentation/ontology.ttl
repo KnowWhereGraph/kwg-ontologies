@@ -1,0 +1,301 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/doj-federal-judicial-districts> rdf:type owl:Ontology ;
+                                                                             <http://purl.org/dc/terms/contributor> "Shirly Stephen"@en ;
+                                                                             <http://purl.org/dc/terms/created> "2023-10-18"^^xsd:date ;
+                                                                             <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en ;
+                                                                             <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en ;
+                                                                             <http://purl.org/dc/terms/title> "Ontology for US DOJ's District Court Jurisdictions Datasets"@en ;
+                                                                             owl:versionInfo "v 3.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge> rdf:type owl:ObjectProperty ;
+                                                           rdfs:comment "This property denotes the relation between a federal jurisdictional area and it's chief judge(s)." ;
+                                                           rdfs:label "has chief judge" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy> rdf:type owl:ObjectProperty ;
+                                                    rdfs:comment "This property denotes the relation between a person and the role (chief judge/ U.S. President) that they hold." ;
+                                                    rdfs:label "held by" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit> rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "in circuit" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy> rdf:type owl:ObjectProperty ;
+                                                         rdfs:comment "This property denotes the relation between a chief judge and the U.S. President who nominated them for that role." ;
+                                                         rdfs:label "nominated by" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime> rdf:type owl:ObjectProperty ;
+                                                            rdfs:comment "This property denotes the nomination time of a chief judge." ;
+                                                            rdfs:label "nomination time" .
+
+
+###  http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#spatialRelation
+<http://www.opengis.net/ont/geosparql#spatialRelation> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:label "abbreviation" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:label "circuit ordinal" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:label "federal judicial district name" .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole> rdf:type owl:Class ;
+                                                            rdfs:label "Chief Judge Role" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit> rdf:type owl:Class ;
+                                                                    rdfs:label "Federal Judicial Circuit" ;
+                                                                    <http://www.w3.org/2004/02/skos/core#description> "There are twelve federal circuits that divide the country into different regions. Each circuit court has multiple judges, ranging from six on the First Circuit to twenty-nine on the Ninth Circuit. Circuit court judges are appointed for life by the president and confirmed by the Senate." .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> ,
+                                                                                     <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.opengis.net/ont/geosparql#spatialRelation> ;
+                                                                                       owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> ;
+                                                                                       owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                                       owl:allValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://www.opengis.net/ont/geosparql#spatialRelation> ;
+                                                                                       owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/abbreviation> ;
+                                                                                       owl:allValuesFrom xsd:string
+                                                                                     ] ;
+                                                                     rdfs:comment "This class denotes jurisdiction boundaries of the United States District Courts." ;
+                                                                     rdfs:label "Federal Judicial District" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Region
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> rdf:type owl:Class ;
+                                                    rdfs:comment "A geographic entity created by the selection of characteristics that are relevant to an area of interest. It can have geometries including point, polyline and polygon." ;
+                                                    rdfs:label "Region" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole> rdf:type owl:Class ;
+                                                             rdfs:label "U.S. President Role" .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasChiefJudge> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy> ;
+  owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/heldBy> ;
+  owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/inCircuit> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/nominatedBy> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/USPresidentRole> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/nominationTime> ;
+  owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/ChiefJudgeRole>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/circuitOrdinal> ;
+  owl:allValuesFrom xsd:integer ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialCircuit>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/federalJudicialDistrictName> ;
+  owl:allValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/FederalJudicialDistrict>
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

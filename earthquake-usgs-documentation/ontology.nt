@@ -1,0 +1,365 @@
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://purl.org/dc/terms/created> "2023-10-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://purl.org/dc/terms/title> "Ontology for USGS's Earthquake Dataset"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/usgs-earthquake> <http://www.w3.org/2002/07/owl#versionInfo> "v 3.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+# 
+# http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2006/time#inXSDDateTime
+<http://www.w3.org/2006/time#inXSDDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Instant> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes earthquakes from USGS's Earthquake Catalog." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#label> "Earthquake" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes measured properties for an earthquake event in the USGS’s Earthquake Catalog dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Earthquake Observable Property" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/Earthquake> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasMember> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/EarthquakeObservation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/phenomenonTime> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Instant> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Earthquake Observation Collection" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservationCollection> <http://www.w3.org/2004/02/skos/core#description> "This class denotes collections of observations corresponding to the various observable properties for an earthquake event." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/Region
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/EarthquakeObservation
+<http://www.w3.org/ns/sosa/EarthquakeObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/EarthquakeObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/EarthquakeObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://www.w3.org/ns/sosa/EarthquakeObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes earthquake observations for specific earthquake observable properties." .
+<http://www.w3.org/ns/sosa/EarthquakeObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Earthquake Observation" .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert> <http://www.w3.org/2000/01/rdf-schema#label> "alert" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.alert> <http://www.w3.org/2004/02/skos/core#description> "The alert level from the PAGER earthquake impact scale (https://earthquake.usgs.gov/data/pager/)." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi> <http://www.w3.org/2000/01/rdf-schema#label> "cdi" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.cdi> <http://www.w3.org/2004/02/skos/core#description> "The maximum reported intensity for the event. Computed by DYFI (https://earthquake.usgs.gov/data/dyfi/). While typically reported as a roman numeral, for the purposes of this API, intensity is expected as the decimal equivalent of the roman numeral." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code> <http://www.w3.org/2000/01/rdf-schema#label> "code" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.code> <http://www.w3.org/2004/02/skos/core#description> "An identifying code assigned by - and unique from - the corresponding source (https://earthquake.usgs.gov/data/comcat/index.php#net) for the event." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth> <http://www.w3.org/2000/01/rdf-schema#label> "depth" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth> <http://www.w3.org/2004/02/skos/core#description> "Depth of the event in kilometers." .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.depth> <http://www.w3.org/2004/02/skos/core#description> "The depth where the earthquake begins to rupture. This depth may be relative to the WGS84 geoid, mean sea-level, or the average elevation of the seismic stations which provided arrival-time data for the earthquake location. The choice of reference depth is dependent on the method used to locate the earthquake, which varies by seismic network. Since ComCat includes data from many different seismic networks, the process for determining the depth is different for different events. The depth is the least-constrained parameter in the earthquake location, and the error bars are generally larger than the variation due to different depth determination methods.\n\nSometimes when depth is poorly constrained by available seismic data, the location program will set the depth at a fixed value. For example, 33 km is often used as a default depth for earthquakes determined to be shallow, but whose depth is not satisfactorily determined by the data, whereas default depths of 5 or 10 km are often used in mid-continental areas and on mid-ocean ridges since earthquakes in these areas are usually shallower than 33 km." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin> <http://www.w3.org/2000/01/rdf-schema#label> "dmin" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.dmin> <http://www.w3.org/2004/02/skos/core#description> "Horizontal distance from the epicenter to the nearest station (in degrees)." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt> <http://www.w3.org/2000/01/rdf-schema#label> "felt" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.felt> <http://www.w3.org/2004/02/skos/core#description> "The total number of felt reports submitted to the DYFI (https://earthquake.usgs.gov/data/dyfi/) system." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap> <http://www.w3.org/2000/01/rdf-schema#label> "gap" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.gap> <http://www.w3.org/2004/02/skos/core#description> "The largest azimuthal gap between azimuthally adjacent stations (in degrees)." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids> <http://www.w3.org/2000/01/rdf-schema#label> "id" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.ids> <http://www.w3.org/2004/02/skos/core#description> "A unique identifier for the event. This is the current preferred id for the event, and may change over time." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag> <http://www.w3.org/2000/01/rdf-schema#label> "magnitude" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mag> <http://www.w3.org/2004/02/skos/core#description> "The magnitude for the event." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType> <http://www.w3.org/2000/01/rdf-schema#label> "magType" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.magType> <http://www.w3.org/2004/02/skos/core#description> "The method or algorithm used to calculate the preferred magnitude for the event." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi> <http://www.w3.org/2000/01/rdf-schema#label> "mmi" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.mmi> <http://www.w3.org/2004/02/skos/core#description> "The maximum estimated instrumental intensity for the event. Computed by ShakeMap (https://earthquake.usgs.gov/data/shakemap/). While typically reported as a roman numeral, for the purposes of this API, intensity is expected as the decimal equivalent of the roman numeral." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net> <http://www.w3.org/2000/01/rdf-schema#label> "net" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.net> <http://www.w3.org/2004/02/skos/core#description> "The ID of a data contributor." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst> <http://www.w3.org/2000/01/rdf-schema#label> "nst" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.nst> <http://www.w3.org/2004/02/skos/core#description> "The total number of seismic stations used to determine earthquake location." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place> <http://www.w3.org/2000/01/rdf-schema#label> "place" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.place> <http://www.w3.org/2004/02/skos/core#description> "Textual description of named geographic region near to the event. This may be a city name, or a Flinn-Engdahl Region (https://earthquake.usgs.gov/data/flinn_engdahl.php) name." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms> <http://www.w3.org/2000/01/rdf-schema#label> "rms" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.rms> <http://www.w3.org/2004/02/skos/core#description> "The root-mean-square (RMS) travel time residual, in sec, using all weights." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig> <http://www.w3.org/2000/01/rdf-schema#label> "sig" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sig> <http://www.w3.org/2004/02/skos/core#description> "A number describing how significant the event is. Larger numbers indicate a more significant event. This value is determined on a number of factors, including: magnitude, maximum MMI, felt reports, and estimated impact." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources> <http://www.w3.org/2000/01/rdf-schema#label> "sources" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.sources> <http://www.w3.org/2004/02/skos/core#description> "A comma-separated list of network contributors (https://earthquake.usgs.gov/data/comcat/index.php#net)." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.status> <http://www.w3.org/2004/02/skos/core#description> "Indicates whether the event has been reviewed by a human." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami> <http://www.w3.org/2000/01/rdf-schema#label> "tsunami" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tsunami> <http://www.w3.org/2004/02/skos/core#description> "This flag is set to \"1\" for large events in oceanic regions and \"0\" otherwise. The existence or value of this flag does not indicate if a tsunami actually did or will exist. If the flag value is \"1\", the event will include a link to the NOAA Tsunami website for tsunami information." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type> <http://www.w3.org/2000/01/rdf-schema#label> "type" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.type> <http://www.w3.org/2004/02/skos/core#description> "Type of seismic event." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types> <http://www.w3.org/2000/01/rdf-schema#label> "types" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.types> <http://www.w3.org/2004/02/skos/core#description> "A comma-separated list of product types associated to this event." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz> <http://www.w3.org/2000/01/rdf-schema#label> "tz" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.tz> <http://www.w3.org/2004/02/skos/core#description> "Timezone offset from UTC in minutes at the event epicenter." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated> <http://www.w3.org/2000/01/rdf-schema#label> "updated" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.updated> <http://www.w3.org/2004/02/skos/core#description> "Time when the event was most recently updated. Times are reported in milliseconds since the epoch. In certain output formats, the date is formatted for readability." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/EarthquakeObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url> <http://www.w3.org/2000/01/rdf-schema#label> "url" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/earthquakeObservableProperty.url> <http://www.w3.org/2004/02/skos/core#description> "Link to USGS Event Page for event." .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

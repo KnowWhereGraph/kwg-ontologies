@@ -1,0 +1,450 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nifc-wildfire> rdf:type owl:Ontology ;
+                                                            <http://purl.org/dc/terms/contributor> "Shirly Stephen, Mitchell Faulk"@en ;
+                                                            <http://purl.org/dc/terms/created> "2023-11-15"^^xsd:date ;
+                                                            <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en ;
+                                                            <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en ;
+                                                            <http://purl.org/dc/terms/title> "Ontology for NIFC's Wildland Fire Incident Locations Dataset"@en ;
+                                                            owl:versionInfo "v 3.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause> rdf:type owl:ObjectProperty ;
+                                                       rdfs:comment "This property is used to indicate the reason the fire occurred." ;
+                                                       rdfs:label "fire cause" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime> rdf:type owl:ObjectProperty ;
+                                                               rdfs:comment "This property is used to indicate the date and time a fire was reported as discovered or confirmed to exist. May also be the start date for reporting purposes." ;
+                                                               rdfs:label "fire discovery time" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime> rdf:type owl:ObjectProperty ;
+                                                         rdfs:comment "This property is used to indicate the date and time when a fire is declared out." ;
+                                                         rdfs:label "fire out time" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin> rdf:type owl:ObjectProperty ;
+                                                               rdfs:comment "This property is used to indicate the point of origin of a fire incident." ;
+                                                               rdfs:label "fire point of origin" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime> rdf:type owl:ObjectProperty ;
+                                                              rdfs:comment "This property is used to indicate the date/time of the initial response to the incident (when the IC arrives and performs initial size up)" ;
+                                                              rdfs:label "fire response time" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin> rdf:type owl:ObjectProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:label "county name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:comment "A unique identifier for the dispatch center that intersects with the incident point of origin." ;
+                                                              rdfs:label "dispatch center ID" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:comment "A code that identifies the wildland fire geographic area coordination center (GACC) at the point of origin for the incident. A GACC is a facility used for the coordination of agency or jurisdictional resources in support of one or more incidents within a geographic area." ;
+                                                  rdfs:label "geographic area coordination center" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS> rdf:type owl:DatatypeProperty .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:label "incident name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:label "irwin ID" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:comment "Indicates the agency that has protection responsibility at the point of origin of a fire incident." ;
+                                                              rdfs:label "protection agency" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:comment "NWCG Unit responsible for providing direct incident management and services to an incident pursuant in its jurisdictional responsibility or as specified by law, contract or agreement. Protection can be re-assigned by agreement. The nature and extent of the incident determines protection (for example Wildfire vs. All Hazard.)" ;
+                                                            rdfs:label "protection unit" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:label "state name" .
+
+
+###  http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> rdf:type owl:Class .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> rdf:type owl:Class ;
+                                                       rdfs:comment "This class denotes all categories into which wildland fires are grouped according to their origin. Broad classification of the reason the fire occurred identified as human, natural or unknown." ;
+                                                       rdfs:label "NIFC Fire Cause" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                                                                       <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> ;
+                                                                         owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> ;
+                                                                         owl:someValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> ;
+                                                                         owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+                                                                         owl:someValuesFrom <http://www.opengis.net/ont/geosparql#Geometry>
+                                                                       ] ;
+                                                       rdfs:comment """This class denotes point locations for all wildland fires in the United States reported to the IRWIN system. Wildland fire incidents from the IRWIN (Integrated Reporting of Wildland Fire Information) incident service that meet the following criteria:
+- Categorized as a Wildfire (WF), Prescribed Fire (RX), or Incident Complex (CX) record
+- Is Valid and not \"quarantined\" in IRWIN due to potential conflicts with other records""" ;
+                                                       rdfs:label "NIFC Fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                         rdfs:comment "This class denotes measured properties for a fire event in the NIFC's Wildland Fire Incident Locations Dataset." ;
+                                                                         rdfs:label "NIFC Fire Observable Property" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                    owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty>
+                                                                                  ] ;
+                                                                  rdfs:comment "This class denotes observations for specific fire observable property measured for a fire event in the NIFC dataset." ;
+                                                                  rdfs:label "NIFC Fire Observation" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservationCollection> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                                                              owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://www.w3.org/ns/sosa/hasMember> ;
+                                                                                              owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservation>
+                                                                                            ] ;
+                                                                            rdfs:comment "This class denotes collections of observations corresponding to the various observable properties for a NIFC fire event." ;
+                                                                            rdfs:label "NIFC Fre Observation Collection" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/countyName> ;
+                                                                                      owl:someValuesFrom xsd:string
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasFIPS> ;
+                                                                                      owl:someValuesFrom xsd:string
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/stateName> ;
+                                                                                      owl:someValuesFrom xsd:string
+                                                                                    ] ;
+                                                                    rdfs:comment "This class denotes the properties of the point of origin of the NIFC fire incident." ;
+                                                                    rdfs:label "NIFC Fire Point Of Origin" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_IncidentComplexFire> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> ;
+                                                                      rdfs:comment "Two or more distinct incidents in the same general area that, by management action, are managed under a single incident commander or unified command in order to improve efficiency and simplify incident management processes." ;
+                                                                      rdfs:label "NIFC Incident Complex Fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_PrescribedFire> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> ;
+                                                                 rdfs:comment "A wildland fire originating from a planned ignition in accordance with applicable laws, policies, and regulations to meet specific objectives.​" ;
+                                                                 rdfs:label "NIFC Prescribed Fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Wildfire> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire> ;
+                                                           rdfs:comment "A wildland fire originating from an unplanned ignition, such as lightning, volcanos, unauthorized and accidental human caused fires, and prescribed fires that are declared wildfires." ;
+                                                           rdfs:label "NIFC Wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.humanCause> rdf:type owl:NamedIndividual ,
+                                                                      <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> ;
+                                                             rdfs:label "human cause" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.naturalCause> rdf:type owl:NamedIndividual ,
+                                                                        <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> ;
+                                                               rdfs:label "natural cause" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.undeterminedCause> rdf:type owl:NamedIndividual ,
+                                                                             <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> ;
+                                                                    rdfs:label "undetermined cause" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifc.unknownCause> rdf:type owl:NamedIndividual ,
+                                                                        <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> ;
+                                                               rdfs:label "unknown cause" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.discoveryAcresBurnt> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> ;
+                                                                                            rdfs:comment "An estimate of acres burning when the fire is first reported by the first person to call in the fire. The estimate should include number of acres within the current perimeter of a specific, individual incident, including unburned and unburnable islands." ;
+                                                                                            rdfs:label "discovery acres burnt" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.estimatedDollarCost> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> ;
+                                                                                            rdfs:comment "The total estimated cost of the incident to date." ;
+                                                                                            rdfs:label "esitmated dollar cost" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt
+<http://stko-kwg.geog.ucsb.edu/lod/resource/nifcFireObservableProperty.finalAcresBurnt> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FireObservableProperty> ;
+                                                                                        rdfs:comment "Reported final acreage of incident." ;
+                                                                                        rdfs:label "final acres burnt" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireDiscoveryTime> ;
+  owl:someValuesFrom <http://www.w3.org/2006/time#Instant> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireOutTime> ;
+  owl:someValuesFrom <http://www.w3.org/2006/time#Instant> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireResponseTime> ;
+  owl:someValuesFrom <http://www.w3.org/2006/time#Instant> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/fireCause> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/firePointOfOrigin> ;
+  owl:allValuesFrom <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin> ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/dispatchCenterID> ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/gacc> ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/incidentName> ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/irwinID> ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_Fire>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingAgency> ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin>
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://stko-kwg.geog.ucsb.edu/lod/ontology/protectingUnit> ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf <http://stko-kwg.geog.ucsb.edu/lod/ontology/NIFC_FirePointOfOrigin>
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

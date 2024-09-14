@@ -1,0 +1,410 @@
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://purl.org/dc/terms/contributor> "Shirly Stephen"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://purl.org/dc/terms/created> "2023-10-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://purl.org/dc/terms/title> "Ontology for NOAA's Historical Hurricane Tracks Dataset"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/noaa-hurricane-tracks> <http://www.w3.org/2002/07/owl#versionInfo> "v 3.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#description
+<http://www.w3.org/2004/02/skos/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#label> "has cyclone segment" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory> <http://www.w3.org/2000/01/rdf-schema#label> "hurricane category" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment> <http://www.w3.org/2002/07/owl#inverseOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment> <http://www.w3.org/2000/01/rdf-schema#label> "next segment" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/previousSegment> <http://www.w3.org/2000/01/rdf-schema#label> "previous segment" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasDefaultGeometry
+<http://www.opengis.net/ont/geosparql#hasDefaultGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasMember
+<http://www.w3.org/ns/sosa/hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasObservation
+<http://www.w3.org/ns/sosa/hasObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/sosa/phenomenonTime
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/detailsURL
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/detailsURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL> <http://www.w3.org/2000/01/rdf-schema#label> "storm details URL" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID> <http://www.w3.org/2000/01/rdf-schema#label> "storm ID" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName> <http://www.w3.org/2000/01/rdf-schema#label> "storm name" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL> <http://www.w3.org/2000/01/rdf-schema#label> "storm observations URL" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID> <http://www.w3.org/2000/01/rdf-schema#label> "storm segment ID" .
+# 
+# http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2006/time#inXSDDateTime
+<http://www.w3.org/2006/time#inXSDDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Hurricane Category" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> <http://www.w3.org/2004/02/skos/core#description> "The Saffir-Simpson Hurricane Wind Scale is a 1 to 5 rating based only on a hurricane's maximum sustained wind speed. This scale does not take into account other potentially deadly hazards such as storm surge, rainfall flooding, and tornadoes.\n\nThe Saffir-Simpson Hurricane Wind Scale estimates potential property damage. While all hurricanes produce life-threatening winds, hurricanes rated Category 3 and higher are known as major hurricanes*. Major hurricanes can cause devastating to catastrophic wind damage and significant loss of life simply due to the strength of their winds. Hurricanes of all categories can produce deadly storm surge, rain-induced floods, and tornadoes. These hazards require people to take protective action, including evacuating from areas vulnerable to storm surge." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Extratropical Cyclone" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_ExtraTropicalCyclone> <http://www.w3.org/2004/02/skos/core#description> "A cyclone of any intensity for which the primary energy source is baroclinic, that is, results from the temperature contrast between warm and cold air masses." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Hurricane" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane> <http://www.w3.org/2004/02/skos/core#description> "A tropical cyclone in which the maximum sustained surface wind (using the U.S. 1-minute average) is 64 kt (74 mph or 119 km/hr) or more. The term hurricane is used for Northern Hemisphere tropical cyclones east of the International Dateline to the Greenwich Meridian. The term typhoon is used for Pacific tropical cyclones north of the Equator west of the International Dateline." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasTemporalScope> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Interval> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Tropical Cyclone" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> <http://www.w3.org/2004/02/skos/core#description> "A warm-core non-frontal synoptic-scale cyclone, originating over tropical or subtropical waters, with organized deep convection and a closed surface wind circulation about a well-defined center. Once formed, a tropical cyclone is maintained by the extraction of heat energy from the ocean at high temperature and heat export at the low temperatures of the upper troposphere. In this they differ from extratropical cyclones, which derive their energy from horizontal temperature contrasts in the atmosphere (baroclinic effects)." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/AdministrativeRegion_2> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Tropical Cyclone Segment" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> <http://www.w3.org/2004/02/skos/core#description> "A subjectively-smoothed representation of a tropical cyclone's location and intensity over its lifetime. The best track contains the cyclone's latitude, longitude, maximum sustained surface winds, and minimum sea-level pressure at 6-hourly intervals. Best track positions and intensities, which are based on a post-storm assessment of all available data, may differ from values contained in storm advisories. They also generally will not reflect the erratic motion implied by connecting individual center fix positions." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Tropical Cyclone Segment Observation" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservationCollection> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasMember> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservation> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/phenomenonTime> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Interval> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegmentObservationCollection> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Tropical Cyclone Segment Observation Collection" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Tropical Depression" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalDepression> <http://www.w3.org/2004/02/skos/core#description> "A tropical cyclone in which the maximum sustained surface wind speed (using the U.S. 1-minute average) is 33 kt (38 mph or 62 km/hr) or less." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm> <http://www.w3.org/2000/01/rdf-schema#label> "NOAA Tropical Storm" .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalStorm> <http://www.w3.org/2004/02/skos/core#description> "A tropical cyclone in which the maximum sustained surface wind speed (using the U.S. 1-minute average) ranges from 34 kt (39 mph or 63 km/hr) to 63 kt (73 mph or 118 km/hr)." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell_Level13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This class denotes the set of cyclone properties measured in the NOAA Hurricane Tracks dataset." .
+<http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Tropical Cyclone Observable Property" .
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/sf#Point
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Geometry> .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+# 
+# http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+# 
+# http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/ObservationCollection
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1> <http://www.w3.org/2000/01/rdf-schema#label> "hurricane category 1" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1> <http://www.w3.org/2004/02/skos/core#description> "Sustained Winds: 74-95 mph; 64-82 kt; 119-153 km/h" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.1> <http://www.w3.org/2004/02/skos/core#description> "Type of damage due to hurricane winds: Very dangerous winds will produce some damage. Well-constructed frame homes could have damage to roof, shingles, vinyl siding and gutters. Large branches of trees will snap and shallowly rooted trees may be toppled. Extensive damage to power lines and poles likely will result in power outages that could last a few to several days." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2> <http://www.w3.org/2000/01/rdf-schema#label> "hurricane category 2" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2> <http://www.w3.org/2004/02/skos/core#description> "Sustained Winds: 96-110 mph; 83-95 kt; 154-177 km/h" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.2> <http://www.w3.org/2004/02/skos/core#description> "Type of damage due to hurricane winds: Extremely dangerous winds will cause extensive damage. Well-constructed frame homes could sustain major roof and siding damage. Many shallowly rooted trees will be snapped or uprooted and block numerous roads. Near-total power loss is expected with outages that could last from several days to weeks." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3> <http://www.w3.org/2000/01/rdf-schema#label> "hurricane category 3" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3> <http://www.w3.org/2004/02/skos/core#description> "Sustained Winds:111-129 mph; 96-112 kt; 178-208 km/h" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.3> <http://www.w3.org/2004/02/skos/core#description> "Type of damage due to hurricane winds: Devastating damage will occur. Well-built framed homes may incur major damage or removal of roof decking and gable ends. Many trees will be snapped or uprooted, blocking numerous roads. Electricity and water will be unavailable for several days to weeks after the storm passes." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4> <http://www.w3.org/2000/01/rdf-schema#label> "hurricane category 4" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4> <http://www.w3.org/2004/02/skos/core#description> "Sustained Winds: 130-156 mph; 113-136 kt; 209-251 km/h" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.4> <http://www.w3.org/2004/02/skos/core#description> "Type of damage due to hurricane winds: Catastrophic damage will occur. Well-built framed homes can sustain severe damage with loss of most of the roof structure and/or some exterior walls. Most trees will be snapped or uprooted and power poles downed. Fallen trees and power poles will isolate residential areas. Power outages will last weeks to possibly months. Most of the area will be uninhabitable for weeks or months." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5> <http://www.w3.org/2000/01/rdf-schema#label> "hurricane category 5" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5> <http://www.w3.org/2004/02/skos/core#description> "Sustained Winds: 157 mph or higher; 137 kt or higher; 252 km/h or higher" .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/hurricaneCategory.5> <http://www.w3.org/2004/02/skos/core#description> "Type of damage due to hurricane winds: Catastrophic damage will occur.  A high percentage of framed homes will be destroyed, with total roof failure and wall collapse. Fallen trees and power poles will isolate residential areas. Power outages will last for weeks to possibly months. Most of the area will be uninhabitable for weeks or months." .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.category> <http://www.w3.org/2000/01/rdf-schema#label> "tropical cyclone segment category" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.minPressure> <http://www.w3.org/2000/01/rdf-schema#label> "tropical cyclone segment minimum pressure" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/ontology/TropicalCycloneObservableProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/resource/tropicalCycloneObservableProperty.windSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "tropical cyclone segment wind speed" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/nextSegment> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> .
+# 
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/hasCycloneSegment> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+# 
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/hurricaneCategory> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://stko-kwg.geog.ucsb.edu/lod/ontology/HurricaneCategory> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_Hurricane> .
+# 
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/stormDetailsURL> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+# 
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/stormObservationsURL> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid14 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+# 
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/stormID> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid15 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+# 
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/stormName> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid16 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCyclone> .
+# 
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://stko-kwg.geog.ucsb.edu/lod/ontology/stormSegmentID> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid17 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAA_TropicalCycloneSegment> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

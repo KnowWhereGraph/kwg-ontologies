@@ -1,0 +1,1094 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix kwg-ont: <http://stko-kwg.geog.ucsb.edu/lod/ontology/> .
+@prefix kwgr: <http://stko-kwg.geog.ucsb.edu/lod/resource/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kwgr:KnowWhereGraph a kwg-ont:KnowledgeGraph ;
+    kwg-ont:containsSubGraph kwgr:subgraph.admin-regions-gadm-new,
+        kwgr:subgraph.air-quality-epa,
+        kwgr:subgraph.bluesky-forecast-airfire,
+        kwgr:subgraph.census-uscb,
+        kwgr:subgraph.climate-divisions-observations-noaa,
+        kwgr:subgraph.cropland-usda,
+        kwgr:subgraph.disaster-declaration-fema,
+        kwgr:subgraph.drought.ndmc,
+        kwgr:subgraph.earthquake-usgs,
+        kwgr:subgraph.federal-judicial-district-doj,
+        kwgr:subgraph.fqhc-hrsa,
+        kwgr:subgraph.gnis-ld-usgs,
+        kwgr:subgraph.historical-fires-mtbs,
+        kwgr:subgraph.hurricane-tracks-noaa,
+        kwgr:subgraph.national-weather-zone-noaa,
+        kwgr:subgraph.public-health,
+        kwgr:subgraph.relief-web,
+        kwgr:subgraph.s2-google-global,
+        kwgr:subgraph.smoke-plumes,
+        kwgr:subgraph.soil-ssurgo-usda,
+        kwgr:subgraph.storm-impacts-noaa,
+        kwgr:subgraph.transportation-usdot,
+        kwgr:subgraph.wildfire-nifc,
+        kwgr:subgraph.zipcode-uscb .
+
+kwgr:KnowWhereGraphTeam a kwg-ont:Team ;
+    kwg-ont:hasMember kwgr:abhilekha.dalal,
+        kwgr:adrita.barua,
+        kwgr:alica.sheill,
+        kwgr:andrew.eells,
+        kwgr:andrew.schroeder,
+        kwgr:anna.lopez-carr,
+        kwgr:anthony.donofrio,
+        kwgr:antrea.christou,
+        kwgr:austin.truchan,
+        kwgr:bruno.basso,
+        kwgr:catherine.foley,
+        kwgr:cogan.shimizu,
+        kwgr:colby.fisher,
+        kwgr:dalia.varanka,
+        kwgr:david.smith,
+        kwgr:dawn.wright,
+        kwgr:dean.rehberger,
+        kwgr:frank.davenport,
+        kwgr:gengchen.mai,
+        kwgr:joseph.zalewski,
+        kwgr:karen.doehner,
+        kwgr:kitty.currier,
+        kwgr:krzysztof.janowicz,
+        kwgr:ling.cai,
+        kwgr:lu.zhou,
+        kwgr:lynn.usery,
+        kwgr:mark.schildhauer,
+        kwgr:matt.jones,
+        kwgr:meilin.shi,
+        kwgr:mohammad.saeid.mahdavinejad,
+        kwgr:pascal.hitzler,
+        kwgr:paulina.oliva,
+        kwgr:randall.barker,
+        kwgr:rui.zhu,
+        kwgr:sanaz.saki.norouzi,
+        kwgr:scott.robinson,
+        kwgr:seila.gonzalez,
+        kwgr:shirly.stephen,
+        kwgr:sizhe.wang,
+        kwgr:thomas.thelen,
+        kwgr:tim.murphy,
+        kwgr:tony.howser,
+        kwgr:ty.fitzpatrick,
+        kwgr:wenwen.li,
+        kwgr:yuanyuan.tian,
+        kwgr:zhangyu.wang,
+        kwgr:zilong.liu .
+
+kwgr:Dataset.air.quality.system.data a kwg-ont:Dataset ;
+    dcterms:creator <https://www.epa.gov/> ;
+    kwg-ont:datasetProvider "U.S. Environmental Protection Agency"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://aqs.epa.gov/aqsweb/documents/data_api.html> ;
+    kwg-ont:updateInterval "daily"^^xsd:string .
+
+kwgr:Dataset.american.community.survey.5-year.data a kwg-ont:Dataset ;
+    dcterms:creator <https://data.census.gov/> ;
+    kwg-ont:datasetProvider "U.S. Census Bureau"^^xsd:string ;
+    kwg-ont:lastUpdated "2023-12-31 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <http://api.census.gov/data/> ;
+    kwg-ont:updateInterval "every 5 years"^^xsd:string .
+
+kwgr:Dataset.anss.comprehensive.earthquake.catalog a kwg-ont:Dataset ;
+    dcterms:creator <https://www.usgs.gov/> ;
+    kwg-ont:datasetProvider "U.S. Geological Survey"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.usgs.gov/natural-hazards/earthquake-hazards/earthquakes> ;
+    kwg-ont:updateInterval "real-time"^^xsd:string .
+
+kwgr:Dataset.bluesky.daily.runs a kwg-ont:Dataset ;
+    dcterms:creator <https://www.airfire.org/home> ;
+    kwg-ont:datasetProvider "The U.S. Forest Service AirFire Research Team"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://tools.airfire.org/websky/v2/#status> ;
+    kwg-ont:updateInterval "daily"^^xsd:string .
+
+kwgr:Dataset.conus.climate.divisional.data a kwg-ont:Dataset ;
+    dcterms:creator <https://www.noaa.gov/> ;
+    kwg-ont:datasetProvider "National Oceanic and Atmospheric Administration"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-10-08 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://psl.noaa.gov/data/usclimdivs/boundaries.html> ;
+    kwg-ont:updateInterval "monthly"^^xsd:string .
+
+kwgr:Dataset.conus.climate.observational.data a kwg-ont:Dataset ;
+    dcterms:creator <https://www.noaa.gov/> ;
+    kwg-ont:datasetProvider "National Oceanic and Atmospheric Administration"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.ncei.noaa.gov/pub/data/cirs/climdiv/> ;
+    kwg-ont:updateInterval "daily"^^xsd:string .
+
+kwgr:Dataset.county.health.rankings.national.data a kwg-ont:Dataset ;
+    dcterms:creator <https://uwphi.pophealth.wisc.edu/> ;
+    kwg-ont:datasetProvider "University of Wisconsin - Population Health Institute"^^xsd:string ;
+    kwg-ont:lastUpdated "Unknown"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.countyhealthrankings.org/sites/default/files/media/document/analytic_data2023_0.csv> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.county.level.poverty.status.small.area.income.and.poverty.estimates.\(saipe\).program a kwg-ont:Dataset ;
+    dcterms:creator <https://data.census.gov/> ;
+    kwg-ont:datasetProvider "U.S. Census Bureau"^^xsd:string ;
+    kwg-ont:lastUpdated "Unknown"^^xsd:string ;
+    kwg-ont:publisherSource <https://api.census.gov/data/timeseries/poverty/saipe.html?get=NAME,SAEPOVALL_PT,SAEPOVRTALL_PT&for=county:*&YEAR=2021> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.county.level.social.vulnerability.index a kwg-ont:Dataset ;
+    dcterms:creator <https://www.cdc.gov/> ;
+    kwg-ont:datasetProvider "Centers for Disease Control and Prevention"^^xsd:string ;
+    kwg-ont:lastUpdated "Unknown"^^xsd:string ;
+    kwg-ont:publisherSource <https://svi.cdc.gov/Documents/Data/2020/csv/states_counties/SVI_2020_US_county.csv> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.cropscape.cropland.data.layer a kwg-ont:Dataset ;
+    dcterms:creator <https://www.usda.gov/> ;
+    kwg-ont:datasetProvider "U.S. Department of Agriculture"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-01-31 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.nass.usda.gov/Research_and_Science/Cropland/Release/index.php> ;
+    kwg-ont:updateInterval "yearly"^^xsd:string .
+
+kwgr:Dataset.federally.qualified.health.centers a kwg-ont:Dataset ;
+    dcterms:creator <https://www.hrsa.gov/> ;
+    kwg-ont:datasetProvider "U.S. Department of Health and Human Services"^^xsd:string ;
+    kwg-ont:lastUpdated "Unknown"^^xsd:string ;
+    kwg-ont:publisherSource <https://data.hrsa.gov/data/download?data=HSCD#HSCD> ;
+    kwg-ont:updateInterval "yearly"^^xsd:string .
+
+kwgr:Dataset.geographic.names.information.system-ld a kwg-ont:Dataset ;
+    dcterms:creator <https://www.geog.ucsb.edu/services/research-facilities> ;
+    kwg-ont:datasetProvider "University of California, Santa Barbara (STKO Lab)"^^xsd:string ;
+    kwg-ont:lastUpdated "2022-04-20 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://gnis-ld.org/> ;
+    kwg-ont:updateInterval "not relevant"^^xsd:string .
+
+kwgr:Dataset.global.administrative.areas a kwg-ont:Dataset ;
+    dcterms:creator <https://gadm.org/index.html> ;
+    kwg-ont:datasetProvider "Robert J. Hijmans"^^xsd:string ;
+    kwg-ont:lastUpdated "2022-07-16 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://gadm.org/data.html> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.historical.hurricane.tracks a kwg-ont:Dataset ;
+    dcterms:creator <https://www.noaa.gov/> ;
+    kwg-ont:datasetProvider "National Oceanic and Atmospheric Administration"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://coast.noaa.gov/hurricanes/> ;
+    kwg-ont:updateInterval "daily"^^xsd:string .
+
+kwgr:Dataset.hospital.from.homeland.infrastructure.foundation-level.data a kwg-ont:Dataset ;
+    dcterms:creator <https://www.dhs.gov/> ;
+    kwg-ont:datasetProvider "Department of Homeland Security"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-07-18 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://hifld-geoplatform.hub.arcgis.com/maps/geoplatform::hospitals-1/about> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.monitoring.trends.in.burn.severity.burned.areas.boundaries a kwg-ont:Dataset ;
+    dcterms:creator <https://mtbs.gov/> ;
+    kwg-ont:datasetProvider "U.S. Geological Survey"^^xsd:string ;
+    kwg-ont:lastUpdated "2022-12-31 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://edcintl.cr.usgs.gov/downloads/sciweb1/shared/MTBS_Fire/data/composite_data/burned_area_extent_shapefile/mtbs_perimeter_data.zip> ;
+    kwg-ont:updateInterval "not relevant"^^xsd:string .
+
+kwgr:Dataset.national.weather.service.public.forecast.zones a kwg-ont:Dataset ;
+    dcterms:creator <https://www.weather.gov/> ;
+    kwg-ont:datasetProvider "NOAA National Weather Service"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-02-22 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.weather.gov/gis/PublicZones> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.noaa.smoke.polygons a kwg-ont:Dataset ;
+    dcterms:creator <https://www.noaa.gov/> ;
+    kwg-ont:datasetProvider "National Oceanic and Atmospheric Administration"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.ospo.noaa.gov/Products/land/hms.html#data> ;
+    kwg-ont:updateInterval "daily"^^xsd:string .
+
+kwgr:Dataset.noaa.storm.events a kwg-ont:Dataset ;
+    dcterms:creator <https://www.noaa.gov/> ;
+    kwg-ont:datasetProvider "National Oceanic and Atmospheric Administration"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-05-31 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.ncdc.noaa.gov/stormevents/ftp.jsp> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.openfema.disaster.declarations a kwg-ont:Dataset ;
+    dcterms:creator <https://www.fema.gov/> ;
+    kwg-ont:datasetProvider "Federal Emergency Management Agency (FEMA)"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://www.fema.gov/about/openfema/data-sets> ;
+    kwg-ont:updateInterval "every 20 mins"^^xsd:string .
+
+kwgr:Dataset.poverty.and.obesity.from.places a kwg-ont:Dataset ;
+    dcterms:creator <https://www.cdc.gov/> ;
+    kwg-ont:datasetProvider "Centers for Disease Control and Prevention"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-08-23 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://data.cdc.gov/500-Cities-Places/PLACES-County-Data-GIS-Friendly-Format-2023-releas/i46a-9kgh> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.public.health.departments.from.homeland.infrastructure.foundation-level.data.\(hifld\) a kwg-ont:Dataset ;
+    dcterms:creator <https://www.dhs.gov/> ;
+    kwg-ont:datasetProvider "Department of Homeland Security"^^xsd:string ;
+    kwg-ont:lastUpdated "Unknown"^^xsd:string ;
+    kwg-ont:publisherSource <https://hifld-geoplatform.hub.arcgis.com/datasets/1b919b0ff5f44d05bcb374591206f757/explore> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.relief.web.reports a kwg-ont:Dataset ;
+    dcterms:creator <https://www.unocha.org/> ;
+    kwg-ont:datasetProvider "The United Nations Office for the Coordination of Humanitarian Affairs "^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://reliefweb.int/updates?list=Updates%20%28Reports%20only%29&view=reports> ;
+    kwg-ont:updateInterval "daily"^^xsd:string .
+
+kwgr:Dataset.rx.open.facilities a kwg-ont:Dataset ;
+    dcterms:creator <https://rxopen.org/> ;
+    kwg-ont:datasetProvider "Healthcare Ready"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-09-13 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://rxopen.org/api/v1/map/download/facility> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.s2.geometry a kwg-ont:Dataset ;
+    dcterms:creator <https://www.google.com/> ;
+    kwg-ont:datasetProvider "Google"^^xsd:string ;
+    kwg-ont:lastUpdated "Static"^^xsd:string ;
+    kwg-ont:publisherSource <https://s2geometry.io/> ;
+    kwg-ont:updateInterval "static"^^xsd:string .
+
+kwgr:Dataset.soil.survey.geographic.database a kwg-ont:Dataset ;
+    dcterms:creator <https://www.nrcs.usda.gov/about/partner-with-us/national-cooperative-soil-survey> ;
+    kwg-ont:datasetProvider "National Cooperative Soil Survey"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-08-01 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <ttps://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo> ;
+    kwg-ont:updateInterval "yearly"^^xsd:string .
+
+kwgr:Dataset.the.national.highway.planning.network.dataset a kwg-ont:Dataset ;
+    dcterms:creator <https://www.transportation.gov/> ;
+    kwg-ont:datasetProvider "U.S. Department of Transportation"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-01 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://geo.dot.gov/mapping/rest/services/NTAD/National_Highway_Planning_Network/MapServer/0/query?> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.u.s..drought.monitor.dataset a kwg-ont:Dataset ;
+    dcterms:creator <https://drought.unl.edu/> ;
+    kwg-ont:datasetProvider "University of Nebraska, National Drought Mitigation Center (NDMC)"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-09-03 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://droughtmonitor.unl.edu/DmData/GISData.aspx> ;
+    kwg-ont:updateInterval "weekly"^^xsd:string .
+
+kwgr:Dataset.us.district.court.jurisdictions a kwg-ont:Dataset ;
+    dcterms:creator <https://www.fjc.gov/history/courts/u.s.-district-courts-and-federaljudiciary> ;
+    kwg-ont:datasetProvider "U.S. Department of Justice"^^xsd:string ;
+    kwg-ont:lastUpdated "2021-03-22 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://hifld-geoplatform.opendata.arcgis.com/datasets/geoplatform::us-district-court-jurisdictions/explore> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:Dataset.wildland.fire.incident.locations a kwg-ont:Dataset ;
+    dcterms:creator <https://www.nifc.gov/> ;
+    kwg-ont:datasetProvider "National Interagency Fire Center"^^xsd:string ;
+    kwg-ont:lastUpdated "Daily updates"^^xsd:string ;
+    kwg-ont:publisherSource <https://data-nifc.opendata.arcgis.com/datasets/nifc::wildland-fire-incident-locations/about> ;
+    kwg-ont:updateInterval "every 5 mins"^^xsd:string .
+
+kwgr:Dataset.zip.code.tabulation.areas a kwg-ont:Dataset ;
+    dcterms:creator <https://data.census.gov/> ;
+    kwg-ont:datasetProvider "U.S. Census Bureau"^^xsd:string ;
+    kwg-ont:lastUpdated "2023-11-22 00:00:00"^^xsd:string ;
+    kwg-ont:publisherSource <https://www2.census.gov/geo/tiger/TIGER2023/ZCTA520/> ;
+    kwg-ont:updateInterval "random"^^xsd:string .
+
+kwgr:abhilekha.dalal a kwg-ont:Person ;
+    rdfs:label "Abhilekha Dalal"^^xsd:string .
+
+kwgr:adrita.barua a kwg-ont:Person ;
+    rdfs:label "Adrita Barua"^^xsd:string .
+
+kwgr:alica.sheill a kwg-ont:Person ;
+    rdfs:label "Alica Sheill"^^xsd:string .
+
+kwgr:andrew.eells a kwg-ont:Person ;
+    rdfs:label "Andrew Eells"^^xsd:string .
+
+kwgr:andrew.schroeder a kwg-ont:Person ;
+    rdfs:label "Andrew Schroeder"^^xsd:string .
+
+kwgr:anna.lopez-carr a kwg-ont:Person ;
+    rdfs:label "Anna Lopez-Carr"^^xsd:string .
+
+kwgr:anthony.donofrio a kwg-ont:Person ;
+    rdfs:label "Anthony D'Onofrio"^^xsd:string .
+
+kwgr:antrea.christou a kwg-ont:Person ;
+    rdfs:label "Antrea Christou"^^xsd:string .
+
+kwgr:austin.truchan a kwg-ont:Person ;
+    rdfs:label "Austin Truchan"^^xsd:string .
+
+kwgr:bruno.basso a kwg-ont:Person ;
+    rdfs:label "Bruno Basso"^^xsd:string .
+
+kwgr:catherine.foley a kwg-ont:Person ;
+    rdfs:label "Catherine Foley"^^xsd:string .
+
+kwgr:cogan.shimizu a kwg-ont:Person ;
+    rdfs:label "Cogan Shimizu"^^xsd:string .
+
+kwgr:colby.fisher a kwg-ont:Person ;
+    rdfs:label "Colby Fisher"^^xsd:string .
+
+kwgr:dalia.varanka a kwg-ont:Person ;
+    rdfs:label "Dalia Varanka"^^xsd:string .
+
+kwgr:david.smith a kwg-ont:Person ;
+    rdfs:label "David Smith"^^xsd:string .
+
+kwgr:dawn.wright a kwg-ont:Person ;
+    rdfs:label "Dawn Wright"^^xsd:string .
+
+kwgr:dean.rehberger a kwg-ont:Person ;
+    rdfs:label "Dean Rehberger"^^xsd:string .
+
+kwgr:frank.davenport a kwg-ont:Person ;
+    rdfs:label "Frank Davenport"^^xsd:string .
+
+kwgr:gengchen.mai a kwg-ont:Person ;
+    rdfs:label "Gengchen Mai"^^xsd:string .
+
+kwgr:joseph.zalewski a kwg-ont:Person ;
+    rdfs:label "Joseph Zalewski"^^xsd:string .
+
+kwgr:karen.doehner a kwg-ont:Person ;
+    rdfs:label "Karen Doehner"^^xsd:string .
+
+kwgr:kitty.currier a kwg-ont:Person ;
+    rdfs:label "Kitty Currier"^^xsd:string .
+
+kwgr:krzysztof.janowicz a kwg-ont:Person ;
+    rdfs:label "Krzysztof Janowicz"^^xsd:string .
+
+kwgr:ling.cai a kwg-ont:Person ;
+    rdfs:label "Ling Cai"^^xsd:string .
+
+kwgr:lu.zhou a kwg-ont:Person ;
+    rdfs:label "Lu Zhou"^^xsd:string .
+
+kwgr:lynn.usery a kwg-ont:Person ;
+    rdfs:label "Lynn Usery"^^xsd:string .
+
+kwgr:mark.schildhauer a kwg-ont:Person ;
+    rdfs:label "Mark Schildhauer"^^xsd:string .
+
+kwgr:matt.jones a kwg-ont:Person ;
+    rdfs:label "Matt Jones"^^xsd:string .
+
+kwgr:meilin.shi a kwg-ont:Person ;
+    rdfs:label "Meilin Shi"^^xsd:string .
+
+kwgr:mohammad.saeid.mahdavinejad a kwg-ont:Person ;
+    rdfs:label "Mohammad Saeid Mahdavinejad"^^xsd:string .
+
+kwgr:pascal.hitzler a kwg-ont:Person ;
+    rdfs:label "Pascal Hitzler"^^xsd:string .
+
+kwgr:paulina.oliva a kwg-ont:Person ;
+    rdfs:label "Paulina Oliva"^^xsd:string .
+
+kwgr:randall.barker a kwg-ont:Person ;
+    rdfs:label "Randall Barker"^^xsd:string .
+
+kwgr:rui.zhu a kwg-ont:Person ;
+    rdfs:label "Rui Zhu"^^xsd:string .
+
+kwgr:sanaz.saki.norouzi a kwg-ont:Person ;
+    rdfs:label "Sanaz Saki Norouzi"^^xsd:string .
+
+kwgr:scott.robinson a kwg-ont:Person ;
+    rdfs:label "Scott Robinson"^^xsd:string .
+
+kwgr:seila.gonzalez a kwg-ont:Person ;
+    rdfs:label "Seila Gonzalez"^^xsd:string .
+
+kwgr:sizhe.wang a kwg-ont:Person ;
+    rdfs:label "Sizhe Wang"^^xsd:string .
+
+kwgr:subgraph.admin-regions-gadm-new a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Global Administrative Areas Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:hasSpatialCoverage kwgr:global ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.global.administrative.areas .
+
+kwgr:subgraph.air-quality-epa a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Air Quality System Data Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1980"^^xsd:gYear ;
+    kwg-ont:describesObservableProperty kwgr:airPollutantParameter.12128,
+        kwgr:airPollutantParameter.14129,
+        kwgr:airPollutantParameter.42101,
+        kwgr:airPollutantParameter.42401,
+        kwgr:airPollutantParameter.42602,
+        kwgr:airPollutantParameter.44201,
+        kwgr:airPollutantParameter.81102,
+        kwgr:airPollutantParameter.85129,
+        kwgr:airPollutantParameter.88101 ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "environmental"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.air.quality.system.data .
+
+kwgr:subgraph.bluesky-forecast-airfire a kwg-ont:DatasetSubgraph ;
+    rdfs:label "BlueSky Daily Runs Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:BlueskyModeledWildfire> ;
+    kwg-ont:describesObservableProperty kwgr:blueskyObservableProperty.modeledDailyEmission.pm10,
+        kwgr:blueskyObservableProperty.modeledDailyEmission.pm25,
+        kwgr:blueskyObservableProperty.modeledGrowthArea,
+        kwgr:blueskyObservableProperty.modeledGrowthNumLocation ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.bluesky.daily.runs .
+
+kwgr:subgraph.census-uscb a kwg-ont:DatasetSubgraph ;
+    rdfs:label "American Community Survey 5-year Data Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2017"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:StatisticalArea> ;
+    kwg-ont:describesObservableProperty kwgr:censusObservableProperty.femalePopulation,
+        kwgr:censusObservableProperty.householdUnits,
+        kwgr:censusObservableProperty.malePopulation,
+        kwgr:censusObservableProperty.totalPopulation ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.american.community.survey.5-year.data .
+
+kwgr:subgraph.climate-divisions-observations-noaa a kwg-ont:DatasetSubgraph ;
+    rdfs:label "CONUS Climate Divisional Data Dataset Subgraph"^^xsd:string,
+        "CONUS Climate Observational Data Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1895"^^xsd:gYear,
+        "Not relevant"^^xsd:string ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:ClimateDivision> ;
+    kwg-ont:describesObservableProperty kwgr:climateObservableProperty.01,
+        kwgr:climateObservableProperty.02,
+        kwgr:climateObservableProperty.05,
+        kwgr:climateObservableProperty.06,
+        kwgr:climateObservableProperty.07,
+        kwgr:climateObservableProperty.08,
+        kwgr:climateObservableProperty.25,
+        kwgr:climateObservableProperty.26,
+        kwgr:climateObservableProperty.27,
+        kwgr:climateObservableProperty.28,
+        kwgr:climateObservableProperty.71,
+        kwgr:climateObservableProperty.72,
+        kwgr:climateObservableProperty.73,
+        kwgr:climateObservableProperty.74,
+        kwgr:climateObservableProperty.75,
+        kwgr:climateObservableProperty.76,
+        kwgr:climateObservableProperty.77 ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "environmental"^^xsd:string,
+        "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.conus.climate.divisional.data,
+        kwgr:Dataset.conus.climate.observational.data .
+
+kwgr:subgraph.cropland-usda a kwg-ont:DatasetSubgraph ;
+    rdfs:label "CropScape - Cropland Data Layer Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2008"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:S2Cell_Level13> ;
+    kwg-ont:describesObservableProperty kwgr:croplandObservableProperty.0,
+        kwgr:croplandObservableProperty.1,
+        kwgr:croplandObservableProperty.10,
+        kwgr:croplandObservableProperty.11,
+        kwgr:croplandObservableProperty.111,
+        kwgr:croplandObservableProperty.112,
+        kwgr:croplandObservableProperty.12,
+        kwgr:croplandObservableProperty.121,
+        kwgr:croplandObservableProperty.122,
+        kwgr:croplandObservableProperty.123,
+        kwgr:croplandObservableProperty.124,
+        kwgr:croplandObservableProperty.13,
+        kwgr:croplandObservableProperty.131,
+        kwgr:croplandObservableProperty.14,
+        kwgr:croplandObservableProperty.141,
+        kwgr:croplandObservableProperty.142,
+        kwgr:croplandObservableProperty.143,
+        kwgr:croplandObservableProperty.152,
+        kwgr:croplandObservableProperty.176,
+        kwgr:croplandObservableProperty.190,
+        kwgr:croplandObservableProperty.195,
+        kwgr:croplandObservableProperty.2,
+        kwgr:croplandObservableProperty.204,
+        kwgr:croplandObservableProperty.205,
+        kwgr:croplandObservableProperty.206,
+        kwgr:croplandObservableProperty.207,
+        kwgr:croplandObservableProperty.208,
+        kwgr:croplandObservableProperty.209,
+        kwgr:croplandObservableProperty.21,
+        kwgr:croplandObservableProperty.210,
+        kwgr:croplandObservableProperty.211,
+        kwgr:croplandObservableProperty.212,
+        kwgr:croplandObservableProperty.213,
+        kwgr:croplandObservableProperty.214,
+        kwgr:croplandObservableProperty.215,
+        kwgr:croplandObservableProperty.216,
+        kwgr:croplandObservableProperty.217,
+        kwgr:croplandObservableProperty.218,
+        kwgr:croplandObservableProperty.219,
+        kwgr:croplandObservableProperty.22,
+        kwgr:croplandObservableProperty.220,
+        kwgr:croplandObservableProperty.221,
+        kwgr:croplandObservableProperty.222,
+        kwgr:croplandObservableProperty.223,
+        kwgr:croplandObservableProperty.224,
+        kwgr:croplandObservableProperty.225,
+        kwgr:croplandObservableProperty.226,
+        kwgr:croplandObservableProperty.227,
+        kwgr:croplandObservableProperty.228,
+        kwgr:croplandObservableProperty.229,
+        kwgr:croplandObservableProperty.23,
+        kwgr:croplandObservableProperty.230,
+        kwgr:croplandObservableProperty.231,
+        kwgr:croplandObservableProperty.232,
+        kwgr:croplandObservableProperty.233,
+        kwgr:croplandObservableProperty.234,
+        kwgr:croplandObservableProperty.235,
+        kwgr:croplandObservableProperty.236,
+        kwgr:croplandObservableProperty.237,
+        kwgr:croplandObservableProperty.238,
+        kwgr:croplandObservableProperty.239,
+        kwgr:croplandObservableProperty.24,
+        kwgr:croplandObservableProperty.240,
+        kwgr:croplandObservableProperty.241,
+        kwgr:croplandObservableProperty.242,
+        kwgr:croplandObservableProperty.243,
+        kwgr:croplandObservableProperty.244,
+        kwgr:croplandObservableProperty.245,
+        kwgr:croplandObservableProperty.246,
+        kwgr:croplandObservableProperty.247,
+        kwgr:croplandObservableProperty.248,
+        kwgr:croplandObservableProperty.249,
+        kwgr:croplandObservableProperty.25,
+        kwgr:croplandObservableProperty.250,
+        kwgr:croplandObservableProperty.254,
+        kwgr:croplandObservableProperty.26,
+        kwgr:croplandObservableProperty.27,
+        kwgr:croplandObservableProperty.28,
+        kwgr:croplandObservableProperty.29,
+        kwgr:croplandObservableProperty.3,
+        kwgr:croplandObservableProperty.30,
+        kwgr:croplandObservableProperty.31,
+        kwgr:croplandObservableProperty.32,
+        kwgr:croplandObservableProperty.33,
+        kwgr:croplandObservableProperty.34,
+        kwgr:croplandObservableProperty.35,
+        kwgr:croplandObservableProperty.36,
+        kwgr:croplandObservableProperty.37,
+        kwgr:croplandObservableProperty.38,
+        kwgr:croplandObservableProperty.39,
+        kwgr:croplandObservableProperty.4,
+        kwgr:croplandObservableProperty.41,
+        kwgr:croplandObservableProperty.42,
+        kwgr:croplandObservableProperty.43,
+        kwgr:croplandObservableProperty.44,
+        kwgr:croplandObservableProperty.45,
+        kwgr:croplandObservableProperty.46,
+        kwgr:croplandObservableProperty.47,
+        kwgr:croplandObservableProperty.48,
+        kwgr:croplandObservableProperty.49,
+        kwgr:croplandObservableProperty.5,
+        kwgr:croplandObservableProperty.50,
+        kwgr:croplandObservableProperty.51,
+        kwgr:croplandObservableProperty.52,
+        kwgr:croplandObservableProperty.53,
+        kwgr:croplandObservableProperty.54,
+        kwgr:croplandObservableProperty.55,
+        kwgr:croplandObservableProperty.56,
+        kwgr:croplandObservableProperty.57,
+        kwgr:croplandObservableProperty.58,
+        kwgr:croplandObservableProperty.59,
+        kwgr:croplandObservableProperty.6,
+        kwgr:croplandObservableProperty.60,
+        kwgr:croplandObservableProperty.61,
+        kwgr:croplandObservableProperty.63,
+        kwgr:croplandObservableProperty.64,
+        kwgr:croplandObservableProperty.65,
+        kwgr:croplandObservableProperty.66,
+        kwgr:croplandObservableProperty.67,
+        kwgr:croplandObservableProperty.68,
+        kwgr:croplandObservableProperty.69,
+        kwgr:croplandObservableProperty.70,
+        kwgr:croplandObservableProperty.71,
+        kwgr:croplandObservableProperty.72,
+        kwgr:croplandObservableProperty.74,
+        kwgr:croplandObservableProperty.75,
+        kwgr:croplandObservableProperty.76,
+        kwgr:croplandObservableProperty.77,
+        kwgr:croplandObservableProperty.81,
+        kwgr:croplandObservableProperty.82,
+        kwgr:croplandObservableProperty.83,
+        kwgr:croplandObservableProperty.87,
+        kwgr:croplandObservableProperty.88,
+        kwgr:croplandObservableProperty.92 ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "environmental"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.cropscape.cropland.data.layer .
+
+kwgr:subgraph.disaster-declaration-fema a kwg-ont:DatasetSubgraph ;
+    rdfs:label "OpenFEMA Disaster Declarations Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1953"^^xsd:gYear ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.openfema.disaster.declarations .
+
+kwgr:subgraph.drought.ndmc a kwg-ont:DatasetSubgraph ;
+    rdfs:label "U.S. Drought Monitor Dataset Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2000"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:S2Cell> ;
+    kwg-ont:describesObservableProperty kwgr:droughtObservableProperty.DroughtIntensity.D0,
+        kwgr:droughtObservableProperty.DroughtIntensity.D1,
+        kwgr:droughtObservableProperty.DroughtIntensity.D2,
+        kwgr:droughtObservableProperty.DroughtIntensity.D3,
+        kwgr:droughtObservableProperty.DroughtIntensity.D4,
+        kwgr:droughtObservableProperty.DroughtIntensity.None ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.u.s..drought.monitor.dataset .
+
+kwgr:subgraph.earthquake-usgs a kwg-ont:DatasetSubgraph ;
+    rdfs:label "ANSS Comprehensive Earthquake Catalog Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1843"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:Earthquake> ;
+    kwg-ont:describesObservableProperty kwgr:earthquakeObservableProperty.alert,
+        kwgr:earthquakeObservableProperty.cdi,
+        kwgr:earthquakeObservableProperty.code,
+        kwgr:earthquakeObservableProperty.dmin,
+        kwgr:earthquakeObservableProperty.felt,
+        kwgr:earthquakeObservableProperty.gap,
+        kwgr:earthquakeObservableProperty.ids,
+        kwgr:earthquakeObservableProperty.mag,
+        kwgr:earthquakeObservableProperty.magType,
+        kwgr:earthquakeObservableProperty.mmi,
+        kwgr:earthquakeObservableProperty.net,
+        kwgr:earthquakeObservableProperty.nst,
+        kwgr:earthquakeObservableProperty.place,
+        kwgr:earthquakeObservableProperty.rms,
+        kwgr:earthquakeObservableProperty.sig,
+        kwgr:earthquakeObservableProperty.sources,
+        kwgr:earthquakeObservableProperty.status,
+        kwgr:earthquakeObservableProperty.tsunami,
+        kwgr:earthquakeObservableProperty.type,
+        kwgr:earthquakeObservableProperty.types,
+        kwgr:earthquakeObservableProperty.tz,
+        kwgr:earthquakeObservableProperty.updated,
+        kwgr:earthquakeObservableProperty.url ;
+    kwg-ont:hasSpatialCoverage kwgr:global ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.anss.comprehensive.earthquake.catalog .
+
+kwgr:subgraph.federal-judicial-district-doj a kwg-ont:DatasetSubgraph ;
+    rdfs:label "US District Court Jurisdictions Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2021"^^xsd:gYear ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.us.district.court.jurisdictions .
+
+kwgr:subgraph.fqhc-hrsa a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Federally Qualified Health Centers Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:FederallyQualifiedHealthCenter> ;
+    kwg-ont:describesObservableProperty kwgr:,
+        kwgr:fqhcObservableProperty.AbnormBreastPatients,
+        kwgr:fqhcObservableProperty.AbnormCervicalPatients,
+        kwgr:fqhcObservableProperty.AcuteRespCovidPatients,
+        kwgr:fqhcObservableProperty.AlcoholPatients,
+        kwgr:fqhcObservableProperty.AmerIn_AKNative,
+        kwgr:fqhcObservableProperty.AmerIn_AKNativePerc,
+        kwgr:fqhcObservableProperty.AnxietyPatients,
+        kwgr:fqhcObservableProperty.Asian,
+        kwgr:fqhcObservableProperty.AsianPerc,
+        kwgr:fqhcObservableProperty.AsthmaPatients,
+        kwgr:fqhcObservableProperty.AttnDefPatients,
+        kwgr:fqhcObservableProperty.Black,
+        kwgr:fqhcObservableProperty.BlackPerc,
+        kwgr:fqhcObservableProperty.ChronLowRespPatients,
+        kwgr:fqhcObservableProperty.ContracptPatients,
+        kwgr:fqhcObservableProperty.CovidPatients,
+        kwgr:fqhcObservableProperty.DehydrationPatients,
+        kwgr:fqhcObservableProperty.DepressnPatients,
+        kwgr:fqhcObservableProperty.DermatitisPatients,
+        kwgr:fqhcObservableProperty.DiabetesPatients,
+        kwgr:fqhcObservableProperty.EmergencyServicesPatients,
+        kwgr:fqhcObservableProperty.ExposurePatients,
+        kwgr:fqhcObservableProperty.EyeExamPatients,
+        kwgr:fqhcObservableProperty.FPL_100_Percent_and_Below,
+        kwgr:fqhcObservableProperty.FPL_101_150_Percent,
+        kwgr:fqhcObservableProperty.FPL_151_200_Percent,
+        kwgr:fqhcObservableProperty.FPL_Over_200_Percent,
+        kwgr:fqhcObservableProperty.FPL_Unknown,
+        kwgr:fqhcObservableProperty.FemalePerc,
+        kwgr:fqhcObservableProperty.FinanclStrain,
+        kwgr:fqhcObservableProperty.FluVacPatients,
+        kwgr:fqhcObservableProperty.FoodInsecur,
+        kwgr:fqhcObservableProperty.HIVPatients,
+        kwgr:fqhcObservableProperty.Haw_PI,
+        kwgr:fqhcObservableProperty.Haw_PIPerc,
+        kwgr:fqhcObservableProperty.HeartDiseasePatients,
+        kwgr:fqhcObservableProperty.HepBPatients,
+        kwgr:fqhcObservableProperty.HepCPatients,
+        kwgr:fqhcObservableProperty.Hispanic,
+        kwgr:fqhcObservableProperty.HispanicPerc,
+        kwgr:fqhcObservableProperty.Homeless,
+        kwgr:fqhcObservableProperty.HousingInsecur,
+        kwgr:fqhcObservableProperty.HypertensionPatients,
+        kwgr:fqhcObservableProperty.LackTransport,
+        kwgr:fqhcObservableProperty.MAT_Opioid_Use,
+        kwgr:fqhcObservableProperty.MalePerc,
+        kwgr:fqhcObservableProperty.Medicaid,
+        kwgr:fqhcObservableProperty.Medicare,
+        kwgr:fqhcObservableProperty.MentlDisordPatients,
+        kwgr:fqhcObservableProperty.MigSeasAgWork,
+        kwgr:fqhcObservableProperty.MultRace,
+        kwgr:fqhcObservableProperty.MultRacePerc,
+        kwgr:fqhcObservableProperty.NonEnglish,
+        kwgr:fqhcObservableProperty.NonEnglishPerc,
+        kwgr:fqhcObservableProperty.NonHispanic,
+        kwgr:fqhcObservableProperty.NonHispanicPerc,
+        kwgr:fqhcObservableProperty.NutrDeficPatients,
+        kwgr:fqhcObservableProperty.ObesityPatients,
+        kwgr:fqhcObservableProperty.OralExamsPatients,
+        kwgr:fqhcObservableProperty.OralSurgeryPatients,
+        kwgr:fqhcObservableProperty.OtitisPatients,
+        kwgr:fqhcObservableProperty.Over64,
+        kwgr:fqhcObservableProperty.Over64Perc,
+        kwgr:fqhcObservableProperty.PerinatalPatients,
+        kwgr:fqhcObservableProperty.PrivateIns,
+        kwgr:fqhcObservableProperty.PublicIns,
+        kwgr:fqhcObservableProperty.RehabilitatePatients,
+        kwgr:fqhcObservableProperty.SchoolBased,
+        kwgr:fqhcObservableProperty.SexTransmitPatients,
+        kwgr:fqhcObservableProperty.SubstancePatients,
+        kwgr:fqhcObservableProperty.TobaccoPatients,
+        kwgr:fqhcObservableProperty.TotalFemale,
+        kwgr:fqhcObservableProperty.TotalMale,
+        kwgr:fqhcObservableProperty.TotalPatients,
+        kwgr:fqhcObservableProperty.TubercPatients,
+        kwgr:fqhcObservableProperty.Under6,
+        kwgr:fqhcObservableProperty.Under6Perc,
+        kwgr:fqhcObservableProperty.Uninsured,
+        kwgr:fqhcObservableProperty.UnreportedEthnicity,
+        kwgr:fqhcObservableProperty.UnreportedEthnicityPerc,
+        kwgr:fqhcObservableProperty.UnreportedRace,
+        kwgr:fqhcObservableProperty.UnreportedRacePerc,
+        kwgr:fqhcObservableProperty.Veteran,
+        kwgr:fqhcObservableProperty.White,
+        kwgr:fqhcObservableProperty.WhitePerc ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "public health"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.federally.qualified.health.centers .
+
+kwgr:subgraph.gnis-ld-usgs a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Geographic Names Information System-LD Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.geographic.names.information.system-ld .
+
+kwgr:subgraph.historical-fires-mtbs a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Monitoring Trends in Burn Severity Burned Areas Boundaries Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1984"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:MTBS_Fire> ;
+    kwg-ont:describesObservableProperty kwgr:mtbsFireObservableProperty.meanNBRValue,
+        kwgr:mtbsFireObservableProperty.numberOfAcresBurned,
+        kwgr:mtbsFireObservableProperty.standardDeviationOfMeanNBRValue ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.monitoring.trends.in.burn.severity.burned.areas.boundaries .
+
+kwgr:subgraph.hurricane-tracks-noaa a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Historical Hurricane Tracks Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1842"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:NOAA_TropicalCycloneSegment> ;
+    kwg-ont:describesObservableProperty kwgr:tropicalCycloneObservableProperty.category,
+        kwgr:tropicalCycloneObservableProperty.minPressure,
+        kwgr:tropicalCycloneObservableProperty.windSpeed ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.historical.hurricane.tracks .
+
+kwgr:subgraph.national-weather-zone-noaa a kwg-ont:DatasetSubgraph ;
+    rdfs:label "National Weather Service Public Forecast Zones Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2023"^^xsd:gYear ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.national.weather.service.public.forecast.zones .
+
+kwgr:subgraph.public-health a kwg-ont:DatasetSubgraph ;
+    rdfs:label "County Health Rankings National Data Dataset Subgraph"^^xsd:string,
+        "County level Poverty Status - Small Area Income and Poverty Estimates (SAIPE) program Dataset Subgraph"^^xsd:string,
+        "County level Social Vulnerability Index Dataset Subgraph"^^xsd:string,
+        "Hospital from Homeland Infrastructure Foundation-Level Data Dataset Subgraph"^^xsd:string,
+        "Poverty and Obesity from PLACES Dataset Subgraph"^^xsd:string,
+        "Public Health Departments from Homeland Infrastructure Foundation-Level Data (HIFLD) Dataset Subgraph"^^xsd:string,
+        "Rx Open Facilities Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2020"^^xsd:gYear,
+        "2021"^^xsd:gYear,
+        "2023"^^xsd:gYear,
+        "Not relevant"^^xsd:string ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:AdministrativeRegion_2> ;
+    kwg-ont:describesObservableProperty kwgr:publicHealthObservableProperty.diabetesAgeAdjusted20PlusPercent,
+        kwgr:publicHealthObservableProperty.fluVaccination,
+        kwgr:publicHealthObservableProperty.fluVaccination-americanIndian-alaskanNative,
+        kwgr:publicHealthObservableProperty.fluVaccination-asian-pacificIslander,
+        kwgr:publicHealthObservableProperty.fluVaccination-black,
+        kwgr:publicHealthObservableProperty.fluVaccination-hispanic,
+        kwgr:publicHealthObservableProperty.fluVaccination-white,
+        kwgr:publicHealthObservableProperty.foodEnvironmentIndex,
+        kwgr:publicHealthObservableProperty.injuryAndDeaths,
+        kwgr:publicHealthObservableProperty.injuryAndDeaths-americanIndian-alaskanNative,
+        kwgr:publicHealthObservableProperty.injuryAndDeaths-asian-pacificIslander,
+        kwgr:publicHealthObservableProperty.injuryAndDeaths-black,
+        kwgr:publicHealthObservableProperty.injuryAndDeaths-hispanic,
+        kwgr:publicHealthObservableProperty.injuryAndDeaths-white,
+        kwgr:publicHealthObservableProperty.lowBirthWeight,
+        kwgr:publicHealthObservableProperty.lowBirthWeight-americanIndian-alaskanNative,
+        kwgr:publicHealthObservableProperty.lowBirthWeight-asian-pacificIslander,
+        kwgr:publicHealthObservableProperty.lowBirthWeight-black,
+        kwgr:publicHealthObservableProperty.lowBirthWeight-hispanic,
+        kwgr:publicHealthObservableProperty.lowBirthWeight-white,
+        kwgr:publicHealthObservableProperty.mammographyScreening,
+        kwgr:publicHealthObservableProperty.mammographyScreening-americanIndian-alaskanNative,
+        kwgr:publicHealthObservableProperty.mammographyScreening-asian-pacificIslander,
+        kwgr:publicHealthObservableProperty.mammographyScreening-black,
+        kwgr:publicHealthObservableProperty.mammographyScreening-hispanic,
+        kwgr:publicHealthObservableProperty.mammographyScreening-white,
+        kwgr:publicHealthObservableProperty.mentalHealthProviders,
+        kwgr:publicHealthObservableProperty.obesityAgeAdjusted20PlusPercent,
+        kwgr:publicHealthObservableProperty.poorMentalHealthDays,
+        kwgr:publicHealthObservableProperty.povertyCountEstimate,
+        kwgr:publicHealthObservableProperty.povertyRateEstimate,
+        kwgr:publicHealthObservableProperty.ratioOfPopulationToMentalHealthProviders,
+        kwgr:publicHealthObservableProperty.uninsuredAdults,
+        kwgr:publicHealthObservableProperty.uninsuredChildren,
+        kwgr:vulnerabilityObservableProperty.socialVulnerabilityIndex ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "public health"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.county.health.rankings.national.data,
+        kwgr:Dataset.county.level.poverty.status.small.area.income.and.poverty.estimates.\(saipe\).program,
+        kwgr:Dataset.county.level.social.vulnerability.index,
+        kwgr:Dataset.hospital.from.homeland.infrastructure.foundation-level.data,
+        kwgr:Dataset.poverty.and.obesity.from.places,
+        kwgr:Dataset.public.health.departments.from.homeland.infrastructure.foundation-level.data.\(hifld\),
+        kwgr:Dataset.rx.open.facilities .
+
+kwgr:subgraph.relief-web a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Relief Web Reports Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Unknown"^^xsd:string ;
+    kwg-ont:hasSpatialCoverage kwgr:global ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "hazard"^^xsd:string,
+        "public health"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.relief.web.reports .
+
+kwgr:subgraph.s2-google-global a kwg-ont:DatasetSubgraph ;
+    rdfs:label "S2 Geometry Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:hasSpatialCoverage kwgr:global ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.s2.geometry .
+
+kwgr:subgraph.smoke-plumes a kwg-ont:DatasetSubgraph ;
+    rdfs:label "NOAA Smoke Polygons Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2005"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:SmokePlumeSnapshot> ;
+    kwg-ont:describesObservableProperty kwgr:smokePlumeObservableProperty.smokeDensity ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.noaa.smoke.polygons .
+
+kwgr:subgraph.soil-ssurgo-usda a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Soil Survey Geographic Database Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Unknown"^^xsd:string ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:SoilMapUnit> ;
+    kwg-ont:describesObservableProperty kwgr:s2OverlapObservableProperty.soilMapUnitOverlapArea,
+        kwgr:soilObservableProperty.awmmfpwwta,
+        kwgr:soilObservableProperty.aws0100wta,
+        kwgr:soilObservableProperty.aws0150wta,
+        kwgr:soilObservableProperty.aws025wta,
+        kwgr:soilObservableProperty.aws050wta,
+        kwgr:soilObservableProperty.brockdepmin,
+        kwgr:soilObservableProperty.drclassdcd,
+        kwgr:soilObservableProperty.drclasswettest,
+        kwgr:soilObservableProperty.engcmssdcd,
+        kwgr:soilObservableProperty.engcmssmp,
+        kwgr:soilObservableProperty.engdwbdcd,
+        kwgr:soilObservableProperty.engdwbll,
+        kwgr:soilObservableProperty.engdwbml,
+        kwgr:soilObservableProperty.engdwobdcd,
+        kwgr:soilObservableProperty.englrsdcd,
+        kwgr:soilObservableProperty.engsldcd,
+        kwgr:soilObservableProperty.engsldcp,
+        kwgr:soilObservableProperty.engstafdcd,
+        kwgr:soilObservableProperty.engstafll,
+        kwgr:soilObservableProperty.engstafml,
+        kwgr:soilObservableProperty.farmlndcl,
+        kwgr:soilObservableProperty.flodfreqdcd,
+        kwgr:soilObservableProperty.flodfreqmax,
+        kwgr:soilObservableProperty.forpehrtdcp,
+        kwgr:soilObservableProperty.hydclprs,
+        kwgr:soilObservableProperty.hydgrpdcd,
+        kwgr:soilObservableProperty.iacornsr,
+        kwgr:soilObservableProperty.iccdcd,
+        kwgr:soilObservableProperty.iccdcdpct,
+        kwgr:soilObservableProperty.interpfocus,
+        kwgr:soilObservableProperty.invesintens,
+        kwgr:soilObservableProperty.mapunitlfw,
+        kwgr:soilObservableProperty.mapunitpfa,
+        kwgr:soilObservableProperty.muacres,
+        kwgr:soilObservableProperty.mucertstat,
+        kwgr:soilObservableProperty.muhelcl,
+        kwgr:soilObservableProperty.mukind,
+        kwgr:soilObservableProperty.mustatus,
+        kwgr:soilObservableProperty.muwathelcl,
+        kwgr:soilObservableProperty.muwndhelcl,
+        kwgr:soilObservableProperty.nhiforsoigrp,
+        kwgr:soilObservableProperty.nhspiagr,
+        kwgr:soilObservableProperty.niccdcd,
+        kwgr:soilObservableProperty.niccdcdpct,
+        kwgr:soilObservableProperty.pondfreqprs,
+        kwgr:soilObservableProperty.slopegraddcp,
+        kwgr:soilObservableProperty.slopegradwta,
+        kwgr:soilObservableProperty.urbrecptdcd,
+        kwgr:soilObservableProperty.urbrecptwta,
+        kwgr:soilObservableProperty.vtsepticsyscl,
+        kwgr:soilObservableProperty.wtdepannmin,
+        kwgr:soilObservableProperty.wtdepaprjunmin ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "environmental"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.soil.survey.geographic.database .
+
+kwgr:subgraph.storm-impacts-noaa a kwg-ont:DatasetSubgraph ;
+    rdfs:label "NOAA Storm Events Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "1950"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:NOAAHazardEvent> ;
+    kwg-ont:describesObservableProperty kwgr:impactObservableProperty.damageCrop,
+        kwgr:impactObservableProperty.damageProperty,
+        kwgr:impactObservableProperty.deathDirect,
+        kwgr:impactObservableProperty.deathIndirect,
+        kwgr:impactObservableProperty.injuryDirect,
+        kwgr:impactObservableProperty.injuryIndirect,
+        kwgr:magnitudeObservableProperty.estimatedSustainedWind,
+        kwgr:magnitudeObservableProperty.fujitaScale,
+        kwgr:magnitudeObservableProperty.length,
+        kwgr:magnitudeObservableProperty.measuredSustainedWind,
+        kwgr:magnitudeObservableProperty.measuredWind,
+        kwgr:magnitudeObservableProperty.width,
+        kwgr:magnitudeObservableProperty.windEstimatedGust ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.noaa.storm.events .
+
+kwgr:subgraph.transportation-usdot a kwg-ont:DatasetSubgraph ;
+    rdfs:label "The National Highway Planning Network dataset Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "network"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.the.national.highway.planning.network.dataset .
+
+kwgr:subgraph.wildfire-nifc a kwg-ont:DatasetSubgraph ;
+    rdfs:label "Wildland Fire Incident Locations Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "2014"^^xsd:gYear ;
+    kwg-ont:describesFeatureOfInterest <http://stko-kwg.geog.ucsb.edu/lod/ontology/kwg-ont:NIFC_Fire> ;
+    kwg-ont:describesObservableProperty kwgr:nifcFireObservableProperty.discoveryAcresBurnt,
+        kwgr:nifcFireObservableProperty.estimatedDollarCost,
+        kwgr:nifcFireObservableProperty.finalAcresBurnt ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "disaster"^^xsd:string,
+        "hazard"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.wildland.fire.incident.locations .
+
+kwgr:subgraph.zipcode-uscb a kwg-ont:DatasetSubgraph ;
+    rdfs:label "ZIP Code Tabulation Areas Dataset Subgraph"^^xsd:string ;
+    kwg-ont:beginYearOfRawData "Not relevant"^^xsd:string ;
+    kwg-ont:hasSpatialCoverage kwgr:administrativeRegion.USA ;
+    kwg-ont:hasSubgraphLead kwgr:shirly.stephen ;
+    kwg-ont:keyword "place identifier"^^xsd:string ;
+    kwg-ont:lastUpdated "2024-03-31"^^xsd:date ;
+    prov:wasDerivedFrom kwgr:Dataset.zip.code.tabulation.areas .
+
+kwgr:thomas.thelen a kwg-ont:Person ;
+    rdfs:label "Thomas Thelen"^^xsd:string .
+
+kwgr:tim.murphy a kwg-ont:Person ;
+    rdfs:label "Tim Murphy"^^xsd:string .
+
+kwgr:tony.howser a kwg-ont:Person ;
+    rdfs:label "Tony Howser"^^xsd:string .
+
+kwgr:ty.fitzpatrick a kwg-ont:Person ;
+    rdfs:label "Ty Fitzpatrick"^^xsd:string .
+
+kwgr:wenwen.li a kwg-ont:Person ;
+    rdfs:label "Wenwen Li"^^xsd:string .
+
+kwgr:yuanyuan.tian a kwg-ont:Person ;
+    rdfs:label "Yuanyuan Tian"^^xsd:string .
+
+kwgr:zhangyu.wang a kwg-ont:Person ;
+    rdfs:label "Zhangyu Wang"^^xsd:string .
+
+kwgr:zilong.liu a kwg-ont:Person ;
+    rdfs:label "Zilong Liu"^^xsd:string .
+
+kwgr:shirly.stephen a kwg-ont:Person ;
+    rdfs:label "Shirly Stephen"^^xsd:string .
+
+
